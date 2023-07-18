@@ -6,7 +6,7 @@ import Portfolio from './pages/portfolio';
 import Resume from './pages/resume';
 
 export default function Container() {
-    const [currentPage, setCurrentPage] = useState('AboutMe');
+    const [currentPage, setDisplayPage] = useState('AboutMe');
 
     const renderPage = () => {
         if (currentPage === 'AboutMe') {
@@ -25,7 +25,7 @@ export default function Container() {
 
     return (
         <div>
-            <Nav currentPage={currentPage} changePage={setDisplayPage} />
+            <Nav currentPage={currentPage} changePage={changePage} />
             {renderPage()}
         </div>
     );
