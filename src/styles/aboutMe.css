@@ -1,0 +1,12 @@
+.name {
+    font-size: 800%;
+    text-shadow: 7px 7px var(--green);
+}
+
+.aboutMeBody {
+    height: 85vh
+}
+
+.leftContainer {
+    height: 70%;
+}
