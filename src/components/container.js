@@ -4,6 +4,8 @@ import AboutMe from './pages/aboutMe';
 import Contact from './pages/contact';
 import Portfolio from './pages/portfolio';
 import Resume from './pages/resume';
+import '../styles/container.css'
+
 
 export default function Container() {
     const [currentPage, setDisplayPage] = useState('AboutMe');
