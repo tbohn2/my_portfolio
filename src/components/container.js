@@ -26,7 +26,7 @@ export default function Container() {
     const changePage = (page) => setDisplayPage(page);
 
     return (
-        <div>
+        <div className='d-flex align-items-center flex-column'>
             <Nav currentPage={currentPage} changePage={changePage} />
             {renderPage()}
         </div>
