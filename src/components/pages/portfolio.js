@@ -9,7 +9,7 @@ export default function AboutMe() {
                     <img src="https://user-images.githubusercontent.com/124842865/231046542-e3912b55-6db1-4bf3-b355-b9475cee8269.png" class="card-img-top" alt="..."></img>
                 </div>
                 <div class="card-body">
-                    <h5 class="card-title">Country Information and Currency Calulator</h5>
+                    <h5 class="card-title">Country Info and Currency Calulator</h5>
                     <p class="card-text">JavaScript, Restful APIs</p>
                     <a href="https://tbohn2.github.io/Country-info-and-exchange-rates/" class="btn btn-dark ms-3">Lauch App</a>
                     <a href="https://github.com/tbohn2/Country-info-and-exchange-rates" class="btn btn-dark ms-5">Visit GitHub Repository</a>
