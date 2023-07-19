@@ -1,9 +1,16 @@
 import React from 'react'
+import '../styles/nav.css'
+
+// const styles = {
+//     navbarStyle: {
+//         
+//     },
+// };
 
 function Nav({ currentPage, changePage }) {
     return (
-        <ul className="nav nav-tabs">
-            <li className="nav-item">
+        <ul className="myNav nav nav-tabs d-flex justify-content-around align-items-center mt-4">
+            <li className="nav-item ">
                 <a
                     href="#AboutMe"
                     onClick={() => changePage('AboutMe')}
