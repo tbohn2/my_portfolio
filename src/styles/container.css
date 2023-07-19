@@ -1,6 +1,6 @@
 .myContainer {
     --green: rgb(0, 68, 0);
-    height: 100vh;
+    height: 100%;
     background-image: linear-gradient(to bottom right, rgb(0, 0, 0), var(--green));
     background-repeat: no-repeat;
     background-size: cover;
