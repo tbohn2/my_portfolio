@@ -9,7 +9,7 @@ import '../styles/nav.css'
 
 function Nav({ currentPage, changePage }) {
     return (
-        <ul className="myNav nav nav-tabs d-flex justify-content-around align-items-center mt-4">
+        <ul className="myNav col-8 nav nav-tabs d-flex justify-content-around align-items-center mt-4">
             <li className="nav-item ">
                 <a
                     href="#AboutMe"
