@@ -1,5 +1,6 @@
 import React from 'react';
 import '../../styles/resume.css'
+import resume from '../../assets/resume.pdf'
 
 export default function AboutMe() {
     return (
@@ -65,6 +66,9 @@ export default function AboutMe() {
                 </div>
 
             </div>
+            <a href={resume} download='Tanner Bohn Resume' className='bg-light col-12 pb-2 d-flex justify-content-center'>
+                <button className='btn col-11 text-light myButton'>Download Resume</button>
+            </a>
 
         </section>
     );
