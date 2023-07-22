@@ -8,3 +8,7 @@
 .myImgBox {
     height: 25vh;
 }
+
+h5 {
+    min-height: 8vh;
+}

@@ -11,8 +11,8 @@ export default function AboutMe() {
                 <div class="card-body">
                     <h5 class="card-title">Country Info and Currency Calulator</h5>
                     <p class="card-text">JavaScript, Restful APIs</p>
-                    <a href="https://tbohn2.github.io/Country-info-and-exchange-rates/" class="btn btn-dark ms-3">Lauch App</a>
-                    <a href="https://github.com/tbohn2/Country-info-and-exchange-rates" class="btn btn-dark ms-5">Visit GitHub Repository</a>
+                    <a href="https://tbohn2.github.io/Country-info-and-exchange-rates/" class="btn btn-dark ">Lauch App</a>
+                    <a href="https://github.com/tbohn2/Country-info-and-exchange-rates" class="btn btn-dark ms-2">GitHub Repo</a>
                 </div>
             </div>
             <div class="card col-3 mx-2 mb-5 bg-secondary">
@@ -22,8 +22,8 @@ export default function AboutMe() {
                 <div class="card-body">
                     <h5 class="card-title ">Zookeeper</h5>
                     <p class="card-text">JavaScript, Restful APIs, MySQL</p>
-                    <a href="https://github.com/tbohn2/Zookeeper" class="btn btn-dark ms-3">Lauch App</a>
-                    <a href="https://github.com/tbohn2/Zookeeper" class="btn btn-dark ms-5">Visit GitHub Repository</a>
+                    <a href="https://github.com/tbohn2/Zookeeper" class="btn btn-dark ">Lauch App</a>
+                    <a href="https://github.com/tbohn2/Zookeeper" class="btn btn-dark ms-2">GitHub Repo</a>
                 </div>
             </div>
             <div class="card col-3 mx-2 mb-5 bg-secondary myCard">
@@ -33,8 +33,8 @@ export default function AboutMe() {
                 <div class="card-body">
                     <h5 class="card-title">Portfolio Example</h5>
                     <p class="card-text">JavaScript, Restful APIs</p>
-                    <a href="https://tbohn2.github.io/Portfolio/" class="btn btn-dark ms-3">Lauch App</a>
-                    <a href="https://github.com/tbohn2/Portfolio" class="btn btn-dark ms-5">Visit GitHub Repository</a>
+                    <a href="https://tbohn2.github.io/Portfolio/" class="btn btn-dark ">Lauch App</a>
+                    <a href="https://github.com/tbohn2/Portfolio" class="btn btn-dark ms-2">GitHub Repo</a>
                 </div>
             </div>
             <div class="card col-3 mx-2 mb-5 bg-secondary myCard">
@@ -44,8 +44,8 @@ export default function AboutMe() {
                 <div class="card-body">
                     <h5 class="card-title">Random Password Generator</h5>
                     <p class="card-text">JavaScript</p>
-                    <a href="https://tbohn2.github.io/Password-generator/" class="btn btn-dark ms-3">Lauch App</a>
-                    <a href="https://github.com/tbohn2/Password-generator" class="btn btn-dark ms-5">Visit GitHub Repository</a>
+                    <a href="https://tbohn2.github.io/Password-generator/" class="btn btn-dark ">Lauch App</a>
+                    <a href="https://github.com/tbohn2/Password-generator" class="btn btn-dark ms-2">GitHub Repo</a>
                 </div>
             </div>
             <div class="card col-3 mx-2 mb-5 bg-secondary myCard">
@@ -55,8 +55,8 @@ export default function AboutMe() {
                 <div class="card-body">
                     <h5 class="card-title">Work Day Scheduler</h5>
                     <p class="card-text">JavaScript</p>
-                    <a href="https://tbohn2.github.io/Work-day-schedule/" class="btn btn-dark ms-3">Lauch App</a>
-                    <a href="https://github.com/tbohn2/Work-day-schedule" class="btn btn-dark ms-5">Visit GitHub Repository</a>
+                    <a href="https://tbohn2.github.io/Work-day-schedule/" class="btn btn-dark ">Lauch App</a>
+                    <a href="https://github.com/tbohn2/Work-day-schedule" class="btn btn-dark ms-2">GitHub Repo</a>
                 </div>
             </div>
             <div class="card col-3 mx-2 mb-5 bg-secondary myCard">
@@ -66,8 +66,8 @@ export default function AboutMe() {
                 <div class="card-body">
                     <h5 class="card-title">Weather Finder</h5>
                     <p class="card-text">JavaScript, Restful APIs</p>
-                    <a href="https://tbohn2.github.io/Weather-finder/" class="btn btn-dark ms-3">Lauch App</a>
-                    <a href="https://github.com/tbohn2/Weather-finder" class="btn btn-dark ms-5">Visit GitHub Repository</a>
+                    <a href="https://tbohn2.github.io/Weather-finder/" class="btn btn-dark">Lauch App</a>
+                    <a href="https://github.com/tbohn2/Weather-finder" class="btn btn-dark ms-2" >GitHub Repo</a>
                 </div>
             </div>
         </section>
