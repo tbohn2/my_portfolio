@@ -4,6 +4,7 @@ import AboutMe from './pages/aboutMe';
 import Contact from './pages/contact';
 import Portfolio from './pages/portfolio';
 import Resume from './pages/resume';
+import Footer from './footer';
 import '../styles/container.css'
 
 
@@ -29,6 +30,7 @@ export default function Container() {
         <div className='d-flex align-items-center flex-column'>
             <Nav currentPage={currentPage} changePage={changePage} />
             {renderPage()}
+            <Footer />
         </div>
     );
 }
