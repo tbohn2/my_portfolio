@@ -4,7 +4,7 @@ import resume from '../../assets/resume.pdf'
 
 export default function AboutMe() {
     return (
-        <section className='mt-5 p-1 col-8 border border-light d-flex flex-column align-items-center'>
+        <section className='my-5 p-1 col-8 border border-light d-flex flex-column align-items-center'>
             <div className='d-flex flex-column align-items-center text-light border border-light col-12'>
                 <h1 className='resName'>Tanner Bohn</h1>
                 <h2>Full-Stack Web Developer</h2>
@@ -66,7 +66,7 @@ export default function AboutMe() {
                 </div>
 
             </div>
-            <a href={resume} download='Tanner Bohn Resume' className='bg-light col-12 pb-2 d-flex justify-content-center'>
+            <a href={resume} download='Tanner Bohn Resume' className='bg-light col-12 py-2 d-flex justify-content-center'>
                 <button className='btn col-11 text-light myButton'>Download Resume</button>
             </a>
 

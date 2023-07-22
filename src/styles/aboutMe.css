@@ -4,11 +4,7 @@
 }
 
 .aboutMeBody {
-    height: 75vh
-}
-
-.leftContainer {
-    height: 70%;
+    min-height: 70vh;
 }
 
 .myImg {
@@ -20,4 +16,10 @@
 
 .myPortraitBox {
     height: 55vh;
+}
+
+@media screen and (max-width: 1050px) {
+    .name {
+        /* font-size: 700% */
+    }
 }
