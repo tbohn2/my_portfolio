@@ -14,7 +14,7 @@ export default function AboutMe() {
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, blanditiis neque. Maiores quasi quaerat explicabo saepe nesciunt. Animi suscipit iure nemo. Quae accusamus neque laudantium ab provident aperiam dolor. Dolores.</p>
             </div>
             <div className='col-6 d-flex justify-content-center center'>
-                <div className='pt-5 mt-5 myImgBox'>
+                <div className='pt-5 mt-5 myPortraitBox'>
                     <img src={pic} alt='' className='myImg'></img>
                 </div>
             </div>
