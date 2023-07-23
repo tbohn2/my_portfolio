@@ -2,7 +2,7 @@ import React from 'react';
 import '../../styles/aboutMe.css'
 import pic from '../../assets/IMG_7980.jpg'
 
-
+// Returns About Me page
 export default function AboutMe() {
     return (
         <section className="aboutMeBody col-8 my-5 d-flex">

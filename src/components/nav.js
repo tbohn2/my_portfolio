@@ -1,16 +1,12 @@
 import React from 'react'
 import '../styles/nav.css'
 
-// const styles = {
-//     navbarStyle: {
-//         
-//     },
-// };
-
+// Returns nav at top of each page
 function Nav({ currentPage, changePage }) {
     return (
+        // changePage function is called each time a navtab is clicked and the corresponding page is rendered as found in container.js
         <ul className="myNav col-8 nav nav-tabs d-flex justify-content-around align-items-center mt-4">
-            <li className="nav-item ">
+            <li className="nav-item">
                 <a
                     href="#AboutMe"
                     onClick={() => changePage('AboutMe')}

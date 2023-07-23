@@ -1,8 +1,10 @@
 import React from 'react';
 import '../../styles/resume.css'
+// Imports pdf of resume
 import resume from '../../assets/resume.pdf'
 
-export default function AboutMe() {
+// Returns resume page
+export default function Resume() {
     return (
         <section className='my-5 p-1 col-8 border border-light d-flex flex-column align-items-center'>
             <div className='d-flex flex-column align-items-center text-light border border-light col-12'>
@@ -66,6 +68,7 @@ export default function AboutMe() {
                 </div>
 
             </div>
+            {/* Button downloads pdf of resume */}
             <a href={resume} download='Tanner Bohn Resume' className='bg-light col-12 py-2 d-flex justify-content-center'>
                 <button className='btn col-11 text-light myButton'>Download Resume</button>
             </a>

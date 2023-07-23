@@ -1,8 +1,11 @@
 import React from 'react';
 import '../../styles/portfolio.css'
+// Imports Project component that returns card with each project's data
 import Project from '../project';
 
-export default function AboutMe() {
+// Function that returns the portfolio page
+export default function Portfolio() {
+    // Six projects are defined in an array of objects with 5 keys each
     const projects = [
         {
             name: 'Country Info and Currency Calulator',
@@ -50,6 +53,7 @@ export default function AboutMe() {
 
     return (
         <section className='mt-5 col-10 d-flex flex-wrap justify-content-evenly'>
+            {/* Maps over projects array applying Project function to each, returning a card to display the information */}
             {projects.map(project => (
                 Project(project)
             ))}

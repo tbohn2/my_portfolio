@@ -1,6 +1,7 @@
 import React from "react";
 import '../styles/portfolio.css'
 
+// Returns a card for a project taking in the parameters name, languages, imgURL, siteURL, and gitURL
 export default function Project({ name, languages, imgURL, siteURL, gitURL }) {
     return (
         <div class="card col-3 mx-2 mb-5 bg-secondary">

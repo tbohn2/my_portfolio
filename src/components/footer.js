@@ -1,6 +1,7 @@
 import React from "react";
 import '../styles/footer.css'
 
+// Returns footer including buttons with links to GitHub, LinkedIn, and Facebook
 function Footer() {
     return (
         <div className="footerBox border-top border-light col-8 d-flex justify-content-evenly align-items-center">
