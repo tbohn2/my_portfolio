@@ -1,0 +1,31 @@
+:root {
+    --green: rgb(0, 255, 0);
+}
+
+body {
+    /* background-image: url('../assets/bg2.jpg'); */
+    background-image: linear-gradient(to bottom right, rgb(0, 0, 0) 45%, var(--green), rgb(0, 0, 0)85%);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    z-index: -1;
+}
+
+.roboto {
+    font-family: 'Roboto', sans-serif;
+}
+
+.fade {
+    animation: fadeIn 1s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
