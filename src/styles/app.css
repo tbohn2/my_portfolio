@@ -1,10 +1,11 @@
 :root {
-    --green: rgb(0, 255, 0);
+    --primary: rgb(136, 211, 255);
+    --secondary: rgb(211, 115, 131);
+    --dark: rgb(11, 35, 75)
 }
 
 body {
-    /* background-image: url('../assets/bg2.jpg'); */
-    background-image: linear-gradient(to bottom right, rgb(0, 0, 0) 45%, var(--green), rgb(0, 0, 0)85%);
+    background-image: url('../assets/bg9.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -13,7 +14,17 @@ body {
 }
 
 .roboto {
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+.font-primary {
+    color: var(--primary);
+}
+
+.font-secondary {
+    color: var(--secondary);
 }
 
 .fade {
