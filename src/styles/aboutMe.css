@@ -3,33 +3,39 @@
 }
 
 #home-left {
-    height: 250px;
+    position: absolute;
+    top: 17%;
+    left: 3%;
 }
 
 #home-left h1 {
-    font-size: 600%;
-    color: var(--green);
-    font-family: "Roboto", sans-serif;
-    font-weight: 200;
+    font-size: 700%;
+    color: var(--primary);
+    /* font-weight: 200; */
     /* font-style: italic; */
-    /* text-shadow: 7px 7px var(--green); */
+    /* text-shadow: 7px 7px var(--primary); */
 
+}
+
+#home-left h1 span {
+    color: white;
 }
 
 #home-left h2 {
-    /* font-size: 300%; */
-    color: var(--green);
-    font-family: "Roboto", sans-serif;
-    font-weight: 200;
+    font-size: 300%;
+    color: var(--primary);
+    font-weight: 400;
     /* font-style: italic; */
-    /* text-shadow: 7px 7px var(--green); */
+    /* text-shadow: 7px 7px var(--primary); */
 }
 
 .myImg {
-    /* border: 1px solid var(--green); */
-
-    width: 550px;
-    height: 550px;
+    /* position: absolute;
+    top: 30%;
+    left: 55%; */
+    background-image: linear-gradient(to bottom right, var(--dark) 45%, var(--secondary) 60%, var(--dark) 75%);
+    width: 250px;
+    height: 250px;
     border-radius: 50%;
     object-fit: cover;
     object-position: center;
