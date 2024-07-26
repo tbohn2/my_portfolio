@@ -1,0 +1,30 @@
+.myNav {
+    font-size: 180%;
+    list-style: none;
+}
+
+.myNav li {
+    display: flex;
+}
+
+.myNav li a {
+    text-decoration: none;
+    color: var(--primary);
+    padding: 5px;
+    border-radius: 0px 0px 10px 10px;
+    transition: all 0.25s;
+}
+
+.myNav li a:hover {
+    color: var(--secondary);
+}
+
+.myNav li .active {
+    background-color: var(--secondary);
+    color: var(--dark);
+    transition: all 0.25s;
+}
+
+.myNav li .active:hover {
+    color: white;
+}
