@@ -1,8 +1,21 @@
-.footerBox {
-    height: 10vh;
+footer {
+    height: 100px;
 }
 
-.footerBtn {
-    border-color: aliceblue;
-    font-size: 150%;
+footer p {
+    color: white;
+}
+
+footer a {
+    height: 50px;
+    transition: all 0.35s;
+}
+
+footer a:hover {
+    opacity: 0.35;
+}
+
+footer a img {
+    height: 100%;
+    width: 100%;
 }
