@@ -1,16 +1,28 @@
+header {
+    height: 100px;
+}
+
+header img {
+    padding: 15px;
+    object-fit: cover;
+}
+
 .myNav {
     font-size: 180%;
     list-style: none;
+    height: 50px;
 }
 
 .myNav li {
+    height: 100%;
     display: flex;
 }
 
 .myNav li a {
+    height: 100%;
+    padding: 5px 15px;
     text-decoration: none;
     color: var(--primary);
-    padding: 5px;
     border-radius: 0px 0px 10px 10px;
     transition: all 0.25s;
 }
@@ -21,7 +33,7 @@
 
 .myNav li .active {
     background-color: var(--secondary);
-    color: var(--dark);
+    color: white;
     transition: all 0.25s;
 }
 
