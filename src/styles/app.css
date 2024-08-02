@@ -1,13 +1,22 @@
 :root {
-    --primary: rgb(38, 212, 16);
-    --secondary: rgb(15, 80, 15);
-    --dark: rgb(0, 0, 0);
+    --primary: rgb(27, 233, 223);
+    --secondary: rgb(185, 57, 57);
+    --dark: rgb(5, 21, 39);
 }
 
 body {
     min-height: 100vh;
     z-index: -1;
-    background-image: linear-gradient(to bottom right, var(--dark) 45%, var(--secondary) 60%, var(--dark) 85%);
+    background-color: var(--dark);
+    background-image: linear-gradient(to bottom right, var(--dark) 60%, var(--primary) 100%);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.bg-2 {
+    background-image: linear-gradient(to top right, var(--secondary) 10%, transparent 20%);
+    min-height: 100vh;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -33,6 +42,11 @@ body {
 
 .fade {
     animation: fadeIn 1s;
+}
+
+.page-container {
+    min-height: 70vh;
+    width: 100%;
 }
 
 @keyframes fadeIn {

@@ -14,14 +14,16 @@ function App() {
 
   return (
     <Router basename='/my_portfolio'>
-      <div className='d-flex align-items-center flex-column'>
+      <div className='d-flex align-items-center flex-column bg-2'>
         <Header displayPage={displayPage} setDisplayPage={(page) => setDisplayPage(page)} />
-        <Routes>
-          <Route path="/" element={<AboutMe />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/portfolio" element={<Portfolio />} />
-          <Route path="/resume" element={<Resume />} />
-        </Routes>
+        <div className='page-container'>
+          <Routes>
+            <Route path="/" element={<AboutMe />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/portfolio" element={<Portfolio />} />
+            <Route path="/resume" element={<Resume />} />
+          </Routes>
+        </div>
         <Footer />
       </div>
     </Router>
