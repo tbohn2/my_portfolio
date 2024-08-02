@@ -1,62 +1,77 @@
-import React from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import '../../styles/portfolio.css'
-// Imports Project component that returns card with each project's data
-import Project from '../project';
+import ashleyPhoto from '../../assets/ashley-photo.png'
+import darrow from '../../assets/darrow.svg'
 
-// Function that returns the portfolio page
 export default function Portfolio() {
-    // Six projects are defined in an array of objects with 5 keys each
+
+    const [detailsId, setDetailsId] = useState(null);
+
+    const detailsRefs = useRef({});
+
+    useEffect(() => {
+        const handleClickOutside = (event) => {
+            // Extracts the values of the refs and checks if the event target is outside of all of them
+            const isClickOutside = Object.values(detailsRefs.current).every(ref => !ref.contains(event.target));
+            if (isClickOutside) {
+                setDetailsId(null);
+            }
+        };
+
+        document.addEventListener('mousedown', handleClickOutside);
+        document.addEventListener('touchstart', handleClickOutside);
+
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside);
+            document.removeEventListener('touchstart', handleClickOutside);
+        };
+    }, []);
+
     const projects = [
         {
-            name: 'Country Info and Currency Calulator',
-            languages: 'JavaScript, Restful APIs',
-            imgURL: 'https://user-images.githubusercontent.com/124842865/231046542-e3912b55-6db1-4bf3-b355-b9475cee8269.png',
-            siteURL: 'https://tbohn2.github.io/Country-info-and-exchange-rates/',
-            gitURL: 'https://github.com/tbohn2/Country-info-and-exchange-rates'
+            id: 1,
+            name: 'Ashley Bohn Photography',
+            langAndTech: 'JavaScript, HTML, CSS, Vite, React, Bootstrap, EmailJS',
+            imgURL: ashleyPhoto,
+            siteURL: 'https://tbohn2.github.io/ashley-photo/',
+            gitURL: 'https://github.com/tbohn2/ashley-photo'
         },
         {
-            name: 'Zookeeper',
-            languages: 'JavaScript, Restful APIs, MySQL',
-            imgURL: 'https://user-images.githubusercontent.com/124842865/243895540-05c5de1b-1463-46e9-b12f-4c0821867cfe.png',
-            siteURL: 'https://pokezoo6000.herokuapp.com/',
-            gitURL: 'https://github.com/tbohn2/Zookeeper'
-        },
-        {
-            name: 'Portfolio Example',
-            languages: 'JavaScript, Restful APIs',
-            imgURL: 'https://user-images.githubusercontent.com/124842865/223294880-014798aa-3db9-4f48-89c1-2e54fea7df5a.png',
-            siteURL: 'https://tbohn2.github.io/Portfolio/',
-            gitURL: 'https://github.com/tbohn2/Portfolio'
-        },
-        {
-            name: 'Random Password Generator',
-            languages: 'JavaScript',
-            imgURL: 'https://user-images.githubusercontent.com/124842865/224519246-1645f2a3-17b2-4b88-a1f1-591998b87fb2.png',
-            siteURL: 'https://tbohn2.github.io/Password-generator/',
-            gitURL: 'https://github.com/tbohn2/Password-generator'
-        },
-        {
-            name: 'Work Day Scheduler',
-            languages: 'JavaScript',
-            imgURL: 'https://user-images.githubusercontent.com/124842865/228134341-30d6793c-d9a0-4b52-9e0e-2e50511e2dee.png',
-            siteURL: 'https://tbohn2.github.io/Work-day-schedule/',
-            gitURL: 'https://github.com/tbohn2/Work-day-schedule'
-        },
-        {
-            name: 'Weather Finder',
-            languages: 'JavaScript, Restful APIs',
-            imgURL: 'https://user-images.githubusercontent.com/124842865/229953591-b5d1716a-0535-45a3-b49d-d2c05bfdb98b.png',
-            siteURL: 'https://tbohn2.github.io/Weather-finder/',
-            gitURL: 'https://github.com/tbohn2/Weather-finder'
+            id: 2,
+            name: 'Ashley Bohn Photography',
+            langAndTech: 'JavaScript, HTML, CSS, Vite, React, Bootstrap, EmailJS',
+            imgURL: ashleyPhoto,
+            siteURL: 'https://tbohn2.github.io/ashley-photo/',
+            gitURL: 'https://github.com/tbohn2/ashley-photo'
         },
     ]
 
+    const toggleDetails = (id) => {
+        if (detailsId === id) {
+            setDetailsId(null);
+        } else {
+            setDetailsId(id);
+        }
+    }
+
     return (
-        <section className='mt-5 col-10 d-flex flex-wrap justify-content-evenly'>
-            {/* Maps over projects array applying Project function to each, returning a card to display the information */}
+        <div className='col-12 d-flex flex-wrap justify-content-evenly'>
             {projects.map(project => (
-                Project(project)
+                <div ref={el => (detailsRefs.current[project.id] = el)} id={project.id} className="project-card" style={{ maxHeight: detailsId === project.id ? '1000px' : '350px' }}>
+                    <img src={project.imgURL} alt={`${project.name} Screenshot`} />
+                    {detailsId === project.id && (
+                        <div className='proj-details'>
+                            This is a story all about how my life got flipped turned upside down. And I'd like to take a minute, just sit right there,
+                            I'll tell you how I became the prince of a town called Bel-Air.
+                        </div>
+                    )}
+                    <button className='d-flex justify-content-center align-items-center' onClick={() => toggleDetails(project.id)}>
+                        <svg className={detailsId === project.id && 'flipped'} enable-background="new 0 0 50 50" height="20px" id="Layer_1" version="1.1" viewBox="0 0 50 50" width="20px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink"><rect fill="none" height="20" width="20" /><polygon fill='rgb(27, 233, 223)' points="47.25,15 45.164,12.914 25,33.078 4.836,12.914 2.75,15 25,37.25 " />
+                        </svg>
+                    </button>
+                </div>
             ))}
-        </section>
+        </div>
     );
 }

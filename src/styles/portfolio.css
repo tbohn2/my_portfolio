@@ -1,8 +1,44 @@
-.myProjImg {
+.project-card {
+    width: 600px;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: max-height 1s ease-in-out;
+}
+
+.project-card img {
     width: 100%;
-    height: 100%;
+    height: 335px;
     object-fit: cover;
-    object-position: center top;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.proj-details {
+    color: white;
+    border-width: 0px 1px 1px 1px;
+    border-style: solid;
+    border-color: var(--primary);
+    padding: 20px;
+}
+
+.project-card button {
+    width: 100%;
+    height: 15px;
+    background-color: var(--dark);
+    border: none;
+    border-width: 0px 1px 1px 1px;
+    border-style: solid;
+    border-color: var(--primary);
+    border-radius: 0px 0px 10px 10px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.project-card button:hover {
+    background-color: var(--secondary);
+}
+
+.flipped {
+    transform: rotate(180deg);
 }
 
 .myImgBox {
