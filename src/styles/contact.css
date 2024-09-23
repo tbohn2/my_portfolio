@@ -2,3 +2,10 @@
     height: 75vh;
     font-size: 150%;
 }
+
+.alert {
+    position: fixed !important;
+    top: 10% !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+}

@@ -1,43 +1,84 @@
 import React, { useState } from 'react';
 import '../../styles/contact.css'
-// Imports function to compare e-mail imput with regex for e-mail
-import { validateEmail } from '../utils/validateEmail';
 
-// Exports function that returns contact page
 export default function Contact() {
-    // Uses react's useState to define email variable
-    const [email, setEmail] = useState('')
 
-    // Function to check if e-mail is valid or not
-    function checkEmail(email) {
-        // If e-mail is not valid, user is alerted
-        if (!validateEmail(email)) {
-            alert('Please enter valid e-mail')
+    const [loading, setLoading] = useState(false);
+    const [message, setMessage] = useState('');
+    const [error, setError] = useState('');
+    const [formState, setFormState] = useState(
+        {
+            FirstName: '',
+            LastName: '',
+            EmailAddress: '',
+            Message: ''
+        }
+    )
+
+    function handleInputChange(e) {
+        const { name, value } = e.target;
+        setFormState({ ...formState, [name]: value })
+    }
+
+    async function handleSubmit(e) {
+        e.preventDefault();
+        setLoading(true);
+        setError('');
+
+        try {
+            const response = await fetch('https://solidgroundaz.com/api/devEmail', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(formState)
+            })
+            const data = await response.json();
+            console.log('Success:', data);
+            setMessage('Message Sent Successfully')
+            setTimeout(() => {
+                setMessage('');
+            }, 5000);
+            setLoading(false);
+        }
+        catch (error) {
+            console.error('Error:', error);
+            setError('Message failed to send')
+            setLoading(false);
         }
     }
 
-    // Function to handle submit of form and check e-mail
-    function handleSubmit(e) {
-        e.preventDefault();
-        checkEmail(email)
-    }
+    const formArray = [
+        { 'label': 'First Name', 'name': 'FirstName', 'type': 'text' },
+        { 'label': 'Last Name', 'name': 'LastName', 'type': 'text' },
+        { 'label': 'Email Address', 'name': 'EmailAddress', 'type': 'email' },
+        { 'label': 'Message', 'name': 'Message', 'type': 'text' }
+    ]
 
     return (
-        <form className='myForm mt-5 d-flex flex-column col-12 align-items-center' onSubmit={handleSubmit}>
-            <div class="mb-3">
-                <label class="text-light form-label">Name</label>
-                <input type="text" class="form-control"></input>
-            </div>
-            <div class="mb-3">
-                <label class="text-light form-label">Email address</label>
-                {/* Sets e-mail var as value of target using useState hook */}
-                <input onChange={(e) => setEmail(e.target.value)} type="email" class="form-control email"></input>
-            </div>
-            <div class="mb-3">
-                <label class="text-light form-label">Enter message here:</label>
-                <textarea type="text" class="form-control"></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
-        </form>
+        <div className='d-flex flex-column align-items-center'>
+            {message && <div className="alert alert-success text-center fade-in" role="alert">{message}</div>}
+            {error && <div className="alert alert-danger text-center fade-in" role="alert">{error}</div>}
+            <form className='myForm roboto mt-5 d-flex flex-column col-6 align-items-center' onSubmit={handleSubmit}>
+                {formArray.map((input, index) => {
+                    return (
+                        <div className="mb-3 col-12" key={index}>
+                            <label className="text-light form-label">{input.label}</label>
+                            {input.label === 'Message' ?
+                                <textarea name="Message" value={formState.Message} onChange={(e) => handleInputChange(e)} type="text" className="form-control" rows={4} required></textarea>
+                                :
+                                <input name={input.name} value={formState[input.name]} onChange={(e) => handleInputChange(e)} type={input.type} className="form-control" required></input>
+                            }
+                        </div>
+                    )
+                })}
+                {loading ?
+                    <div className="spinner-border text-light" role="status"></div>
+                    :
+                    <button type="submit" className="custom-btn">Submit</button>
+                }
+            </form>
+        </div>
+
     );
 }
