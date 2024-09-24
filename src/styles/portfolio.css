@@ -1,40 +1,79 @@
+.card-container {
+    width: 30%;
+    transition: all .5s ease-in-out;
+}
+
+.card-container:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.card-container.active:hover {
+    transform: none;
+}
+
 .project-card {
-    width: 600px;
+    width: 100%;
     border-radius: 10px;
-    overflow: hidden;
-    transition: max-height 1s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+
+.project-card.active {
+    position: fixed;
+    transform: translate(-50%, -50%);
+    width: 90vw;
+    height: 90vh;
+    top: 50%;
+    left: 50%;
+    z-index: 3;
+}
+
+.project-card.active:hover {
+    cursor: default;
 }
 
 .project-card img {
     width: 100%;
-    height: 335px;
     object-fit: cover;
     border-radius: 10px 10px 0px 0px;
 }
 
-.proj-details {
+.project-card h2 {
     color: white;
-    border-width: 0px 1px 1px 1px;
-    border-style: solid;
-    border-color: var(--primary);
-    padding: 20px;
-}
-
-.project-card button {
-    width: 100%;
-    height: 15px;
     background-color: var(--dark);
-    border: none;
+    text-align: center;
+    padding: 5px 0px;
     border-width: 0px 1px 1px 1px;
+    border-radius: 0px 0px 10px 10px;
     border-style: solid;
     border-color: var(--primary);
-    border-radius: 0px 0px 10px 10px;
-    cursor: pointer;
-    transition: all 0.3s;
 }
 
-.project-card button:hover {
-    background-color: var(--secondary);
+.proj-details {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 95vw;
+    min-height: 95vh;
+    transform: translate(-50%, -50%);
+    color: var(--primary);
+    background-color: var(--dark);
+    border: 1px solid var(--primary);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.proj-details .close {
+    position: fixed;
+    font-weight: 1000;
+    top: 15px;
+    right: 25px;
+    color: var(--secondary);
+    cursor: pointer;
+}
+
+.proj-details img {
+    border-radius: 10px;
 }
 
 .flipped {

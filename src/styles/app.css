@@ -40,28 +40,27 @@ body {
     color: var(--secondary);
 }
 
-.fade {
-    animation: fadeIn 1s;
-}
-
 .page-container {
     min-height: 70vh;
     width: 100%;
 }
 
 .custom-btn {
-    background-color: var(--primary);
-    color: var(--dark);
-    border: none;
-    border-radius: 5px;
-    padding: 0.5rem 1rem;
-    font-size: 1.5rem;
+    background-color: var(--dark);
+    color: var(--primary);
+    border: 1px solid var(--primary);
+    padding: 5px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: all 0.3s;
 }
 
 .custom-btn:hover {
-    background-color: var(--secondary);
+    color: var(--dark);
+    background-color: var(--primary);
+}
+
+.fade-in {
+    animation: fadeIn .75s;
 }
 
 @keyframes fadeIn {
