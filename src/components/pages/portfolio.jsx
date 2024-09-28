@@ -1,9 +1,11 @@
 import React, { useState, useEffect, useRef } from 'react';
 import '../../styles/portfolio.css'
 import ashleyPhoto from '../../assets/ashley-photo.png'
+import ashleyPhoto2 from '../../assets/ashley-photo2.png'
 import platePlannerImage from '../../assets/plate-planner.png'
+import platePlannerImage2 from '../../assets/plate-planner2.png'
 import solidGroundImage from '../../assets/solid-g.png'
-import solidGroundAdminImage from '../../assets/solid-g-admin.png'
+import solidGroundImage2 from '../../assets/solid-g2.png'
 
 export default function Portfolio() {
 
@@ -56,6 +58,7 @@ export default function Portfolio() {
                 'Ensuring the gallery loads efficiently while maintaining high-quality image displays'],
             role: 'Full-stack developer: Designed and developed the frontend using React and Vite, integrated EmailJS for form handling, and coordinated with the photographer to meet design needs.',
             imgURL: ashleyPhoto,
+            imgURL2: ashleyPhoto2,
             siteURL: 'https://tbohn2.github.io/ashley-photo/',
             gitURL: 'https://github.com/tbohn2/ashley-photo'
         },
@@ -65,9 +68,8 @@ export default function Portfolio() {
             description: 'Plate Planner is a web application designed to streamline meal planning and grocery shopping. It integrates the MERN stack (MongoDB, Express, React, Node.js) with GraphQL for flexible data querying and Vite for a fast and efficient development experience.',
             features: [
                 'User authentication and authorization',
-                'Meal plan creation and management',
-                'Recipe search and selection',
-                'Nutritional information display',
+                'Shopping list management',
+                'Recipe search and creation',
                 'Responsive design'
             ],
             languages: 'JavaScript, HTML, CSS',
@@ -80,6 +82,7 @@ export default function Portfolio() {
             ],
             role: 'Full-stack developer: Developed both frontend and backend using React, Node.js, Express, and MongoDB. Implemented GraphQL for data queries and designed user authentication with JWT.',
             imgURL: platePlannerImage,
+            imgURL2: platePlannerImage2,
             siteURL: 'https://tbohn2.github.io/plate-planner/',
             gitURL: 'https://github.com/tbohn2/plate-planner',
             login: 'Username: test, Password: testtest'
@@ -104,16 +107,16 @@ export default function Portfolio() {
             ],
             role: 'Full-stack developer: Developed the backend using ASP.NET Core and MySQL, implemented JWT-based authentication, and created a dynamic frontend with jQuery for schedule and appointment management.',
             imgURL: solidGroundImage,
+            imgURL2: solidGroundImage2,
             siteURL: 'https://solidgroundaz.com/',
             gitURL: 'https://github.com/tbohn2/solid-ground-az',
             adminSiteURL: 'https://solidgroundaz.com/admin',
-            adminLogin: 'Username: test, Password: testtest',
-            adminImgURL: solidGroundAdminImage
+            login: 'Username: test, Password: testtest',
         }
     ];
 
     return (
-        <div className='mt-5 col-12 d-flex flex-wrap justify-content-evenly'>
+        <div className='fade-in mt-5 col-12 d-flex flex-wrap justify-content-evenly'>
             {projects.map(project => (
                 <div className='card-container'>
                     <div className='project-card roboto' onClick={() => setDetails(project)}>
@@ -125,24 +128,19 @@ export default function Portfolio() {
             {details && (
                 <div className='proj-details fade-in d-flex' ref={el => (detailsRefs.current[details.id] = el)} id={details.id}>
                     <span className='close fs-3' onClick={() => setDetails(null)}>✕</span>
-                    <div className='col-4 d-flex flex-column'>
-                        <img className='col-12' src={details.imgURL} alt={`${details.title} Screenshot`} />
-                        <div className='col-12 d-flex justify-content-evenly'>
-                            <a className='col-5 custom-btn text-decoration-none text-center my-3 fs-5' href={details.siteURL}>Visit Site</a>
-                            <a className='col-5 custom-btn text-decoration-none text-center my-3 fs-5' href={details.gitURL}>Visit Repository</a>
+                    <div className='col-4 d-flex flex-column align-items-center'>
+                        <img className='col-12 my-2' src={details.imgURL} alt={`${details.title} Screenshot`} />
+                        <img className='col-12 my-2' src={details.imgURL2} alt={`${details.title} Screenshot 2`} />
+                        <div className='col-12 d-flex justify-content-evenly my-3 fs-5'>
+                            <a className='col-5 custom-btn text-decoration-none text-center' href={details.siteURL}>Visit Site</a>
+                            <a className='col-5 custom-btn text-decoration-none text-center' href={details.gitURL}>Visit Repository</a>
                         </div>
                         {details.adminSiteURL && (
-                            <div className='col-12 d-flex flex-column align-items-center'>
-                                <h2 className='col-12 text-center'>Admin Site</h2>
-                                <img className='col-12' src={details.adminImgURL} alt={`${details.title} Admin Screenshot`} />
-                                <a className='col-5 custom-btn text-decoration-none text-center my-3 fs-5' href={details.adminSiteURL}>Visit Admin Site</a>
-                                <h3>Admin Login:</h3>
-                                <p>{details.adminLogin}</p>
-                            </div>
+                            <a className='col-5 custom-btn text-decoration-none text-center my-3 fs-5' href={details.adminSiteURL}>Visit Admin Site</a>
                         )}
                         {details.login && (
                             <div className='d-flex flex-column align-items-center'>
-                                <h3>Login:</h3>
+                                <h3>Test Login:</h3>
                                 <p>{details.login}</p>
                             </div>
                         )}
