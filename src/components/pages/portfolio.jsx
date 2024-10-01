@@ -47,16 +47,20 @@ export default function Portfolio() {
             id: 1,
             title: 'Ashley Bohn Photography',
             description: 'Ashley Photography is a web application created for photographer Ashley Bohn. It showcases her work, including her biography, pricing, and portfolio. The application allows users to contact her through a form submission using EmailJS, which sends their message directly to her email.',
-            features: [`View the photographer's biography`,
+            features: [
+                `View the photographer's biography`,
                 'Browse through the photography portfolio.',
                 'Check pricing for various services.',
-                'Contact form submission via EmailJS.'],
-            languages: 'JavaScript, HTML, CSS',
-            tech: 'Vite, React, Bootstrap, EmailJS',
-            challenges: ['Creating a responsive design that looks good on all devices',
+                'Contact form submission via EmailJS.'
+            ],
+            languages: ['JavaScript', 'HTML', 'CSS'],
+            tech: ['Vite', 'React', 'Bootstrap', 'EmailJS'],
+            challenges: [
+                'Creating a responsive design that looks good on all devices',
                 'Implementing form submission to directly email the photographer via EmailJS',
-                'Ensuring the gallery loads efficiently while maintaining high-quality image displays'],
-            role: 'Full-stack developer: Designed and developed the frontend using React and Vite, integrated EmailJS for form handling, and coordinated with the photographer to meet design needs.',
+                'Ensuring the gallery loads efficiently while maintaining high-quality image displays'
+            ],
+            role: ['Designed and developed the frontend using React and Vite', 'Integrated EmailJS for form handling', 'Coordinated with the photographer to meet design needs'],
             imgURL: ashleyPhoto,
             imgURL2: ashleyPhoto2,
             siteURL: 'https://tbohn2.github.io/ashley-photo/',
@@ -72,15 +76,15 @@ export default function Portfolio() {
                 'Recipe search and creation',
                 'Responsive design'
             ],
-            languages: 'JavaScript, HTML, CSS',
-            tech: 'MERN Stack (MongoDB, Express, React, Node.js), Vite, GraphQL, Apollo Client, JWT Decode, React Router DOM, Bootstrap',
+            languages: ['JavaScript', 'HTML', 'CSS'],
+            tech: ['MERN Stack', 'Vite', 'GraphQL', 'Apollo Client', 'JWT Decode', 'React Router DOM', 'Bootstrap'],
             challenges: [
                 'Integrating GraphQL with both the front and backend for efficient data querying',
                 'Implementing user authentication and authorization using JWT',
                 'Ensuring smooth user experience across devices with responsive design',
                 'Handling user recipes and transforming them into shopping lists'
             ],
-            role: 'Full-stack developer: Developed both frontend and backend using React, Node.js, Express, and MongoDB. Implemented GraphQL for data queries and designed user authentication with JWT.',
+            role: ['Developed both frontend and backend using React, Node.js, Express, and MongoDB', 'Implemented GraphQL for data queries and designed user authentication with JWT'],
             imgURL: platePlannerImage,
             imgURL2: platePlannerImage2,
             siteURL: 'https://tbohn2.github.io/plate-planner/',
@@ -98,25 +102,26 @@ export default function Portfolio() {
                 'Admin Dashboard for managing schedules and appointments',
                 'Dynamic frontend with jQuery for interactive user experiences'
             ],
-            languages: 'C#, HTML, JavaScript, SQL',
-            tech: 'ASP.NET Core 8.0, Razor Pages, MySQL, Entity Framework Core, Pomelo.EntityFrameworkCore.MySql, jQuery',
+            languages: ['C#', 'HTML', 'JavaScript', 'SQL'],
+            tech: ['ASP.NET Core 8.0', 'Razor Pages', 'MySQL', 'Entity Framework Core', 'Pomelo.EntityFrameworkCore.MySql', 'jQuery'],
             challenges: [
                 'Implementing secure authentication with JWT and password hashing using BCrypt',
                 'Real-time schedule updates and appointment booking for both instructors and clients',
                 'Building a responsive and dynamic frontend with jQuery for smooth user interaction'
             ],
-            role: 'Full-stack developer: Developed the backend using ASP.NET Core and MySQL, implemented JWT-based authentication, and created a dynamic frontend with jQuery for schedule and appointment management.',
+            role: ['Developed the backend using ASP.NET Core and MySQL', 'Implemented JWT-based authentication', 'Created a dynamic frontend with jQuery for schedule and appointment management'],
             imgURL: solidGroundImage,
             imgURL2: solidGroundImage2,
             siteURL: 'https://solidgroundaz.com/',
             gitURL: 'https://github.com/tbohn2/solid-ground-az',
             adminSiteURL: 'https://solidgroundaz.com/admin',
-            login: 'Username: test, Password: testtest',
+            login: 'Username: test, Password: testtest'
         }
     ];
 
+
     return (
-        <div className='fade-in mt-5 col-12 d-flex flex-wrap justify-content-evenly'>
+        <div className='fade-in mt-5col-12 d-flex flex-wrap justify-content-evenly'>
             {projects.map(project => (
                 <div className='card-container'>
                     <div className='project-card roboto' onClick={() => setDetails(project)}>
@@ -126,7 +131,7 @@ export default function Portfolio() {
                 </div>
             ))}
             {details && (
-                <div className='proj-details fade-in d-flex' ref={el => (detailsRefs.current[details.id] = el)} id={details.id}>
+                <div className='proj-details fs-5 fade-in d-flex' ref={el => (detailsRefs.current[details.id] = el)} id={details.id}>
                     <span className='close fs-3' onClick={() => setDetails(null)}>✕</span>
                     <div className='col-4 d-flex flex-column align-items-center'>
                         <img className='col-12 my-2' src={details.imgURL} alt={`${details.title} Screenshot`} />
@@ -147,25 +152,45 @@ export default function Portfolio() {
                     </div>
                     <div className='col-8 px-3'>
                         <h1 className='col-12 text-center'>{details.title}</h1>
-                        <p className='col-12'>{details.description}</p>
-                        <h3>Languages:</h3>
-                        <p>{details.languages}</p>
-                        <h3>Technologies:</h3>
-                        <p>{details.tech}</p>
-                        <h3>Role:</h3>
-                        <p>{details.role}</p>
-                        <h3>Features:</h3>
-                        <ul>
-                            {details.features.map(feature => (
-                                <li>{feature}</li>
-                            ))}
-                        </ul>
-                        <h3>Challenges:</h3>
-                        <ul>
-                            {details.challenges.map(challenge => (
-                                <li>{challenge}</li>
-                            ))}
-                        </ul>
+                        <div className='col-12 scroll-details'>
+                            <p className='col-12'>{details.description}</p>
+                            <div className='d-flex col-12 '>
+                                <div className='col-4'>
+                                    <h3>Languages:</h3>
+                                    <ul>
+                                        {details.languages.map(language => (
+                                            <li>{language}</li>
+                                        ))}
+                                    </ul>
+                                </div>
+                                <div className='col-8 '>
+                                    <h3 className='col-12'>Technology:</h3>
+                                    <ul className='d-flex flex-wrap tech-container col-12'>
+                                        {details.tech.map((techName, index) => (
+                                            <li className='col-6'>{techName}</li>
+                                        ))}
+                                    </ul>
+                                </div>
+                            </div>
+                            <h3>Features:</h3>
+                            <ul>
+                                {details.features.map(feature => (
+                                    <li>{feature}</li>
+                                ))}
+                            </ul>
+                            <h3>Role:</h3>
+                            <ul>
+                                {details.role.map(role => (
+                                    <li>{role}</li>
+                                ))}
+                            </ul>
+                            <h3>Challenges:</h3>
+                            <ul>
+                                {details.challenges.map(challenge => (
+                                    <li>{challenge}</li>
+                                ))}
+                            </ul>
+                        </div>
                     </div>
                 </div>
             )}

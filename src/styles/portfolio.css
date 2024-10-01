@@ -50,21 +50,23 @@
 }
 
 .proj-details {
-    position: fixed;
-    top: 50%;
+    position: absolute;
+    top: 10px;
     left: 50%;
     width: 95vw;
     min-height: 95vh;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, 0%);
     color: var(--primary);
     background-color: var(--dark);
     border: 1px solid var(--primary);
     border-radius: 10px;
     padding: 10px;
+    margin: 10px 0px;
+    z-index: 2;
 }
 
 .proj-details .close {
-    position: fixed;
+    position: absolute;
     font-weight: 1000;
     top: 15px;
     right: 25px;
@@ -76,12 +78,21 @@
     border-radius: 10px;
 }
 
+.scroll-details {
+    overflow-y: auto;
+    max-height: 88vh;
+}
+
 .flipped {
     transform: rotate(180deg);
 }
 
 .myImgBox {
     height: 20vh;
+}
+
+.tech-container {
+    max-height: 10vh;
 }
 
 h5 {
