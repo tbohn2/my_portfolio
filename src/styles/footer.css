@@ -2,20 +2,22 @@ footer {
     height: 15vh;
 }
 
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
 footer p {
     color: white;
 }
 
-footer a {
-    height: 50px;
+.footer-icon {
+    height: 75px;
+    width: auto;
     transition: all 0.35s;
+
 }
 
-footer a:hover {
+.footer-icon:hover {
     opacity: 0.35;
-}
-
-footer a img {
-    height: 100%;
-    width: 100%;
 }
