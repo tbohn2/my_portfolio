@@ -18,13 +18,15 @@ function Footer({ mobile }) {
     } else {
         return (
             <footer className="roboto col-12 px-4 d-flex justify-content-between align-items-center py-2">
-                <a className="col-4" href="mailto:tannerbohndev@gmail.com">tannerbohndev@gmail.com</a>
+                <div className="col-4">
+                    <a href="mailto:tannerbohndev@gmail.com">tannerbohndev@gmail.com</a>
+                </div>
                 <p className="m-0 col-4 text-center">&copy; 2024 Tanner Bohn</p>
                 <div className="d-flex justify-content-end col-4">
                     {/* <a href="https://www.aedin.com/in/tanner-bohn-084060285" type='button'>
                     <img className="footer-icon" href="https://www.aedin.com/in/tanner-bohn-084060285" src={liLogo} alt="Linked-in Logo" />
                 </a> */}
-                    <a href="https://github.com/tbohn2" type='button' >
+                    <a href="https://github.com/tbohn2" type='button'>
                         <img className="footer-icon" src={gitLogo} alt="GitHub Logo" />
                     </a>
                 </div>
