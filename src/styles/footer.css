@@ -21,3 +21,14 @@ footer p {
 .footer-icon:hover {
     opacity: 0.35;
 }
+
+@media screen and (max-width: 768px) {
+    footer {
+        height: auto;
+    }
+
+    .footer-icon {
+        height: 50px;
+    }
+
+}
