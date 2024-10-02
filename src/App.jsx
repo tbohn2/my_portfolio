@@ -14,18 +14,17 @@ function App() {
   const [displayPage, setDisplayPage] = useState('AboutMe');
 
   useEffect(() => {
-    if (window.innerWidth < 768) {
+    if (window.innerWidth <= 768) {
       setMobile(true);
     }
-
     window.addEventListener('resize', () => {
-      if (window.innerWidth < 768) {
+      if (window.innerWidth <= 768) {
         setMobile(true);
       } else {
         setMobile(false);
       }
-    })
-  }, [])
+    });
+  }, []);
 
   return (
     <Router basename='/my_portfolio'>

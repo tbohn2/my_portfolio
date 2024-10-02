@@ -2,11 +2,42 @@ header {
     height: 15vh;
 }
 
-header h1 {
-    font-size: 300%;
+.logo {
+    height: 100px;
+    width: 400px;
     color: var(--primary);
     text-align: center;
-    padding: 0px 5px;
+    text-decoration: none;
+    padding-left: 5px;
+    margin-top: 5px;
+}
+
+.logo h1 {
+    font-size: 60px;
+    height: 100%;
+    width: 100%;
+}
+
+#T,
+#B {
+    height: 100%;
+    border-bottom: 3px;
+    border-top: 3px;
+    border-radius: 50px;
+}
+
+#T {
+    border-bottom-style: solid;
+    border-bottom-color: var(--primary);
+    border-top-style: solid;
+    border-top-color: var(--secondary);
+}
+
+#B {
+    border-top-style: solid;
+    border-top-color: var(--primary);
+    border-bottom-style: solid;
+    border-bottom-color: var(--secondary);
 }
 
 header img {
@@ -14,36 +45,104 @@ header img {
     object-fit: cover;
 }
 
-.myNav {
-    font-size: 180%;
+nav {
+    font-size: 32px;
     list-style: none;
-    height: 50px;
+    height: 150px;
 }
 
-.myNav li {
+nav li {
     height: 100%;
     display: flex;
 }
 
-.myNav li a {
+nav li a {
     height: 100%;
     padding: 5px 15px;
     text-decoration: none;
     color: var(--primary);
-    border-radius: 0px 0px 10px 10px;
+    border-width: 0px 0px 3px 0px;
+    border-style: solid;
+    border-color: transparent;
+    border-radius: 50px;
     transition: all 0.25s;
 }
 
-.myNav li a:hover {
+nav li a:hover {
     color: var(--secondary);
 }
 
-.myNav li .active {
-    background-color: var(--secondary);
-    color: white;
+nav li .active {
+    color: var(--secondary);
+    border-width: 0px 0px 3px 0px;
+    border-style: solid;
+    border-color: var(--secondary);
+    border-radius: 50px;
     transition: all 0.25s;
 }
 
-.myNav li .active:hover {
-    color: white;
+@media screen and (max-width: 1200px) {
+    .logo {
+        height: 90px;
+        width: 360px;
+    }
+
+    .logo h1 {
+        font-size: 54px;
+    }
+
+    nav {
+        font-size: 24px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .logo {
+        height: 75px;
+        width: 300px;
+    }
+
+    .logo h1 {
+        font-size: 45px;
+    }
+
+    nav {
+        font-size: 24px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .logo {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    nav {
+        color: var(--primary);
+        position: absolute;
+        top: 10px;
+        right: 30px;
+    }
+
+    .dropdown-menu {
+        background-color: var(--dark) !important;
+        border: 1px solid var(--secondary) !important;
+    }
+
+    .dropdown-menu li {
+        border-bottom: 1px solid var(--secondary);
+    }
+}
+
+@media screen and (max-width: 430px) {
+    .logo {
+        height: 60px;
+        width: 240px;
+    }
+
+    .logo h1 {
+        font-size: 36px;
+    }
 }
