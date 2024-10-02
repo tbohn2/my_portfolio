@@ -1,52 +1,105 @@
 #aboutMeBody {
-    min-height: 90vh;
+    min-height: 85vh;
 }
 
-#home-left {
+#aboutMeContent {
     position: absolute;
-    top: 17%;
-    left: 3%;
+    top: 25%;
 }
 
-#home-left h1 {
-    font-size: 700%;
+#aboutText h1 {
+    font-size: 100px;
+    font-weight: 600;
     color: var(--primary);
-    /* font-weight: 200; */
-    /* font-style: italic; */
-    /* text-shadow: 7px 7px var(--primary); */
-
 }
 
-#home-left h1 span {
+#aboutText h1 span {
+    font-weight: 600;
     color: white;
 }
 
-#home-left h2 {
-    font-size: 300%;
+#aboutText h2 {
+    font-size: 50px;
     color: var(--primary);
-    font-weight: 400;
-    /* font-style: italic; */
-    /* text-shadow: 7px 7px var(--primary); */
+}
+
+#aboutText p a {
+    text-decoration: none;
+    color: var(--primary);
+    transition: all 0.5s;
+}
+
+#aboutText p a:hover {
+    text-decoration: none;
+    color: var(--secondary);
 }
 
 .myImg {
-    /* position: absolute;
-    top: 30%;
-    left: 55%; */
-    background-image: linear-gradient(to bottom right, var(--dark) 45%, var(--secondary) 60%, var(--dark) 75%);
-    width: 250px;
-    height: 250px;
+    background-color: var(--dark);
+    box-shadow: 0 0 50px 1px var(--secondary);
+    background-image: radial-gradient(circle, transparent 55%, var(--secondary) 100%);
+    width: 350px;
+    height: 350px;
     border-radius: 50%;
     object-fit: cover;
     object-position: center;
 }
 
-.myPortraitBox {
-    min-height: 45vh
+@media screen and (max-width: 1200px) {
+    #aboutText h1 {
+        font-size: 80px;
+    }
+
+    #aboutText h2 {
+        font-size: 40px;
+    }
+
+    .myImg {
+        width: 300px;
+        height: 300px;
+    }
 }
 
-@media screen and (max-width: 1050px) {
-    .name {
-        font-size: 700%;
+@media screen and (max-width: 992px) {
+    #aboutText h1 {
+        font-size: 70px;
+    }
+
+    #aboutText h2 {
+        font-size: 32px;
+    }
+
+    .myImg {
+        width: 275px;
+        height: 275px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #aboutMeContent {
+        position: relative;
+    }
+
+    #aboutText {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #aboutText p {
+        text-align: center;
+    }
+
+    #aboutText h1 {
+        font-size: 70px;
+    }
+
+    #aboutText h2 {
+        font-size: 32px;
+    }
+
+    .myImg {
+        width: 275px;
+        height: 275px;
     }
 }

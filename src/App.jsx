@@ -32,7 +32,7 @@ function App() {
         <Header displayPage={displayPage} setDisplayPage={(page) => setDisplayPage(page)} mobile={mobile} />
         <div className='page-container'>
           <Routes>
-            <Route path="/" element={<AboutMe mobile={mobile} />} />
+            <Route path="/" element={<AboutMe mobile={mobile} setDisplayPage={(page) => setDisplayPage(page)} />} />
             <Route path="/contact" element={<Contact mobile={mobile} />} />
             <Route path="/portfolio" element={<Portfolio mobile={mobile} />} />
             <Route path="/resume" element={<Resume mobile={mobile} />} />
