@@ -4,40 +4,29 @@ header {
 
 .logo {
     height: 100px;
-    width: 400px;
+    width: 200px;
     color: var(--primary);
     text-align: center;
     text-decoration: none;
-    padding-left: 5px;
+    margin-left: 15px;
     margin-top: 5px;
 }
 
 .logo h1 {
-    font-size: 60px;
+    font-size: 80px;
     height: 100%;
     width: 100%;
 }
 
-#T,
-#B {
+#TB {
     height: 100%;
     border-bottom: 3px;
     border-top: 3px;
     border-radius: 50px;
-}
-
-#T {
     border-bottom-style: solid;
+    border-top-style: solid;
     border-bottom-color: var(--primary);
-    border-top-style: solid;
     border-top-color: var(--secondary);
-}
-
-#B {
-    border-top-style: solid;
-    border-top-color: var(--primary);
-    border-bottom-style: solid;
-    border-bottom-color: var(--secondary);
 }
 
 header img {
@@ -84,11 +73,11 @@ nav li .active {
 @media screen and (max-width: 1200px) {
     .logo {
         height: 90px;
-        width: 360px;
+        width: 180px;
     }
 
     .logo h1 {
-        font-size: 54px;
+        font-size: 68px;
     }
 
     nav {
@@ -99,11 +88,11 @@ nav li .active {
 @media screen and (max-width: 992px) {
     .logo {
         height: 75px;
-        width: 300px;
+        width: 150px;
     }
 
     .logo h1 {
-        font-size: 45px;
+        font-size: 55px;
     }
 
     nav {
@@ -117,6 +106,8 @@ nav li .active {
         top: 0;
         left: 50%;
         transform: translateX(-50%);
+        width: 200px;
+        margin-left: 0px;
     }
 
     nav {
@@ -136,13 +127,4 @@ nav li .active {
     }
 }
 
-@media screen and (max-width: 430px) {
-    .logo {
-        height: 60px;
-        width: 240px;
-    }
-
-    .logo h1 {
-        font-size: 36px;
-    }
-}
+@media screen and (max-width: 430px) {}

@@ -8,10 +8,7 @@ function Header({ displayPage, setDisplayPage, mobile }) {
     return (
         <header className='col-12 d-flex justify-content-between'>
             <Link to='/' className='logo' onClick={() => setDisplayPage('AboutMe')}>
-                <h1 className="col-12 d-flex justify-content-center align-items-center">
-                    <span id='T' className='col-6 d-flex align-items-start justify-content-end'>T</span>
-                    <span id='B' className='col-6 d-flex align-items-end justify-content-start'>B</span>
-                </h1>
+                <h1 id='TB' className='col-12 work-sans text-center'>TB</h1>
             </Link>
             {mobile ?
                 <nav className='fs-2 d-flex justify-content-evenly'>
@@ -34,25 +31,25 @@ function Header({ displayPage, setDisplayPage, mobile }) {
                     </div>
                 </nav>
                 :
-                <nav className='col-xl-8 col-md-8'>
-                    <ul className="roboto fw-lighter col-12 d-flex justify-content-evenly align-items-center">
+                <nav className='col-8'>
+                    <ul className="roboto col-12 d-flex justify-content-evenly align-items-center">
                         <li>
-                            <Link to="/" onClick={() => setDisplayPage('AboutMe')} className={displayPage === 'AboutMe' ? ' active' : 'inactive'}>
+                            <Link to="/" onClick={() => setDisplayPage('AboutMe')} className={displayPage === 'AboutMe' ? 'active' : 'inactive'}>
                                 home
                             </Link>
                         </li>
                         <li>
-                            <Link to="/portfolio" onClick={() => setDisplayPage('Portfolio')} className={displayPage === 'Portfolio' ? ' active' : 'inactive'}                >
+                            <Link to="/portfolio" onClick={() => setDisplayPage('Portfolio')} className={displayPage === 'Portfolio' ? 'active' : 'inactive'}                >
                                 portfolio
                             </Link>
                         </li>
                         <li>
-                            <Link to="/resume" onClick={() => setDisplayPage('Resume')} className={displayPage === 'Resume' ? ' active' : 'inactive'}                >
+                            <Link to="/resume" onClick={() => setDisplayPage('Resume')} className={displayPage === 'Resume' ? 'active' : 'inactive'}                >
                                 resume
                             </Link>
                         </li>
                         <li>
-                            <Link to="/contact" onClick={() => setDisplayPage('Contact')} className={displayPage === 'Contact' ? ' active' : 'inactive'}                >
+                            <Link to="/contact" onClick={() => setDisplayPage('Contact')} className={displayPage === 'Contact' ? 'active' : 'inactive'}                >
                                 contact
                             </Link>
                         </li>
