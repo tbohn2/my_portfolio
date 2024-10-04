@@ -121,9 +121,9 @@ export default function Portfolio() {
 
 
     return (
-        <div className='fade-in mt-5col-12 d-flex flex-wrap justify-content-evenly'>
-            {projects.map(project => (
-                <div className='card-container'>
+        <div className='fade-in col-12 d-flex flex-wrap justify-content-evenly'>
+            {projects.map((project, index) => (
+                <div key={index} className='card-container'>
                     <div className='project-card roboto' onClick={() => setDetails(project)}>
                         <img src={project.imgURL} alt={`${project.title} Screenshot`} />
                         <h2>{project.title}</h2>
@@ -133,7 +133,7 @@ export default function Portfolio() {
             {details && (
                 <div className='proj-details fs-5 fade-in d-flex' ref={el => (detailsRefs.current[details.id] = el)} id={details.id}>
                     <span className='close fs-3' onClick={() => setDetails(null)}>✕</span>
-                    <div className='col-4 d-flex flex-column align-items-center'>
+                    <div className='col-4 scroll-left d-flex flex-column align-items-center'>
                         <img className='col-12 my-2' src={details.imgURL} alt={`${details.title} Screenshot`} />
                         <img className='col-12 my-2' src={details.imgURL2} alt={`${details.title} Screenshot 2`} />
                         <div className='col-12 d-flex justify-content-evenly my-3 fs-5'>
