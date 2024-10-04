@@ -1,5 +1,73 @@
-.resName {
-    font-size: 10vh;
+/* 8.5 x 11*/
+#resume {
+    width: 612px;
+    height: 792px;
+    overflow: hidden;
+}
+
+#resume h1 {
+    font-size: 30px;
+    margin: 0px;
+}
+
+#resume h2 {
+    border-bottom: 2px solid var(--dark);
+    font-size: 18px;
+    margin: 0px 0px 2px 0px;
+    font-weight: 600;
+}
+
+#resume h3 {
+    margin: 0px;
+    font-size: 16px !important;
+    font-weight: 600;
+}
+
+#resume h4 {
+    margin: 0px;
+    font-size: 14px !important;
+}
+
+#resume-header img {
+    width: 165px;
+    height: 165px;
+    border-radius: 7px;
+    object-fit: cover;
+}
+
+#resume p {
+    font-size: 11px;
+}
+
+#resume ul {
+    margin-bottom: 3px;
+}
+
+#resume li {
+    font-size: 11px;
+    line-height: normal;
+}
+
+#left-column {
+    width: 290px;
+}
+
+#contact li {
+    margin: 0.5px 0px;
+    font-size: 11px;
+}
+
+.skills {
+    margin: 1px 0px;
+}
+
+.skills p {
+    background-color: var(--dark);
+    color: white;
+    border: 1px solid var(--dark);
+    border-radius: 5px;
+    margin: 1px;
+    padding: 1px 3px;
 }
 
 .myButton {
