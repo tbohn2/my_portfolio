@@ -9,7 +9,7 @@ export default function AboutMe({ mobile, setDisplayPage }) {
         <section id="aboutMeBody" className='fade-in roboto'>
             <div id='aboutMeContent' className='col-12 d-flex justify-content-center align-items-start'>
                 <div id="aboutText" className='col-md-7 col-11 me-3'>
-                    <h1 className="my-0">TANNER BOHN</h1>
+                    <h1 className="my-0 work-sans">Tanner Bohn</h1>
                     {mobile &&
                         <img src={pic} alt='' className='myImg my-3 align-self-center'></img>
                     }
