@@ -56,10 +56,11 @@ export default function Contact() {
     ]
 
     return (
-        <div className='d-flex flex-column align-items-center'>
+        <div className='fade-in d-flex flex-column align-items-center'>
+            <h1 className='text-light work-sans mb-3 text-center'>Send a message with any inquiries!</h1>
             {message && <div className="alert alert-success text-center fade-in" role="alert">{message}</div>}
             {error && <div className="alert alert-danger text-center fade-in" role="alert">{error}</div>}
-            <form className='myForm roboto mt-5 d-flex flex-column col-6 align-items-center' onSubmit={handleSubmit}>
+            <form className='myForm roboto d-flex flex-column col-md-6 col-10 align-items-center' onSubmit={handleSubmit}>
                 {formArray.map((input, index) => {
                     return (
                         <div className="mb-3 col-12" key={index}>
@@ -75,7 +76,7 @@ export default function Contact() {
                 {loading ?
                     <div className="spinner-border text-light" role="status"></div>
                     :
-                    <button type="submit" className="custom-btn">Submit</button>
+                    <button type="submit" className="custom-btn col-lg-6 col-12 my-3">Submit</button>
                 }
             </form>
         </div>

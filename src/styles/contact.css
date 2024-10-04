@@ -1,5 +1,4 @@
 .myForm {
-    height: 75vh;
     font-size: 150%;
 }
 
@@ -8,4 +7,11 @@
     top: 10% !important;
     left: 50% !important;
     transform: translateX(-50%) !important;
+}
+
+@media screen and (max-width: 768px) {
+    .myForm label {
+        font-size: 20px;
+    }
+
 }
