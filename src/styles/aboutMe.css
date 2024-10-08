@@ -3,8 +3,7 @@
 }
 
 #aboutMeContent {
-    position: absolute;
-    top: 25%;
+    padding-top: 50px;
 }
 
 #aboutText h1 {
@@ -36,16 +35,20 @@
 
 .myImg {
     background-color: var(--dark);
-    box-shadow: 0 0 50px 1px var(--secondary);
+    box-shadow: 0 0 90px 25px var(--secondary);
     background-image: radial-gradient(circle, transparent 55%, var(--secondary) 100%);
-    width: 350px;
-    height: 350px;
+    width: 400px;
+    height: 400px;
     border-radius: 50%;
     object-fit: cover;
-    object-position: center;
+    object-position: center 20%;
 }
 
 @media screen and (max-width: 1200px) {
+    #aboutMeBody {
+        min-height: 70vh;
+    }
+
     #aboutText h1 {
         font-size: 80px;
     }
@@ -61,23 +64,8 @@
 }
 
 @media screen and (max-width: 992px) {
-    #aboutText h1 {
-        font-size: 70px;
-    }
-
-    #aboutText h2 {
-        font-size: 32px;
-    }
-
-    .myImg {
-        width: 275px;
-        height: 275px;
-    }
-}
-
-@media screen and (max-width: 768px) {
     #aboutMeContent {
-        position: relative;
+        padding-top: 0px;
     }
 
     #aboutText {
@@ -101,5 +89,32 @@
     .myImg {
         width: 275px;
         height: 275px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #aboutText h1 {
+        font-size: 70px;
+        margin-bottom: 30px;
+
+    }
+
+    #aboutText h2 {
+        font-size: 32px;
+    }
+
+    .myImg {
+        width: 275px;
+        height: 275px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    #aboutText h1 {
+        font-size: 55px;
+    }
+
+    #aboutText h2 {
+        font-size: 26px;
     }
 }
