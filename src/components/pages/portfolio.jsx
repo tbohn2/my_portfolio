@@ -7,7 +7,7 @@ import platePlannerImage2 from '../../assets/plate-planner2.png'
 import solidGroundImage from '../../assets/solid-g.png'
 import solidGroundImage2 from '../../assets/solid-g2.png'
 
-export default function Portfolio() {
+export default function Portfolio({ mobile }) {
 
     const [details, setDetails] = useState(null);
 
@@ -32,15 +32,21 @@ export default function Portfolio() {
         };
 
         if (details) {
+            document.body.style.overflow = 'hidden';
+
             document.addEventListener('mousedown', handleClickOutside);
             document.addEventListener('touchstart', handleClickOutside);
+        } else {
+            document.body.style.overflow = 'auto';
         }
 
         return () => {
+            document.body.style.overflow = 'auto';
             document.removeEventListener('mousedown', handleClickOutside);
             document.removeEventListener('touchstart', handleClickOutside);
         };
     }, [details]);
+
 
     const projects = [
         {
@@ -89,7 +95,7 @@ export default function Portfolio() {
             imgURL2: platePlannerImage2,
             siteURL: 'https://tbohn2.github.io/plate-planner/',
             gitURL: 'https://github.com/tbohn2/plate-planner',
-            login: 'Username: test, Password: testtest'
+            login: ['Username: test@test.com', 'Password: testtest']
         },
         {
             id: 3,
@@ -103,7 +109,7 @@ export default function Portfolio() {
                 'Dynamic frontend with jQuery for interactive user experiences'
             ],
             languages: ['C#', 'HTML', 'JavaScript', 'SQL'],
-            tech: ['ASP.NET Core 8.0', 'Razor Pages', 'MySQL', 'Entity Framework Core', 'Pomelo.EntityFrameworkCore.MySql', 'jQuery'],
+            tech: ['ASP.NET Core 8.0', 'Razor Pages', 'MySQL', 'Entity Framework Core', 'jQuery'],
             challenges: [
                 'Implementing secure authentication with JWT and password hashing using BCrypt',
                 'Real-time schedule updates and appointment booking for both instructors and clients',
@@ -115,9 +121,35 @@ export default function Portfolio() {
             siteURL: 'https://solidgroundaz.com/',
             gitURL: 'https://github.com/tbohn2/solid-ground-az',
             adminSiteURL: 'https://solidgroundaz.com/admin',
-            login: 'Username: test, Password: testtest'
+            login: ['Username: test', 'Password: testtest']
         }
     ];
+
+    const leftSide = () =>
+        <div className='col-md-4 col-12 scroll-left d-flex flex-column align-items-center'>
+            <img className='col-11 my-2' src={details.imgURL} alt={`${details.title} Screenshot`} />
+            {!mobile &&
+                <img className='col-11 my-2' src={details.imgURL2} alt={`${details.title} Screenshot 2`} />
+            }
+            {mobile &&
+                <p className='col-12 text-center'>{details.description}</p>
+            }
+            {details.login && (
+                <div className='d-flex flex-column align-items-center'>
+                    <h3>Test Login:</h3>
+                    {details.login.map(login => (
+                        <p className='my-1'>{login}</p>
+                    ))}
+                </div>
+            )}
+            <div className='col-12 d-flex flex-wrap justify-content-evenly fs-5'>
+                <a className='col-xl-5 col-11 my-2 custom-btn text-decoration-none text-center' href={details.siteURL}>Visit Site</a>
+                <a className='col-xl-5 col-11 my-2 custom-btn text-decoration-none text-center' href={details.gitURL}>Visit Repository</a>
+            </div>
+            {details.adminSiteURL && (
+                <a className='col-xl-5 col-11 custom-btn text-decoration-none text-center my-2 fs-5' href={details.adminSiteURL}>Visit Admin Site</a>
+            )}
+        </div>
 
 
     return (
@@ -131,61 +163,54 @@ export default function Portfolio() {
                 </div>
             ))}
             {details && (
-                <div className='proj-details fs-5 fade-in d-flex' ref={el => (detailsRefs.current[details.id] = el)} id={details.id}>
+                <div className='proj-details fs-5 fade-in d-flex flex-wrap' ref={el => (detailsRefs.current[details.id] = el)} id={details.id}>
                     <span className='close fs-3' onClick={() => setDetails(null)}>✕</span>
-                    <div className='col-4 scroll-left d-flex flex-column align-items-center'>
-                        <img className='col-12 my-2' src={details.imgURL} alt={`${details.title} Screenshot`} />
-                        <img className='col-12 my-2' src={details.imgURL2} alt={`${details.title} Screenshot 2`} />
-                        <div className='col-12 d-flex justify-content-evenly my-3 fs-5'>
-                            <a className='col-5 custom-btn text-decoration-none text-center' href={details.siteURL}>Visit Site</a>
-                            <a className='col-5 custom-btn text-decoration-none text-center' href={details.gitURL}>Visit Repository</a>
-                        </div>
-                        {details.adminSiteURL && (
-                            <a className='col-5 custom-btn text-decoration-none text-center my-3 fs-5' href={details.adminSiteURL}>Visit Admin Site</a>
-                        )}
-                        {details.login && (
-                            <div className='d-flex flex-column align-items-center'>
-                                <h3>Test Login:</h3>
-                                <p>{details.login}</p>
-                            </div>
-                        )}
+                    <div className='col-12 d-flex justify-content-end'>
+                        <h1 className='col-md-8 col-12 text-center'>{details.title}</h1>
                     </div>
-                    <div className='col-8 px-3'>
-                        <h1 className='col-12 text-center'>{details.title}</h1>
-                        <div className='col-12 scroll-details'>
-                            <p className='col-12'>{details.description}</p>
-                            <div className='d-flex col-12 '>
-                                <div className='col-4'>
-                                    <h3>Languages:</h3>
+                    {!mobile &&
+                        leftSide()
+                    }
+                    <div className='col-md-8 col-12 px-1'>
+                        <div className='col-12 d-flex flex-column align-items-center scroll-details'>
+                            {mobile &&
+                                leftSide()
+                            }
+                            {!mobile &&
+                                <p className='col-12'>{details.description}</p>
+                            }
+                            <div className='d-flex flex-wrap col-12'>
+                                <div className='col-xl-4 col-5'>
+                                    <h3 className={mobile && ''}>Languages:</h3>
                                     <ul>
                                         {details.languages.map(language => (
                                             <li>{language}</li>
                                         ))}
                                     </ul>
                                 </div>
-                                <div className='col-8 '>
-                                    <h3 className='col-12'>Technology:</h3>
+                                <div className='col-xl-8 col-7'>
+                                    <h3 className={mobile && ''}>Technology:</h3>
                                     <ul className='d-flex flex-wrap tech-container col-12'>
-                                        {details.tech.map((techName, index) => (
-                                            <li className='col-6'>{techName}</li>
+                                        {details.tech.map(techName => (
+                                            <li className='col-xl-6 col-12'>{techName}</li>
                                         ))}
                                     </ul>
                                 </div>
                             </div>
                             <h3>Features:</h3>
-                            <ul>
+                            <ul className='col-12'>
                                 {details.features.map(feature => (
                                     <li>{feature}</li>
                                 ))}
                             </ul>
                             <h3>Role:</h3>
-                            <ul>
+                            <ul className='col-12'>
                                 {details.role.map(role => (
                                     <li>{role}</li>
                                 ))}
                             </ul>
                             <h3>Challenges:</h3>
-                            <ul>
+                            <ul className='col-12'>
                                 {details.challenges.map(challenge => (
                                     <li>{challenge}</li>
                                 ))}

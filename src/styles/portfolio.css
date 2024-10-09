@@ -22,20 +22,6 @@
     transition: all 0.5s ease-in-out;
 }
 
-.project-card.active {
-    position: fixed;
-    transform: translate(-50%, -50%);
-    width: 90vw;
-    height: 90vh;
-    top: 50%;
-    left: 50%;
-    z-index: 3;
-}
-
-.project-card.active:hover {
-    cursor: default;
-}
-
 .project-card img {
     width: 100%;
     height: 80%;
@@ -55,18 +41,18 @@
 }
 
 .proj-details {
-    position: absolute;
+    position: fixed;
     top: 10px;
     left: 50%;
-    width: 95vw;
-    min-height: 95vh;
+    width: 98vw;
+    height: 98vh;
     transform: translate(-50%, 0%);
-    color: var(--primary);
+    color: white;
     background-color: var(--dark);
     border: 1px solid var(--primary);
     border-radius: 10px;
-    padding: 10px;
-    margin: 10px 0px;
+    padding: 5px;
+    margin: 0px;
     z-index: 2;
 }
 
@@ -85,12 +71,12 @@
 
 .scroll-left {
     overflow-y: auto;
-    max-height: 95vh;
+    max-height: 90vh;
 }
 
 .scroll-details {
     overflow-y: auto;
-    max-height: 88vh;
+    max-height: 90vh;
 }
 
 .flipped {
@@ -109,6 +95,16 @@ h5 {
     min-height: 8vh;
 }
 
+@media screen and (max-height: 800px) {
+    .scroll-left {
+        max-height: 85vh;
+    }
+
+    .scroll-details {
+        max-height: 85vh;
+    }
+}
+
 @media screen and (max-width: 1400px) {
     .project-card h2 {
         font-size: 28px;
@@ -116,6 +112,10 @@ h5 {
 }
 
 @media screen and (max-width: 1200px) {
+    .tech-container {
+        max-height: 100vh;
+    }
+
     .project-card h2 {
         font-size: 20px;
     }
@@ -131,6 +131,18 @@ h5 {
 
     .project-card h2 {
         font-size: 32px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .proj-details {
+        width: 98vw;
+        height: 98vh;
+        padding: 10px;
+    }
+
+    .scroll-left {
+        max-height: 1000px;
     }
 }
 

@@ -59,6 +59,7 @@ body {
 .custom-btn:hover {
     color: var(--dark);
     background-color: var(--primary);
+    box-shadow: 0 0 10px 1px var(--primary);
 }
 
 .fade-in {
