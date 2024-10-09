@@ -45,6 +45,12 @@ body {
 .page-container {
     min-height: 70vh;
     width: 100%;
+    opacity: 0;
+    transition: all 1s;
+}
+
+.page-container.loaded {
+    opacity: 1;
 }
 
 .custom-btn {
@@ -62,6 +68,10 @@ body {
     box-shadow: 0 0 10px 1px var(--primary);
 }
 
+.spinner-border {
+    color: var(--primary);
+}
+
 .fade-in {
     animation: fadeIn 1s;
 }
@@ -73,5 +83,19 @@ body {
 
     to {
         opacity: 1;
+    }
+}
+
+.fade-out {
+    animation: fadeOut .5s;
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
     }
 }

@@ -3,12 +3,12 @@ import '../../styles/resume.css'
 import headshot from '../../assets/portrait3.jpg'
 import resume from '../../assets/resume.pdf'
 
-export default function Resume() {
+export default function Resume({ handleLoadedPage }) {
     return (
         <section className='fade-in col-12 d-flex flex-column align-items-center'>
             <div id='resume' className='d-flex flex-column work-sans bg-dark-blue border border-light p-2'>
                 <div id='resume-header' className='bg-dark-blue border border-light d-flex justify-content-between align-items-center col-12'>
-                    <img src={headshot} alt='Tanner Bohn' />
+                    <img src={headshot} alt='Tanner Bohn' onLoad={() => handleLoadedPage('Resume')} />
                     <div className='d-flex flex-column align-items-start px-2 text-light'>
                         <h1>Tanner Bohn</h1>
                         <h2>Full-Stack Web Developer</h2>

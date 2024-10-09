@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import '../../styles/aboutMe.css'
 import pic from '../../assets/portrait4.jpg'
 
-export default function AboutMe({ setDisplayPage }) {
+export default function AboutMe({ setDisplayPage, handleLoadedPage }) {
 
     const [medScreen, setmedScreen] = useState(false);
 
@@ -26,7 +26,7 @@ export default function AboutMe({ setDisplayPage }) {
                 <div id="aboutText" className='col-md-7 col-11'>
                     <h1 className="work-sans">Tanner Bohn</h1>
                     {medScreen &&
-                        <img src={pic} alt='' className='myImg my-3 align-self-center'></img>
+                        <img src={pic} alt='' className='myImg my-3 align-self-center' onLoad={() => handleLoadedPage('AboutMe')}></img>
                     }
                     <h2 className="my-4">FULL-STACK WEB DEVELOPER</h2>
                     <p className='text-light fs-5 col-12'>
@@ -39,7 +39,7 @@ export default function AboutMe({ setDisplayPage }) {
                     </p>
                 </div>
                 {!medScreen &&
-                    <img src={pic} alt='' className='myImg ms-3'></img>
+                    <img src={pic} alt='' className='myImg ms-3' onLoad={() => handleLoadedPage('AboutMe')}></img>
                 }
             </div>
         </section>

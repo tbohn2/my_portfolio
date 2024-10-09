@@ -12,6 +12,12 @@ function App() {
 
   const [mobile, setMobile] = useState(false);
   const [displayPage, setDisplayPage] = useState('AboutMe');
+  const [loadedPages, setLoadedPages] = useState({
+    AboutMe: false,
+    Portfolio: false,
+    Resume: false,
+    Contact: true
+  });
 
   useEffect(() => {
     if (window.innerWidth <= 768) {
@@ -26,16 +32,27 @@ function App() {
     });
   }, []);
 
+  const handleLoadedPage = (page) => {
+    setLoadedPages({ ...loadedPages, [page]: true });
+  }
+
+  console.log('this page is loaded', loadedPages[displayPage]);
+
+
   return (
     <Router basename='/my_portfolio'>
       <div className='d-flex align-items-center flex-column bg-2'>
-        <Header displayPage={displayPage} setDisplayPage={(page) => setDisplayPage(page)} mobile={mobile} />
-        <div className='page-container'>
+        <Header displayPage={displayPage} setDisplayPage={(page) => setDisplayPage(page)} handleLoadedPage={(page) => handleLoadedPage(page)} mobile={mobile} />
+        <div className={`${loadedPages[displayPage] && 'loaded'} page-container`}>
+          {!loadedPages[displayPage] &&
+            <div className='col-12 text-center'>
+              <div className='spinner-border'></div>
+            </div>}
           <Routes>
-            <Route path="/" element={<AboutMe setDisplayPage={(page) => setDisplayPage(page)} />} />
+            <Route path="/" element={<AboutMe setDisplayPage={(page) => setDisplayPage(page)} handleLoadedPage={(page) => handleLoadedPage(page)} />} />
+            <Route path="/portfolio" element={<Portfolio mobile={mobile} handleLoadedPage={(page) => handleLoadedPage(page)} />} />
+            <Route path="/resume" element={<Resume mobile={mobile} handleLoadedPage={(page) => handleLoadedPage(page)} />} />
             <Route path="/contact" element={<Contact mobile={mobile} />} />
-            <Route path="/portfolio" element={<Portfolio mobile={mobile} />} />
-            <Route path="/resume" element={<Resume mobile={mobile} />} />
           </Routes>
         </div>
         <Footer mobile={mobile} />

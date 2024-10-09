@@ -7,9 +7,11 @@ import platePlannerImage2 from '../../assets/plate-planner2.png'
 import solidGroundImage from '../../assets/solid-g.png'
 import solidGroundImage2 from '../../assets/solid-g2.png'
 
-export default function Portfolio({ mobile }) {
+export default function Portfolio({ mobile, handleLoadedPage }) {
 
     const [details, setDetails] = useState(null);
+    const [closing, setClosing] = useState(false);
+    const [projLoaded, setProjLoaded] = useState([]);
 
     const detailsRefs = useRef({});
 
@@ -47,6 +49,13 @@ export default function Portfolio({ mobile }) {
         };
     }, [details]);
 
+    useEffect(() => {
+        console.log(projLoaded);
+
+        if (projLoaded.length === 3) {
+            handleLoadedPage('Portfolio');
+        }
+    }, [projLoaded]);
 
     const projects = [
         {
@@ -125,6 +134,20 @@ export default function Portfolio({ mobile }) {
         }
     ];
 
+    const handledLoadedProject = () => {
+        setProjLoaded((prevState) => (
+            [...prevState, true]
+        ));
+    }
+
+    const handleClose = () => {
+        setClosing(true);
+        setTimeout(() => {
+            setDetails(null);
+            setClosing(false);
+        }, 450);
+    }
+
     const leftSide = () =>
         <div className='col-md-4 col-12 scroll-left d-flex flex-column align-items-center'>
             <img className='col-11 my-2' src={details.imgURL} alt={`${details.title} Screenshot`} />
@@ -157,16 +180,16 @@ export default function Portfolio({ mobile }) {
             {projects.map((project, index) => (
                 <div key={index} className='card-container'>
                     <div className='project-card roboto' onClick={() => setDetails(project)}>
-                        <img src={project.imgURL} alt={`${project.title} Screenshot`} />
+                        <img src={project.imgURL} alt={`${project.title} Screenshot`} onLoad={handledLoadedProject} />
                         <h2>{project.title}</h2>
                     </div>
                 </div>
             ))}
             {details && (
-                <div className='proj-details fs-5 fade-in d-flex flex-wrap' ref={el => (detailsRefs.current[details.id] = el)} id={details.id}>
-                    <span className='close fs-3' onClick={() => setDetails(null)}>✕</span>
+                <div className={`${closing && 'fade-out'} proj-details fs-5 fade-in d-flex flex-wrap`} ref={el => (detailsRefs.current[details.id] = el)} id={details.id}>
+                    <span className='close fs-3' onClick={handleClose}>✕</span>
                     <div className='col-12 d-flex justify-content-end'>
-                        <h1 className='col-md-8 col-12 text-center'>{details.title}</h1>
+                        <h1 className='col-md-8 col-12 my-0 text-center'>{details.title}</h1>
                     </div>
                     {!mobile &&
                         leftSide()
@@ -181,7 +204,7 @@ export default function Portfolio({ mobile }) {
                             }
                             <div className='d-flex flex-wrap col-12'>
                                 <div className='col-xl-4 col-5'>
-                                    <h3 className={mobile && ''}>Languages:</h3>
+                                    <h3>Languages:</h3>
                                     <ul>
                                         {details.languages.map(language => (
                                             <li>{language}</li>
@@ -189,7 +212,7 @@ export default function Portfolio({ mobile }) {
                                     </ul>
                                 </div>
                                 <div className='col-xl-8 col-7'>
-                                    <h3 className={mobile && ''}>Technology:</h3>
+                                    <h3>Technology:</h3>
                                     <ul className='d-flex flex-wrap tech-container col-12'>
                                         {details.tech.map(techName => (
                                             <li className='col-xl-6 col-12'>{techName}</li>
