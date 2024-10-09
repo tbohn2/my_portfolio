@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Playwrite+HU:wght@100..400&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        /* 8.5 x 11*/
+        #resume {
+            width: 612px;
+            height: 792px;
+            overflow: hidden;
+        }
+
+        #resume h1 {
+            font-size: 30px;
+            margin: 0px;
+        }
+
+        #resume h2 {
+            border-bottom: 2px solid var(--dark);
+            font-size: 18px;
+            margin: 0px 0px 2px 0px;
+            font-weight: 600;
+        }
+
+        #resume h3 {
+            margin: 0px;
+            font-size: 16px !important;
+            font-weight: 600;
+        }
+
+        #resume h4 {
+            margin: 0px;
+            font-size: 14px !important;
+        }
+
+        #resume-header img {
+            width: 165px;
+            height: 165px;
+            border-radius: 7px;
+            object-fit: cover;
+            object-position: center 20%;
+            flex-shrink: 0;
+            margin: 7px;
+        }
+
+        #resume p {
+            font-size: 11px;
+        }
+
+        #resume ul {
+            margin-bottom: 3px;
+        }
+
+        #resume li {
+            font-size: 11px;
+            line-height: normal;
+        }
+
+        #left-column {
+            width: 290px;
+        }
+
+        #contact li {
+            margin: 0.5px 0px;
+            font-size: 11px;
+        }
+
+        .skills {
+            margin: 1px 0px;
+        }
+
+        .skills p {
+            background-color: var(--dark);
+            color: white;
+            border: 1px solid var(--dark);
+            border-radius: 5px;
+            margin: 1px;
+            padding: 1px 3px;
+        }
+
+        .myButton {
+            background-image: linear-gradient(to bottom right, var(--green), var(--green));
+        }
+
+        /* Body CSS */
+
+        :root {
+            --primary: rgb(27, 233, 223);
+            --secondary: rgb(185, 57, 57);
+            --dark: rgb(5, 21, 39);
+        }
+
+        .bg-dark-blue {
+            background-color: var(--dark);
+        }
+
+        .roboto {
+            font-family: "Roboto Mono", monospace;
+        }
+
+        .qwitcher {
+            font-family: "Qwitcher Grypen", cursive;
+        }
+
+        .work-sans {
+            font-family: "Work Sans", sans-serif;
+        }
+
+        .font-primary {
+            color: var(--primary);
+        }
+
+        .font-secondary {
+            color: var(--secondary);
+        }
+
+        .page-container {
+            min-height: 70vh;
+            width: 100%;
+        }
+
+        .custom-btn {
+            background-color: var(--dark);
+            color: var(--primary);
+            border: 1px solid var(--primary);
+            padding: 5px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .custom-btn:hover {
+            color: var(--dark);
+            background-color: var(--primary);
+        }
+
+        .fade-in {
+            animation: fadeIn 1s;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+    <title>Resume</title>
+</head>
+
+<body class="">
+    <div id='resume' class='d-flex flex-column work-sans bg-dark-blue border border-light p-2'>
+        <div id='resume-header'
+            class='bg-dark-blue border border-light d-flex justify-content-between align-items-center col-12'>
+            <img src='./src/assets/portrait3.jpg' alt='Tanner Bohn' />
+            <div class='d-flex flex-column align-items-start px-2 text-light'>
+                <h1>Tanner Bohn</h1>
+                <h2>Full-Stack Web Developer</h2>
+                <p>Results-driven developer skilled in building dynamic, responsive web applications using ASP.NET Core,
+                    React, Node.js, MySQL, and MongoDB.
+                    Proven success in enhancing user experiences, streamlining scheduling systems, and integrating
+                    secure authentication.
+                    Experienced in delivering projects from concept to deployment with a focus on efficient data
+                    management and frontend-backend integration.
+                </p>
+            </div>
+        </div>
+        <div class='d-flex flex-grow-1 bg-light col-12'>
+            <div id='left-column' class='mx-2 pt-2'>
+                <ul id='contact' class='list-unstyled'>
+                    <li><i class="bi bi-envelope"></i> tannerbohndev@gmail.com</li>
+                    <li><i class="bi bi-window"></i> Porfolio URL</li>
+                    <li><i class="bi bi-geo-alt"></i> Mesa, AZ</li>
+                    <li><i class="bi bi-github"></i> https://github.com/tbohn2</li>
+                </ul>
+                <h2>Languages</h2>
+                <div class='skills d-flex flex-wrap '>
+                    <p>HTML</p>
+                    <p>CSS</p>
+                    <p>JavaScript</p>
+                    <p>C#</p>
+                    <p>SQL</p>
+                </div>
+                <h2>Technologies</h2>
+                <div class='skills d-flex flex-wrap '>
+                    <p>REACT</p>
+                    <p>Node.JS</p>
+                    <p>ASP.NET Core</p>
+                    <p>MySQL</p>
+                    <p>MongoDB</p>
+                    <p>GraphQL</p>
+                    <p>Entity Framework Core</p>
+                    <p>jQuery</p>
+                    <p>Git/GitHub</p>
+                    <p>Bootstrap</p>
+                    <p>Vite</p>
+                    <p>JWT</p>
+                    <p>EmailJS</p>
+                </div>
+                <h2>Other Skills</h2>
+                <div class='skills d-flex flex-wrap '>
+                    <p>Spanish</p>
+                    <p>Adaptability</p>
+                    <p>Communication</p>
+                    <p>Analytical thinking</p>
+                    <p>Attention to detail</p>
+                </div>
+                <h2>Education</h2>
+                <ul class='list-unstyled'>
+                    <li>
+                        <h4 class='my-0'>Bachelor of Science </h4>
+                        <p class='my-0'>Biochemistry</p>
+                        <p class='my-0'> Arizona State University </p>
+                        <p class='my-0 fst-italic'>2016-2018, 2020-2022</p>
+                        <p class='my-0 fst-italic'>GPA: 4.00</p>
+                    </li>
+                    <li class='mt-1'>
+                        <h4 class='my-0'>ASU Coding Bootcamp </h4>
+                        <p class='my-0'> Arizona State University </p>
+                        <p class='my-0 fst-italic'>Feb 2023-Aug 2023</p>
+                    </li>
+                </ul>
+            </div>
+            <div class='experience border-start border-dark px-2'>
+                <h2>Experience</h2>
+                <h3>Full-Stack Web Developer</h3>
+                <h4>Solid Ground AZ (April 2024 - Present)</h4>
+                <ul>
+                    <li>Developed a scheduling system using ASP.NET Core, Razor Pages, and MySQL for yoga instructors
+                        and clients</li>
+                    <li>Implemented JWT-based authentication and BCrypt password hashing</li>
+                    <li>Designed a responsive admin dashboard with jQuery for real-time schedule management and booking
+                    </li>
+                </ul>
+
+                <h3 class='mt-2'>Full-Stack Web Developer</h3>
+                <h4>Plate Planner (October 2023 - Present)</h4>
+                <ul>
+                    <li>Built a meal planning and grocery app with the MERN stack and GraphQL for flexible querying</li>
+                    <li>Integrated JWT for secure authentication and developed recipe management with dynamic shopping
+                        lists</li>
+                    <li>Utilized Vite + React for efficient development and designed a responsive interface</li>
+                </ul>
+
+                <h3 class='mt-2'>Front-End Web Developer</h3>
+                <h4>Ashley Bohn Photography (October 2023 - Present)</h4>
+                <ul>
+                    <li>Created a photography portfolio site using React and Bootstrap, featuring responsive layouts and
+                        an optimized image gallery</li>
+                    <li>Implemented contact form submissions via EmailJS to send messages directly to the photographer
+                    </li>
+                </ul>
+
+                <h2>Other Experience</h2>
+                <h3>Dental Assistant</h3>
+                <h4>My Dental Dentistry and Implants (April 2021 - April 2024)</h4>
+                <ul>
+                    <li><strong>Effective Communication:</strong> Coordinated communication between doctors and
+                        patients, ensuring clarity in technical details</li>
+                    <li><strong>Team Collaboration:</strong> Worked with a team to meet tight deadlines</li>
+                    <li><strong>Case Tracking & Coordination:</strong> Managed and tracked cases, maintaining
+                        correspondence with labs for timely deliveries</li>
+                </ul>
+
+                <h3 class='mt-2'>Sign Installation</h3>
+                <h4>SpellItOut Company (May 2020 - April 2021)</h4>
+                <ul>
+                    <li><strong>Client-Centered Design:</strong> Designed sign layouts based on client requests</li>
+                    <li><strong>Attention to Detail:</strong> Ensured meticulous installation of signs</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
