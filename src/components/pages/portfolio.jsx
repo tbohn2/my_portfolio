@@ -29,7 +29,7 @@ export default function Portfolio({ mobile, handleLoadedPage }) {
             }
 
             if (isClickOutside) {
-                setDetails(null);
+                handleClose();
             }
         };
 
