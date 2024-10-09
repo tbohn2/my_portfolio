@@ -33,6 +33,9 @@
     height: 165px;
     border-radius: 7px;
     object-fit: cover;
+    object-position: center 20%;
+    flex-shrink: 0;
+    margin: 7px;
 }
 
 #resume p {
