@@ -149,29 +149,30 @@ export default function Portfolio({ mobile, handleLoadedPage }) {
     }
 
     const leftSide = () =>
-        <div className='col-md-4 col-12 scroll-left d-flex flex-column align-items-center'>
-            <img className='col-11 my-2' src={details.imgURL} alt={`${details.title} Screenshot`} />
-            {!mobile &&
-                <img className='col-11 my-2' src={details.imgURL2} alt={`${details.title} Screenshot 2`} />
-            }
+        <div className='col-xl-3 col-md-4 col-12 scroll-left d-flex flex-column align-items-center'>
+            <div className='d-flex flex-wrap justify-content-evenly col-12'>
+                <img className='col-9 col-md-11 col-sm-5 my-2' src={details.imgURL} alt={`${details.title} Screenshot`} />
+                <img className='col-9 col-md-11 col-sm-5 my-2' src={details.imgURL2} alt={`${details.title} Screenshot 2`} />
+            </div>
+
             {mobile &&
                 <p className='col-12 text-center'>{details.description}</p>
             }
             {details.login && (
-                <div className='d-flex flex-column align-items-center'>
+                <div className='mb-2 d-flex flex-column align-items-center'>
                     <h3>Test Login:</h3>
                     {details.login.map(login => (
-                        <p className='my-1'>{login}</p>
+                        <p className='my-0'>{login}</p>
                     ))}
                 </div>
             )}
-            <div className='col-12 d-flex flex-wrap justify-content-evenly fs-5'>
-                <a className='col-xl-5 col-11 my-2 custom-btn text-decoration-none text-center' href={details.siteURL}>Visit Site</a>
-                <a className='col-xl-5 col-11 my-2 custom-btn text-decoration-none text-center' href={details.gitURL}>Visit Repository</a>
+            <div className='col-12 d-flex flex-wrap justify-content-evenly align-items-center fs-5'>
+                <a className='col-11 col-sm-4 col-md-11 my-2 custom-btn text-decoration-none text-center' href={details.siteURL}>Visit Site</a>
+                <a className='col-11 col-sm-4 col-md-11 my-2 custom-btn text-decoration-none text-center' href={details.gitURL}>Visit Repository</a>
+                {details.adminSiteURL && (
+                    <a className='col-11 col-sm-4 col-md-11 custom-btn text-decoration-none text-center my-2 fs-5' href={details.adminSiteURL}>Visit Admin Site</a>
+                )}
             </div>
-            {details.adminSiteURL && (
-                <a className='col-xl-5 col-11 custom-btn text-decoration-none text-center my-2 fs-5' href={details.adminSiteURL}>Visit Admin Site</a>
-            )}
         </div>
 
 
@@ -188,56 +189,58 @@ export default function Portfolio({ mobile, handleLoadedPage }) {
             {details && (
                 <div className={`${closing && 'fade-out'} proj-details fs-5 fade-in d-flex flex-wrap`} ref={el => (detailsRefs.current[details.id] = el)} id={details.id}>
                     <span className='close fs-3' onClick={handleClose}>✕</span>
-                    <div className='col-12 d-flex justify-content-end'>
-                        <h1 className='col-md-8 col-12 my-0 text-center'>{details.title}</h1>
-                    </div>
+                    <h1 className='col-12 my-0 d-flex justify-content-center align-items-center'>{details.title}</h1>
                     {!mobile &&
                         leftSide()
                     }
-                    <div className='col-md-8 col-12 px-1'>
-                        <div className='col-12 d-flex flex-column align-items-center scroll-details'>
+                    <div className='col-xl-9 col-md-8 col-12 px-1'>
+                        <div className='col-12 d-flex flex-wrap scroll-details'>
                             {mobile &&
                                 leftSide()
                             }
                             {!mobile &&
-                                <p className='col-12'>{details.description}</p>
+                                <p className='col-12 details-text'>{details.description}</p>
                             }
-                            <div className='d-flex flex-wrap col-12'>
-                                <div className='col-xl-4 col-5'>
-                                    <h3>Languages:</h3>
-                                    <ul>
-                                        {details.languages.map(language => (
-                                            <li>{language}</li>
-                                        ))}
-                                    </ul>
-                                </div>
-                                <div className='col-xl-8 col-7'>
-                                    <h3>Technology:</h3>
-                                    <ul className='d-flex flex-wrap tech-container col-12'>
-                                        {details.tech.map(techName => (
-                                            <li className='col-xl-6 col-12'>{techName}</li>
-                                        ))}
-                                    </ul>
-                                </div>
+                            <div className='col-xl-6 col-6'>
+                                <h3>Languages:</h3>
+                                <ul>
+                                    {details.languages.map(language => (
+                                        <li className='details-text'>{language}</li>
+                                    ))}
+                                </ul>
                             </div>
-                            <h3>Features:</h3>
-                            <ul className='col-12'>
-                                {details.features.map(feature => (
-                                    <li>{feature}</li>
-                                ))}
-                            </ul>
-                            <h3>Role:</h3>
-                            <ul className='col-12'>
-                                {details.role.map(role => (
-                                    <li>{role}</li>
-                                ))}
-                            </ul>
-                            <h3>Challenges:</h3>
-                            <ul className='col-12'>
-                                {details.challenges.map(challenge => (
-                                    <li>{challenge}</li>
-                                ))}
-                            </ul>
+                            <div className='col-xl-6 col-6'>
+                                <h3>Technology:</h3>
+                                <ul className='tech-container col-12'>
+                                    {details.tech.map(techName => (
+                                        <li className='col-xl-6 col-12 details-text'>{techName}</li>
+                                    ))}
+                                </ul>
+                            </div>
+                            <div className='col-xl-6 col-12'>
+                                <h3>Features:</h3>
+                                <ul className='col-12'>
+                                    {details.features.map(feature => (
+                                        <li className='details-text'>{feature}</li>
+                                    ))}
+                                </ul>
+                            </div>
+                            <div className='col-xl-6 col-12'>
+                                <h3>Role:</h3>
+                                <ul className='col-12'>
+                                    {details.role.map(role => (
+                                        <li className='details-text'>{role}</li>
+                                    ))}
+                                </ul>
+                            </div>
+                            <div className='col-12'>
+                                <h3>Challenges:</h3>
+                                <ul className='col-12'>
+                                    {details.challenges.map(challenge => (
+                                        <li className='details-text'>{challenge}</li>
+                                    ))}
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>

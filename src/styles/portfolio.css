@@ -51,15 +51,29 @@
     background-color: var(--dark);
     border: 1px solid var(--primary);
     border-radius: 10px;
-    padding: 5px;
     margin: 0px;
     z-index: 2;
+}
+
+.proj-details h1 {
+    background-color: var(--primary);
+    color: var(--dark);
+    border-radius: 10px 10px 0px 0px;
+    height: 57px;
+}
+
+.scroll-details h3 {
+    /* border-top: 1px solid var(--primary); */
+    border-bottom: 1px solid var(--primary);
+    /* border-left: 1px solid var(--primary); */
+    color: var(--primary);
+    margin: 0px 10px;
 }
 
 .proj-details .close {
     position: absolute;
     font-weight: 1000;
-    top: 15px;
+    top: 5px;
     right: 25px;
     color: var(--secondary);
     cursor: pointer;
@@ -79,6 +93,10 @@
     max-height: 90vh;
 }
 
+.details-text {
+    font-size: 21px;
+}
+
 .flipped {
     transform: rotate(180deg);
 }
@@ -87,9 +105,9 @@
     height: 20vh;
 }
 
-.tech-container {
+/* .tech-container {
     max-height: 10vh;
-}
+} */
 
 h5 {
     min-height: 8vh;
@@ -102,6 +120,12 @@ h5 {
 
     .scroll-details {
         max-height: 85vh;
+    }
+}
+
+@media screen and (max-width: 1630px) {
+    .details-text {
+        font-size: 20px;
     }
 }
 
@@ -138,11 +162,15 @@ h5 {
     .proj-details {
         width: 98vw;
         height: 98vh;
-        padding: 10px;
     }
 
     .scroll-left {
-        max-height: 1000px;
+        max-height: 10000px;
+        padding-bottom: 15px;
+    }
+
+    .scroll-details {
+        padding: 0px 20px;
     }
 }
 
@@ -155,6 +183,6 @@ h5 {
     }
 
     .project-card h2 {
-        font-size: 22px;
+        font-size: 20px;
     }
 }
