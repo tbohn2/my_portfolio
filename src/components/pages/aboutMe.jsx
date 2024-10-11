@@ -22,11 +22,11 @@ export default function AboutMe({ setDisplayPage, handleLoadedPage }) {
 
     return (
         <section id="aboutMeBody" className='fade-in roboto'>
-            <div id='aboutMeContent' className='col-12 d-flex justify-content-center align-items-start'>
-                <div id="aboutText" className='col-md-7 col-11'>
+            <div id='aboutMeContent' className='col-12 d-flex justify-content-evenly align-items-start'>
+                <div id="aboutText" className='col-md-7 col-10'>
                     <h1 className="work-sans">Tanner Bohn</h1>
                     {medScreen &&
-                        <img src={pic} alt='' className='myImg my-3 align-self-center' onLoad={() => handleLoadedPage('AboutMe')}></img>
+                        <img src={pic} alt='' className='myImg my-4 align-self-center' onLoad={() => handleLoadedPage('AboutMe')}></img>
                     }
                     <h2 className="my-4">FULL-STACK WEB DEVELOPER</h2>
                     <p className='text-light fs-5 col-12'>
