@@ -117,6 +117,10 @@ nav li .active {
         right: 30px;
     }
 
+    nav span {
+        font-size: 32px;
+    }
+
     .dropdown-menu {
         background-color: var(--dark) !important;
         border: 1px solid var(--secondary) !important;
@@ -126,5 +130,3 @@ nav li .active {
         border-bottom: 1px solid var(--secondary);
     }
 }
-
-@media screen and (max-width: 430px) {}
