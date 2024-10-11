@@ -6,6 +6,9 @@ import resume from '../../assets/resume.pdf'
 export default function Resume({ handleLoadedPage }) {
     return (
         <section className='fade-in col-12 d-flex flex-column align-items-center'>
+            <a id='pdf-download' href={resume} download='Tanner Bohn Resume' className='my-3'>
+                <button className='custom-btn col-12'>Download Resume</button>
+            </a>
             <div id='resume' className='d-flex flex-column work-sans bg-dark-blue border border-light p-2'>
                 <div id='resume-header' className='bg-dark-blue border border-light d-flex justify-content-between align-items-center col-12'>
                     <img src={headshot} alt='Tanner Bohn' onLoad={() => handleLoadedPage('Resume')} />
@@ -74,7 +77,7 @@ export default function Resume({ handleLoadedPage }) {
                             </li>
                         </ul>
                     </div>
-                    <div className='experience border-start border-dark px-2'>
+                    <div className='border-start border-dark px-2'>
                         <h2>Experience</h2>
                         <h3>Full-Stack Web Developer</h3>
                         <h4>Solid Ground AZ (April 2024 - Present)</h4>
@@ -127,7 +130,4 @@ export default function Resume({ handleLoadedPage }) {
             </div>
         </section>
     );
-    {/* <a href={resume} download='Tanner Bohn Resume' className='bg-light col-12 py-2 d-flex justify-content-center'>
-        <button className='btn col-11 text-light myButton'>Download Resume</button>
-    </a> */}
 }

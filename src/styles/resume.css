@@ -1,67 +1,76 @@
 /* 8.5 x 11*/
+:root {
+    --resume-multiplier: 120px;
+}
+
+#pdf-download {
+    width: calc(8.5 * var(--resume-multiplier));
+    font-size: 32px;
+}
+
 #resume {
-    width: 612px;
-    height: 792px;
+    width: calc(8.5 * var(--resume-multiplier));
+    height: calc(11 * var(--resume-multiplier));
     overflow: hidden;
 }
 
 #resume h1 {
-    font-size: 30px;
+    font-size: calc(0.42 * var(--resume-multiplier));
     margin: 0px;
 }
 
 #resume h2 {
     border-bottom: 2px solid var(--dark);
-    font-size: 18px;
-    margin: 0px 0px 2px 0px;
+    font-size: calc(0.25 * var(--resume-multiplier));
+    margin-bottom: calc(.02778 * var(--resume-multiplier));
     font-weight: 600;
 }
 
 #resume h3 {
     margin: 0px;
-    font-size: 16px !important;
+    font-size: calc(0.22222 * var(--resume-multiplier)) !important;
     font-weight: 600;
 }
 
 #resume h4 {
     margin: 0px;
-    font-size: 14px !important;
+    font-size: calc(0.1944 * var(--resume-multiplier)) !important;
 }
 
 #resume-header img {
-    width: 165px;
-    height: 165px;
+    width: calc(2.292 * var(--resume-multiplier));
+    height: calc(2.292 * var(--resume-multiplier));
     border-radius: 7px;
     object-fit: cover;
     object-position: center 20%;
     flex-shrink: 0;
-    margin: 7px;
+    margin: calc(0.097222 * var(--resume-multiplier));
 }
 
 #resume p {
-    font-size: 11px;
+    font-size: calc(0.15833 * var(--resume-multiplier));
 }
 
 #resume ul {
-    margin-bottom: 3px;
+    margin-bottom: calc(0.041667 * var(--resume-multiplier));
 }
 
 #resume li {
-    font-size: 11px;
+    font-size: calc(0.15833 * var(--resume-multiplier));
     line-height: normal;
 }
 
 #left-column {
-    width: 290px;
+    width: calc(4.0278 * var(--resume-multiplier));
 }
 
 #contact li {
-    margin: 0.5px 0px;
-    font-size: 11px;
+    margin: calc(0.006944 * var(--resume-multiplier)) 0px;
+    font-size: calc(0.15278 * var(--resume-multiplier));
 }
 
 .skills {
-    margin: 1px 0px;
+    margin: calc(0.0139 * var(--resume-multiplier)) 0px;
 }
 
 .skills p {
@@ -69,10 +78,59 @@
     color: white;
     border: 1px solid var(--dark);
     border-radius: 5px;
-    margin: 1px;
-    padding: 1px 3px;
+    margin: calc(0.0139 * var(--resume-multiplier));
+    padding: calc(0.0139 * var(--resume-multiplier)) calc(0.041667 * var(--resume-multiplier));
 }
 
 .myButton {
     background-image: linear-gradient(to bottom right, var(--green), var(--green));
+}
+
+@media screen and (max-width: 1200px) {
+    :root {
+        --resume-multiplier: 100px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    :root {
+        --resume-multiplier: 90px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    :root {
+        --resume-multiplier: 62px;
+    }
+
+    #resume {
+        height: auto;
+    }
+
+    #left-column {
+        padding-bottom: 30px;
+    }
+
+    #contact li {
+        font-size: calc(0.148 * var(--resume-multiplier));
+    }
+}
+
+@media screen and (max-width: 576px) {
+    :root {
+        --resume-multiplier: 41px;
+    }
+
+    #resume ul {
+        padding-inline-start: 20px;
+    }
+
+    #left-column ul {
+        padding-inline-start: 0px !important;
+    }
+
+    #contact li {
+        margin: calc(0.005944 * var(--resume-multiplier)) 0px;
+        font-size: calc(0.137 * var(--resume-multiplier));
+    }
 }
