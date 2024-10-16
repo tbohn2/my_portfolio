@@ -45,7 +45,7 @@
     top: 10px;
     left: 50%;
     width: 98vw;
-    height: 98vh;
+    max-height: 98vh;
     transform: translate(-50%, 0%);
     color: white;
     background-color: var(--dark);
@@ -60,12 +60,11 @@
     color: var(--dark);
     border-radius: 10px 10px 0px 0px;
     height: 57px;
+    margin-bottom: 10px;
 }
 
 .scroll-details h3 {
-    /* border-top: 1px solid var(--primary); */
     border-bottom: 1px solid var(--primary);
-    /* border-left: 1px solid var(--primary); */
     color: var(--primary);
     margin: 0px 10px;
 }
@@ -94,7 +93,7 @@
 }
 
 .details-text {
-    font-size: 21px;
+    font-size: 24px;
 }
 
 .flipped {

@@ -50,8 +50,6 @@ export default function Portfolio({ mobile, handleLoadedPage }) {
     }, [details]);
 
     useEffect(() => {
-        console.log(projLoaded);
-
         if (projLoaded.length === 3) {
             handleLoadedPage('Portfolio');
         }
@@ -109,7 +107,7 @@ export default function Portfolio({ mobile, handleLoadedPage }) {
         {
             id: 3,
             title: 'Solid Ground AZ',
-            description: 'Solid Ground AZ\'s Stretch Scheduler is a full-stack web application designed to manage yoga instructor schedules, clients, and appointments. Built using ASP.NET Core with Razor Pages and MySQL, it offers a responsive and efficient solution for scheduling management.',
+            description: 'Solid Ground AZ is a full-stack web application designed to manage yoga instructor schedules, clients, and appointments. Built using ASP.NET Core with Razor Pages and MySQL, it offers a responsive and efficient solution for scheduling management.',
             features: [
                 'User Authentication with JWT',
                 'Schedule Management for yoga instructors',
@@ -121,6 +119,7 @@ export default function Portfolio({ mobile, handleLoadedPage }) {
             tech: ['ASP.NET Core 8.0', 'Razor Pages', 'MySQL', 'Entity Framework Core', 'jQuery'],
             challenges: [
                 'Implementing secure authentication with JWT and password hashing using BCrypt',
+                'Encrypting user data to ensure confidentiality and security',
                 'Real-time schedule updates and appointment booking for both instructors and clients',
                 'Building a responsive and dynamic frontend with jQuery for smooth user interaction'
             ],
@@ -189,7 +188,7 @@ export default function Portfolio({ mobile, handleLoadedPage }) {
             {details && (
                 <div className={`${closing && 'fade-out'} proj-details fs-5 fade-in d-flex flex-wrap`} ref={el => (detailsRefs.current[details.id] = el)} id={details.id}>
                     <span className='close fs-3' onClick={handleClose}>✕</span>
-                    <h1 className='col-12 my-0 d-flex justify-content-center align-items-center'>{details.title}</h1>
+                    <h1 className='col-12 d-flex justify-content-center align-items-center'>{details.title}</h1>
                     {!mobile &&
                         leftSide()
                     }
@@ -199,7 +198,7 @@ export default function Portfolio({ mobile, handleLoadedPage }) {
                                 leftSide()
                             }
                             {!mobile &&
-                                <p className='col-12 details-text'>{details.description}</p>
+                                <p className='col-12 details-text pe-1'>{details.description}</p>
                             }
                             <div className='col-xl-6 col-6'>
                                 <h3>Languages:</h3>
