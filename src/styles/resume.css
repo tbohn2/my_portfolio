@@ -1,11 +1,11 @@
 /* 8.5 x 11*/
 :root {
-    --resume-multiplier: 120px;
+    --resume-multiplier: 111px;
 }
 
 #pdf-download {
     width: calc(8.5 * var(--resume-multiplier));
-    font-size: 32px;
+    font-size: calc(0.30 * var(--resume-multiplier));
 }
 
 #resume {

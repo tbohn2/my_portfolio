@@ -1,6 +1,6 @@
 import React from 'react';
 import '../../styles/resume.css'
-import headshot from '../../assets/portrait3.jpg'
+import headshot from '../../assets/portrait5.jpg'
 import resume from '../../assets/resume.pdf'
 
 export default function Resume({ handleLoadedPage }) {
@@ -24,10 +24,10 @@ export default function Resume({ handleLoadedPage }) {
                 <div className='d-flex flex-grow-1 bg-light col-12'>
                     <div id='left-column' className='mx-2 pt-2'>
                         <ul id='contact' className='list-unstyled'>
-                            <li><i className="bi bi-envelope"></i> tannerbohndev@gmail.com</li>
-                            <li><i className="bi bi-window"></i> Porfolio URL</li>
+                            <li><i className="bi bi-envelope"></i> tannerjbohn@gmail.com</li>
+                            <li><i className="bi bi-cursor"></i> tannerbohn.dev</li>
+                            <li><i className="bi bi-github"></i> github.com/tbohn2</li>
                             <li><i className="bi bi-geo-alt"></i> Mesa, AZ</li>
-                            <li><i className="bi bi-github"></i> https://github.com/tbohn2</li>
                         </ul>
                         <h2>Languages</h2>
                         <div className='skills d-flex flex-wrap '>
