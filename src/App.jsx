@@ -30,24 +30,28 @@ function App() {
         setMobile(false);
       }
     });
+
+    if (window.location.pathname !== '/my_portfolio') {
+      window.location.pathname = '/my_portfolio';
+    }
+
   }, []);
 
   const handleLoadedPage = (page) => {
-    setLoadedPages({ ...loadedPages, [page]: true });
+    setTimeout(() => {
+      setLoadedPages({ ...loadedPages, [page]: true });
+    }, 500);
   }
-
-  console.log('this page is loaded', loadedPages[displayPage]);
-
 
   return (
     <Router basename='/my_portfolio'>
       <div className='d-flex align-items-center flex-column bg-2'>
         <Header displayPage={displayPage} setDisplayPage={(page) => setDisplayPage(page)} handleLoadedPage={(page) => handleLoadedPage(page)} mobile={mobile} />
+        {!loadedPages[displayPage] &&
+          <div className='col-12 text-center'>
+            <div className='spinner-border'></div>
+          </div>}
         <div className={`${loadedPages[displayPage] && 'loaded'} page-container`}>
-          {!loadedPages[displayPage] &&
-            <div className='col-12 text-center'>
-              <div className='spinner-border'></div>
-            </div>}
           <Routes>
             <Route path="/" element={<AboutMe setDisplayPage={(page) => setDisplayPage(page)} handleLoadedPage={(page) => handleLoadedPage(page)} />} />
             <Route path="/portfolio" element={<Portfolio mobile={mobile} handleLoadedPage={(page) => handleLoadedPage(page)} />} />
