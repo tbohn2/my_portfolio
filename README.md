@@ -42,12 +42,6 @@ This [website](https://tbohn2.github.io/my_portfolio/) showcases my work as a **
 - **Database**: MySQL, MongoDB
 - **Version Control**: Git & GitHub
 
-## Technologies Used to Build the Portfolio
-- **Frontend**: React, HTML, CSS, JavaScript
-- **Bundler**: Vite
-- **Backend**: Node.js
-- **Version Control**: Git & GitHub
-
 ## Contact
 
 Feel free to reach out if you have any questions or opportunities:
