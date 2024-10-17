@@ -30,11 +30,6 @@ function App() {
         setMobile(false);
       }
     });
-
-    if (window.location.pathname !== '/my_portfolio') {
-      window.location.pathname = '/my_portfolio';
-    }
-
   }, []);
 
   const handleLoadedPage = (page) => {
