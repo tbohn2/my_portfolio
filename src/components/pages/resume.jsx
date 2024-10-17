@@ -117,14 +117,6 @@ export default function Resume({ handleLoadedPage }) {
                             <li><strong>Client-Centered Design:</strong> Designed sign layouts based on client requests</li>
                             <li><strong>Attention to Detail:</strong> Ensured meticulous installation of signs</li>
                         </ul>
-
-                        {/* <h3>Missionary</h3>
-                        <h4>The Church of Jesus Christ of Latter-Day Saints in Paraguay (February 2018 - February 2020)</h4>
-                        <ul>
-                            <li><strong>Continuous Learning:</strong> Constantly learned a new language (Spanish), showing adaptability and the ability to quickly pick up new skills—valuable in web development for learning new frameworks or technologies.</li>
-                            <li><strong>Leadership & Coordination:</strong> Led and managed up to 16 volunteers, reflecting project management and leadership in coordinating development teams or tasks.</li>
-                            <li><strong>Public Outreach:</strong> Delivered clear, concise messages to communities, similar to presenting project progress or communicating technical solutions to clients.</li>
-                        </ul> */}
                     </div>
                 </div>
             </div>
