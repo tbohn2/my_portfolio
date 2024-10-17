@@ -80,7 +80,7 @@ export default function Resume({ handleLoadedPage }) {
                     <div className='border-start border-dark px-2'>
                         <h2>Experience</h2>
                         <h3>Full-Stack Web Developer</h3>
-                        <h4>Solid Ground AZ (April 2024 - Present)</h4>
+                        <h4>Solid Ground AZ (February 2024 - Present)</h4>
                         <ul>
                             <li>Developed a scheduling system using ASP.NET Core, Razor Pages, and MySQL for yoga instructors and clients</li>
                             <li>Implemented JWT-based authentication and BCrypt password hashing</li>
