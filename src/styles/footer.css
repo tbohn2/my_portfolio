@@ -12,14 +12,41 @@ footer p {
 }
 
 .footer-icon {
-    height: 75px;
-    width: auto;
-    transition: all 0.35s;
-
+    font-size: 50px;
+    height: 50px;
+    width: 50px;
+    transition: all 0.5s;
+    margin: 0px 10px;
+    background-color: white;
 }
 
-.footer-icon:hover {
-    opacity: 0.35;
+.footer-icon i {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#linkedin {
+    border-radius: 5px;
+    color: #0077B5;
+}
+
+#linkedin:hover {
+    background-color: #0077B5;
+    color: white;
+    box-shadow: 0 0 10px 5px #0077B5;
+}
+
+#github {
+    border-radius: 50px;
+    color: #333;
+}
+
+#github:hover {
+    background-color: #333;
+    color: white;
+    box-shadow: 0 0 10px 5px #333;
 }
 
 @media screen and (max-width: 768px) {
@@ -28,7 +55,20 @@ footer p {
     }
 
     .footer-icon {
-        height: 50px;
+        font-size: 45px;
+        height: 45px;
+        width: 45px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    footer {
+        height: auto;
     }
 
+    .footer-icon {
+        font-size: 40px;
+        height: 40px;
+        width: 40px;
+    }
 }

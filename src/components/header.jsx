@@ -14,17 +14,17 @@ function Header({ displayPage, setDisplayPage, mobile }) {
                 <nav className='fs-2 d-flex justify-content-evenly'>
                     <div className="dropdown">
                         <span data-bs-toggle="dropdown" aria-expanded="false">&#9776;</span>
-                        <ul className="col-12 dropdown-menu m-0 p-0">
-                            <li className='col-12 fs-3'>
+                        <ul className="col-12 fs-3 dropdown-menu m-0 p-0">
+                            <li className='col-12'>
                                 <Link to='/'>home</Link>
                             </li>
-                            <li className='col-12 fs-3'>
+                            <li className='col-12'>
                                 <Link to='/portfolio'>portfolio</Link>
                             </li>
-                            <li className='col-12 fs-3'>
+                            <li className='col-12'>
                                 <Link to='/resume'>resume</Link>
                             </li>
-                            <li className='col-12 fs-3'>
+                            <li className='col-12'>
                                 <Link to='/contact'>contact</Link>
                             </li>
                         </ul>
