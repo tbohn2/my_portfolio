@@ -1,24 +1,60 @@
-# My Portfolio
+# Tanner Bohn's Portfolio
 
-## Description
+## Overview
 
-This application is my developer portfolio in progress. It uses REACT library to render four pages: an about me page, contact page, display of six project, and my resume. Bootstrap and custom CSS were used to style the pages. E-mail validation is included on the contact page. REACT's useState hook was used in defining some of the variables.
+This [website](https://tbohn2.github.io/my_portfolio/) showcases my work as a **Full Stack Web Developer**. It highlights projects I've worked on, demonstrating my skills in front-end and back-end development. The website features a user-friendly design to provide an interactive experience for visitors who want to learn more about my background and projects.
 
-## Installation
+## Projects
 
-No installations are required to interact with this application.
+### 1. **Solid Ground AZ**
+   - **Description**: Solid Ground AZ's Stretch Scheduler is a full-stack web application designed to manage yoga instructor schedules, clients, and appointments.
+   - **Technologies**: ASP.NET Core 8.0, Razor Pages, MySQL, jQuery, JWT Authentication
+   - **Features**:
+     - User Authentication
+     - Real-time Schedule Management
+     - Client Booking System
+     - Admin Dashboard for Schedules and Appointments
 
-## Usage
+### 2. **Plate Planner**
+   - **Description**: Plate Planner is a meal planning web application that helps users create personalized meal plans based on dietary preferences.
+   - **Technologies**: React, Node.js, MongoDB, Express
+   - **Features**:
+     - User Profile and Preferences
+     - Dynamic Meal Plan Generation
+     - Recipe Integration
 
-This application is used to learn a bit about me and to explore some of the projects I have developed.
+### 3. **Ashley Bohn Photography**
+   - **Description**: Ashley Bohn Photography is a photography portfolio website showcasing a photographer’s work, services, and biography.
+   - **Technologies**: Vite, React, Bootstrap, EmailJS
+   - **Features**:
+     - Image Gallery
+     - Responsive Design
+     - Contact Form via EmailJS
 
-## License
-  
-N/A
+## Key Features
+- **Responsive Design**: The portfolio is fully responsive and optimized for both mobile and desktop users.
+- **Interactive Projects**: Each project is clickable, leading to a detailed description, live demo, or GitHub repository.
+- **Modern Stack**: Built using the latest front-end technologies (React, Bootstrap) and hosted for fast performance.
 
-## Repository URL and Demo
+## Technologies Used In Projects
+- **Frontend**: HTML, CSS, JavaScript, React, Bootstrap
+- **Backend**: C#, ASP.NET Core, Node.js, Express
+- **Database**: MySQL, MongoDB
+- **Version Control**: Git & GitHub
 
-https://tbohn2.github.io/my_portfolio/
+## Technologies Used to Build the Portfolio
+- **Frontend**: React, HTML, CSS, JavaScript
+- **Bundler**: Vite
+- **Backend**: Node.js
+- **Version Control**: Git & GitHub
 
-![localhost_3000_my_portfolio](https://github.com/tbohn2/my_portfolio/assets/124842865/8c65d56e-839d-45fb-9a79-7be5cf42be3c)
+## Contact
 
+Feel free to reach out if you have any questions or opportunities:
+- tannerjbohn@gmail.com
+- [LinkedIn](https://www.linkedin.com/in/tanner-bohn-084060285)
+
+
+## Screenshot
+
+![tbohn2 github io_my_portfolio_portfolio](https://github.com/user-attachments/assets/7fdc684b-b2c2-47cd-af18-dd063309f695)
