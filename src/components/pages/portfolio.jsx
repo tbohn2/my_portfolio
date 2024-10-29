@@ -76,7 +76,7 @@ export default function Portfolio({ mobile, handleLoadedPage }) {
             role: ['Designed and developed the frontend using React and Vite', 'Integrated EmailJS for form handling', 'Coordinated with the photographer to meet design needs'],
             imgURL: ashleyPhoto,
             imgURL2: ashleyPhoto2,
-            siteURL: 'https://tbohn2.github.io/ashley-photo/',
+            siteURL: 'https://www.ashleybohnphoto.com',
             gitURL: 'https://github.com/tbohn2/ashley-photo'
         },
         {
@@ -100,7 +100,7 @@ export default function Portfolio({ mobile, handleLoadedPage }) {
             role: ['Developed both frontend and backend using React, Node.js, Express, and MongoDB', 'Implemented GraphQL for data queries and designed user authentication with JWT'],
             imgURL: platePlannerImage,
             imgURL2: platePlannerImage2,
-            siteURL: 'https://tbohn2.github.io/plate-planner/',
+            siteURL: 'https://www.plate-planner.com/',
             gitURL: 'https://github.com/tbohn2/plate-planner',
             login: ['Username: test@test.com', 'Password: testtest']
         },

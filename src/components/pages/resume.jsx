@@ -29,7 +29,7 @@ export default function Resume({ handleLoadedPage }) {
                         <div id='left-column' class='d-flex flex-column flex-grow-1 mx-2'>
                             <ul id='contact' class='list-unstyled'>
                                 <li><i class="bi bi-envelope"></i> tannerjbohn@gmail.com</li>
-                                <li><i class="bi bi-globe"></i> tannerbohn.me</li>
+                                <li><a href="https://www.tannerbohn.me/"><i class="bi bi-globe"></i> tannerbohn.me</a></li>
                                 <li><a href="https://github.com/tbohn2"><i class="bi bi-github"></i> github.com/tbohn2</a></li>
                                 <li><i class="bi bi-geo-alt"></i> Mesa, AZ</li>
                             </ul>
