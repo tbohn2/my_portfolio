@@ -39,7 +39,7 @@ function App() {
   }
 
   return (
-    <Router basename='/my_portfolio'>
+    <Router>
       <div className='d-flex align-items-center flex-column bg-2'>
         <Header displayPage={displayPage} setDisplayPage={(page) => setDisplayPage(page)} handleLoadedPage={(page) => handleLoadedPage(page)} mobile={mobile} />
         {!loadedPages[displayPage] &&
