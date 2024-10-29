@@ -27,6 +27,7 @@
             width: calc(8.5 * var(--resume-multiplier));
             height: calc(11 * var(--resume-multiplier));
             overflow: hidden;
+            color: black;
         }
 
         #resume h1 {
@@ -37,7 +38,7 @@
         #resume h2 {
             border-bottom: 2px solid var(--dark);
             font-size: calc(0.25 * var(--resume-multiplier));
-            margin-bottom: calc(.02778 * var(--resume-multiplier));
+            margin-bottom: calc(.032778 * var(--resume-multiplier));
             font-weight: 600;
         }
 
@@ -53,17 +54,18 @@
         }
 
         #resume-header img {
-            width: calc(2.292 * var(--resume-multiplier));
-            height: calc(2.292 * var(--resume-multiplier));
+            width: calc(1.9 * var(--resume-multiplier));
+            height: calc(1.9 * var(--resume-multiplier));
             border-radius: 7px;
             object-fit: cover;
             object-position: center 20%;
             flex-shrink: 0;
-            margin: calc(0.097222 * var(--resume-multiplier));
+            margin: calc(0.097222 * var(--resume-multiplier)) calc(0.46 * var(--resume-multiplier));
         }
 
         #resume p {
             font-size: calc(0.15833 * var(--resume-multiplier));
+            line-height: 1.25;
         }
 
         #resume ul {
@@ -71,30 +73,60 @@
         }
 
         #resume li {
-            font-size: calc(0.15833 * var(--resume-multiplier));
+            font-size: calc(0.165 * var(--resume-multiplier));
             line-height: normal;
         }
 
         #left-column {
-            width: calc(4.0278 * var(--resume-multiplier));
+            width: calc(5 * var(--resume-multiplier));
+            padding-top: calc(0.1 * var(--resume-multiplier));
+        }
+
+        #left-column h2 {
+            font-size: calc(0.21 * var(--resume-multiplier));
+            font-weight: 600;
+            margin-top: calc(0.07 * var(--resume-multiplier));
+        }
+
+        #left-column li {
+            font-size: calc(0.162 * var(--resume-multiplier));
         }
 
         #contact li {
             margin: calc(0.006944 * var(--resume-multiplier)) 0px;
-            font-size: calc(0.15278 * var(--resume-multiplier));
+            font-size: calc(0.17 * var(--resume-multiplier));
         }
 
+        #contact a {
+            text-decoration: none;
+            font-weight: normal;
+            color: black;
+        }
+
+        /* These are the ul on left */
         .skills {
             margin: calc(0.0139 * var(--resume-multiplier)) 0px;
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            padding: 0px;
         }
 
-        .skills p {
-            background-color: var(--dark);
-            color: white;
-            border: 1px solid var(--dark);
-            border-radius: 5px;
-            margin: calc(0.0139 * var(--resume-multiplier));
-            padding: calc(0.0139 * var(--resume-multiplier)) calc(0.041667 * var(--resume-multiplier));
+        .skills li {
+            min-width: 50%;
+            margin: calc(0.025 * var(--resume-multiplier)) 0px;
+        }
+
+        #right-column {
+            border-left: 1px solid var(--dark);
+        }
+
+        .right-column-margins {
+            margin-top: calc(0.07 * var(--resume-multiplier)) !important;
+        }
+
+        .other-exp {
+            margin-top: calc(0.06 * var(--resume-multiplier)) !important;
         }
 
         /* Body CSS */
@@ -166,79 +198,81 @@
 </head>
 
 <body class="">
-    <div id='resume' class='d-flex flex-column work-sans bg-dark-blue border border-light p-2'>
-        <div id='resume-header'
-            class='bg-dark-blue border border-light d-flex justify-content-between align-items-center col-12'>
+    <div id='resume' class='d-flex flex-column work-sans'>
+        <div id='resume-header' class='bg-dark-blue d-flex justify-content-between align-items-center col-12'>
             <img src='/my_portfolio/assets/portrait5-WWSF00UG.jpg' alt='Tanner Bohn' />
-            <div class='d-flex flex-column align-items-start px-2 text-light'>
+            <!-- <img src='./src/assets/portrait5.jpg' alt='Tanner Bohn' /> -->
+            <div class='d-flex flex-column justify-content-center flex-grow-1 align-items-start px-2 pt-2 text-light'>
                 <h1>Tanner Bohn</h1>
                 <h2>Full-Stack Web Developer</h2>
-                <p>Results-driven developer skilled in building dynamic, responsive web applications using ASP.NET Core,
-                    React, Node.js, MySQL, and MongoDB.
-                    Proven success in enhancing user experiences, streamlining scheduling systems, and integrating
-                    secure authentication.
-                    Experienced in delivering projects from concept to deployment with a focus on efficient data
-                    management and frontend-backend integration.
+                <p>Results-driven developer skilled in dynamic web applications using ASP.NET Core, React, Node.js,
+                    MySQL, and MongoDB.
+                    Proven success in enhancing user experiences and streamlining scheduling systems, implementing
+                    secure authentication, and delivering projects from concept to deployment.
+                    Focused on efficient data management and effective frontend-backend integration.
                 </p>
             </div>
         </div>
-        <div class='d-flex flex-grow-1 bg-light col-12'>
-            <div id='left-column' class='mx-2 pt-2'>
+        <div class='d-flex flex-grow-1 col-12'>
+            <div id='left-column' class='d-flex flex-column flex-grow-1 mx-2'>
                 <ul id='contact' class='list-unstyled'>
                     <li><i class="bi bi-envelope"></i> tannerjbohn@gmail.com</li>
-                    <li><i class="bi bi-cursor"></i> tannerbohn.dev</li>
-                    <li><i class="bi bi-github"></i> github.com/tbohn2</li>
+                    <li><i class="bi bi-globe"></i> tannerbohn.me</li>
+                    <li><a href="https://github.com/tbohn2"><i class="bi bi-github"></i> github.com/tbohn2</a></li>
                     <li><i class="bi bi-geo-alt"></i> Mesa, AZ</li>
                 </ul>
-                <h2>Languages</h2>
-                <div class='skills d-flex flex-wrap '>
-                    <p>HTML</p>
-                    <p>CSS</p>
-                    <p>JavaScript</p>
-                    <p>C#</p>
-                    <p>SQL</p>
-                </div>
-                <h2>Technologies</h2>
-                <div class='skills d-flex flex-wrap '>
-                    <p>REACT</p>
-                    <p>Node.JS</p>
-                    <p>ASP.NET Core</p>
-                    <p>MySQL</p>
-                    <p>MongoDB</p>
-                    <p>GraphQL</p>
-                    <p>Entity Framework Core</p>
-                    <p>jQuery</p>
-                    <p>Git/GitHub</p>
-                    <p>Bootstrap</p>
-                    <p>Vite</p>
-                    <p>JWT</p>
-                    <p>EmailJS</p>
-                </div>
+                <h2 class=''>Programming Languages</h2>
+                <ul class='skills'>
+                    <li>HTML5</li>
+                    <li>CSS3</li>
+                    <li>JavaScript</li>
+                    <li>C#</li>
+                    <li>SQL (Structured Query Language)</li>
+                </ul>
+                <h2>Frameworks and Tools</h2>
+                <ul class='skills'>
+                    <li>Entity Framework Core</li>
+                    <li>ASP.NET Core</li>
+                    <li>React</li>
+                    <li>Node.js</li>
+                    <li>Vite</li>
+                    <li>jQuery</li>
+                    <li>Bootstrap</li>
+                    <li>JWT</li>
+                    <li>EmailJS</li>
+                    <li>Git/GitHub</li>
+                </ul>
+                <h2>Databases</h2>
+                <ul class='skills'>
+                    <li>MySQL</li>
+                    <li>MongoDB</li>
+                    <li>GraphQL</li>
+                </ul>
                 <h2>Other Skills</h2>
-                <div class='skills d-flex flex-wrap '>
-                    <p>Spanish</p>
-                    <p>Adaptability</p>
-                    <p>Communication</p>
-                    <p>Analytical thinking</p>
-                    <p>Attention to detail</p>
-                </div>
+                <ul class='skills d-flex flex-wrap'>
+                    <li>Spanish</li>
+                    <li>Adaptability</li>
+                    <li>Critical thinking</li>
+                    <li>Time management</li>
+                    <li>Attention to detail</li>
+                </ul>
                 <h2>Education</h2>
                 <ul class='list-unstyled'>
                     <li>
+                        <h4 class='my-0'>ASU Coding Bootcamp </h4>
+                        <p class='my-0'> Arizona State University </p>
+                        <p class='my-0 fst-italic'>Feb 2023-Aug 2023</p>
+                    </li>
+                    <li class='mt-2'>
                         <h4 class='my-0'>Bachelor of Science </h4>
                         <p class='my-0'>Biochemistry</p>
                         <p class='my-0'> Arizona State University </p>
                         <p class='my-0 fst-italic'>2016-2018, 2020-2022</p>
                         <p class='my-0 fst-italic'>GPA: 4.00</p>
                     </li>
-                    <li class='mt-1'>
-                        <h4 class='my-0'>ASU Coding Bootcamp </h4>
-                        <p class='my-0'> Arizona State University </p>
-                        <p class='my-0 fst-italic'>Feb 2023-Aug 2023</p>
-                    </li>
                 </ul>
             </div>
-            <div class='border-start border-dark px-2'>
+            <div id='right-column' class='d-flex flex-column flex-grow-1 px-2'>
                 <h2>Experience</h2>
                 <h3>Full-Stack Web Developer</h3>
                 <h4>Solid Ground AZ (February 2024 - Present)</h4>
@@ -250,7 +284,7 @@
                     </li>
                 </ul>
 
-                <h3 class='mt-2'>Full-Stack Web Developer</h3>
+                <h3 class='right-column-margins'>Full-Stack Web Developer</h3>
                 <h4>Plate Planner (October 2023 - Present)</h4>
                 <ul>
                     <li>Built a meal planning and grocery app with the MERN stack and GraphQL for flexible querying</li>
@@ -259,7 +293,7 @@
                     <li>Utilized Vite + React for efficient development and designed a responsive interface</li>
                 </ul>
 
-                <h3 class='mt-2'>Front-End Web Developer</h3>
+                <h3 class='right-column-margins'>Front-End Web Developer</h3>
                 <h4>Ashley Bohn Photography (October 2023 - Present)</h4>
                 <ul>
                     <li>Created a photography portfolio site using React and Bootstrap, featuring responsive layouts and
@@ -268,9 +302,9 @@
                     </li>
                 </ul>
 
-                <h2>Other Experience</h2>
+                <h2 class="other-exp">Other Experience</h2>
                 <h3>Dental Assistant</h3>
-                <h4>My Dental Dentistry and Implants (April 2021 - April 2024)</h4>
+                <h4>My Dental Dentistry & Implants (April 2021 - April 2024)</h4>
                 <ul>
                     <li><strong>Effective Communication:</strong> Coordinated communication between doctors and
                         patients, ensuring clarity in technical details</li>
@@ -279,7 +313,7 @@
                         correspondence with labs for timely deliveries</li>
                 </ul>
 
-                <h3 class='mt-2'>Sign Installation</h3>
+                <h3 class='right-column-margins'>Sign Installation</h3>
                 <h4>SpellItOut Company (May 2020 - April 2021)</h4>
                 <ul>
                     <li><strong>Client-Centered Design:</strong> Designed sign layouts based on client requests</li>

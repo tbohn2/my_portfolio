@@ -1,6 +1,6 @@
 /* 8.5 x 11*/
 :root {
-    --resume-multiplier: 111px;
+    --resume-multiplier: 100px;
 }
 
 #pdf-download {
@@ -12,6 +12,9 @@
     width: calc(8.5 * var(--resume-multiplier));
     height: calc(11 * var(--resume-multiplier));
     overflow: hidden;
+    color: black;
+    background-color: white;
+    border: 5px solid var(--dark);
 }
 
 #resume h1 {
@@ -22,7 +25,7 @@
 #resume h2 {
     border-bottom: 2px solid var(--dark);
     font-size: calc(0.25 * var(--resume-multiplier));
-    margin-bottom: calc(.02778 * var(--resume-multiplier));
+    margin-bottom: calc(.03 * var(--resume-multiplier));
     font-weight: 600;
 }
 
@@ -38,17 +41,18 @@
 }
 
 #resume-header img {
-    width: calc(2.292 * var(--resume-multiplier));
-    height: calc(2.292 * var(--resume-multiplier));
+    width: calc(1.9 * var(--resume-multiplier));
+    height: calc(1.9 * var(--resume-multiplier));
     border-radius: 7px;
     object-fit: cover;
     object-position: center 20%;
     flex-shrink: 0;
-    margin: calc(0.097222 * var(--resume-multiplier));
+    margin: calc(0.097222 * var(--resume-multiplier)) calc(0.46 * var(--resume-multiplier));
 }
 
 #resume p {
     font-size: calc(0.15833 * var(--resume-multiplier));
+    line-height: 1.25;
 }
 
 #resume ul {
@@ -56,39 +60,69 @@
 }
 
 #resume li {
-    font-size: calc(0.15833 * var(--resume-multiplier));
+    font-size: calc(0.165 * var(--resume-multiplier));
     line-height: normal;
 }
 
 #left-column {
-    width: calc(4.0278 * var(--resume-multiplier));
+    width: calc(5 * var(--resume-multiplier));
+    padding-top: calc(0.1 * var(--resume-multiplier));
+}
+
+#left-column h2 {
+    font-size: calc(0.21 * var(--resume-multiplier));
+    font-weight: 600;
+    margin-top: calc(0.05 * var(--resume-multiplier));
+}
+
+#left-column li {
+    font-size: calc(0.162 * var(--resume-multiplier));
 }
 
 #contact li {
     margin: calc(0.006944 * var(--resume-multiplier)) 0px;
-    font-size: calc(0.15278 * var(--resume-multiplier));
+    font-size: calc(0.17 * var(--resume-multiplier));
 }
 
+#contact a {
+    text-decoration: none;
+    font-weight: normal;
+    color: black;
+}
+
+/* These are the ul on left */
 .skills {
     margin: calc(0.0139 * var(--resume-multiplier)) 0px;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0px;
 }
 
-.skills p {
-    background-color: var(--dark);
-    color: white;
-    border: 1px solid var(--dark);
-    border-radius: 5px;
-    margin: calc(0.0139 * var(--resume-multiplier));
-    padding: calc(0.0139 * var(--resume-multiplier)) calc(0.041667 * var(--resume-multiplier));
+.skills li {
+    min-width: 50%;
+    margin: calc(0.025 * var(--resume-multiplier)) 0px;
 }
 
-.myButton {
-    background-image: linear-gradient(to bottom right, var(--green), var(--green));
+#right-column {
+    border-left: 1px solid var(--dark);
+}
+
+.right-column-margins {
+    margin-top: 0 !important;
+}
+
+.other-exp {
+    margin-top: 0 !important;
 }
 
 @media screen and (max-width: 1200px) {
     :root {
         --resume-multiplier: 100px;
+    }
+
+    #resume {
+        height: auto;
     }
 }
 
