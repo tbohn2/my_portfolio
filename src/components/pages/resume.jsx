@@ -43,16 +43,18 @@ export default function Resume({ handleLoadedPage }) {
                             </ul>
                             <h2>Frameworks and Tools</h2>
                             <ul class='skills'>
-                                <li>Entity Framework Core</li>
-                                <li>ASP.NET Core</li>
                                 <li>React</li>
                                 <li>Node.js</li>
+                                <li>Express.js</li>
+                                <li>ASP.NET Core</li>
+                                <li>Entity Framework Core</li>
                                 <li>Vite</li>
                                 <li>jQuery</li>
                                 <li>Bootstrap</li>
-                                <li>JWT</li>
                                 <li>EmailJS</li>
                                 <li>Git/GitHub</li>
+                                <li>BCrypt</li>
+                                <li>JSON Web Tokens (JWT)</li>
                             </ul>
                             <h2>Databases</h2>
                             <ul class='skills'>
@@ -60,13 +62,12 @@ export default function Resume({ handleLoadedPage }) {
                                 <li>MongoDB</li>
                                 <li>GraphQL</li>
                             </ul>
-                            <h2>Other Skills</h2>
-                            <ul class='skills d-flex flex-wrap'>
-                                <li>Spanish</li>
-                                <li>Adaptability</li>
-                                <li>Critical thinking</li>
-                                <li>Time management</li>
-                                <li>Attention to detail</li>
+                            <h2>Core Technical Concepts</h2>
+                            <ul class='skills'>
+                                <li>Object-Oriented Programming (OOP)</li>
+                                <li>Functional Programming</li>
+                                <li>RESTful APIs</li>
+                                <li>MVC (Model-View-Controller)</li>
                             </ul>
                             <h2>Education</h2>
                             <ul class='list-unstyled'>
@@ -114,7 +115,7 @@ export default function Resume({ handleLoadedPage }) {
                                 </li>
                             </ul>
 
-                            <h2 class="other-exp">Other Experience</h2>
+                            {/* <h2 class="other-exp">Other Experience</h2> */}
                             <h3>Dental Assistant</h3>
                             <h4>My Dental Dentistry & Implants (April 2021 - April 2024)</h4>
                             <ul>

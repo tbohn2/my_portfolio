@@ -60,7 +60,7 @@
 }
 
 #resume li {
-    font-size: calc(0.165 * var(--resume-multiplier));
+    font-size: calc(0.163 * var(--resume-multiplier));
     line-height: normal;
 }
 
@@ -72,11 +72,10 @@
 #left-column h2 {
     font-size: calc(0.21 * var(--resume-multiplier));
     font-weight: 600;
-    margin-top: calc(0.05 * var(--resume-multiplier));
 }
 
 #left-column li {
-    font-size: calc(0.162 * var(--resume-multiplier));
+    font-size: calc(0.16 * var(--resume-multiplier));
 }
 
 #contact li {
