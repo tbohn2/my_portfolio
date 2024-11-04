@@ -1,6 +1,6 @@
 import React from 'react';
 import '../../styles/resume.css'
-import headshot from '../../assets/portrait5.jpg'
+import headshot from '../../assets/portrait5small.jpg'
 import resume from '../../assets/resume.pdf'
 
 export default function Resume({ handleLoadedPage }) {
