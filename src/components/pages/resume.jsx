@@ -6,7 +6,7 @@ import resume from '../../assets/resume.pdf'
 export default function Resume({ handleLoadedPage }) {
     return (
         <section className='fade-in col-12 d-flex flex-column align-items-center'>
-            <a id='pdf-download' href={resume} download='Tanner Bohn Resume' className='my-3'>
+            <a id='pdf-download' href={resume} download='Tanner_Bohn_Resume' className='my-3'>
                 <button className='custom-btn col-12'>Download Resume</button>
             </a>
             <div className='bg-light p-1'>
