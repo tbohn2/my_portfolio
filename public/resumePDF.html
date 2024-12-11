@@ -72,14 +72,9 @@
             margin-bottom: calc(0.041667 * var(--resume-multiplier));
         }
 
-        #resume li {
-            font-size: calc(0.163 * var(--resume-multiplier));
-            line-height: normal;
-        }
-
         #left-column {
-            width: calc(5 * var(--resume-multiplier));
-            padding-top: calc(0.1 * var(--resume-multiplier));
+            width: calc(7 * var(--resume-multiplier));
+            padding-top: calc(0.05 * var(--resume-multiplier));
         }
 
         #left-column h2 {
@@ -89,6 +84,7 @@
 
         #left-column li {
             font-size: calc(0.16 * var(--resume-multiplier));
+            line-height: normal;
         }
 
         #contact li {
@@ -113,11 +109,17 @@
 
         .skills li {
             min-width: 50%;
-            margin: calc(0.025 * var(--resume-multiplier)) 0px;
+            margin: calc(0.02 * var(--resume-multiplier)) 0px;
         }
 
         #right-column {
             border-left: 1px solid var(--dark);
+            padding-top: calc(0.05 * var(--resume-multiplier));
+        }
+
+        #right-column li {
+            line-height: 20px;
+            font-size: calc(0.17 * var(--resume-multiplier));
         }
 
         .right-column-margins {
@@ -200,15 +202,16 @@
     <div id='resume' class='d-flex flex-column work-sans'>
         <div id='resume-header' class='bg-dark-blue d-flex justify-content-between align-items-center col-12'>
             <img src='/assets/portrait5small-CwI8BH-v.jpg' alt='Tanner Bohn' />
-            <!-- <img src='./src/assets/portrait5.jpg' alt='Tanner Bohn' /> -->
+            <!-- <img src='https://www.tannerbohn.me/assets/portrait5small-CwI8BH-v.jpg' alt='Tanner Bohn' /> -->
             <div class='d-flex flex-column justify-content-center flex-grow-1 align-items-start px-2 pt-2 text-light'>
                 <h1>Tanner Bohn</h1>
-                <h2>Full-Stack Web Developer</h2>
-                <p>Results-driven developer skilled in dynamic web applications using ASP.NET Core, React, Node.js,
-                    MySQL, and MongoDB.
-                    Proven success in enhancing user experiences and streamlining scheduling systems, implementing
-                    secure authentication, and delivering projects from concept to deployment.
-                    Focused on efficient data management and effective frontend-backend integration.
+                <h2>Software Engineer</h2>
+                <p>Results-driven full-stack developer with expertise in building dynamic web applications using
+                    <strong>ASP.NET
+                        Core</strong>, <strong>React</strong>, <strong>Node.js</strong>, <strong>MySQL</strong>, and
+                    <strong>MongoDB</strong>. Proficient in enhancing user experiences and implementing secure
+                    authentication solutions. Experienced in delivering projects from concept to deployment, with a
+                    focus on efficient data management and seamless <strong>frontend-backend integration</strong>.
                 </p>
             </div>
         </div>
@@ -253,6 +256,7 @@
                 <ul class='skills'>
                     <li>Object-Oriented Programming (OOP)</li>
                     <li>Functional Programming</li>
+                    <li>ORM (Object-Relational Mapping)</li>
                     <li>RESTful APIs</li>
                     <li>MVC (Model-View-Controller)</li>
                 </ul>
@@ -274,50 +278,63 @@
             </div>
             <div id='right-column' class='d-flex flex-column flex-grow-1 px-2'>
                 <h2>Experience</h2>
-                <h3>Full-Stack Web Developer</h3>
+                <h3>Software Engineer</h3>
                 <h4>Solid Ground AZ (February 2024 - Present)</h4>
                 <ul>
-                    <li>Developed a scheduling system using ASP.NET Core, Razor Pages, and MySQL for yoga instructors
-                        and clients</li>
-                    <li>Implemented JWT-based authentication and BCrypt password hashing</li>
-                    <li>Designed a responsive admin dashboard with jQuery for real-time schedule management and booking
+                    <li>Developed a secure scheduling system using <strong>C#</strong>, <strong>ASP.NET
+                            Core</strong>, <strong>Razor Pages</strong>, and <strong>MySQL</strong>, leveraging
+                        <strong>Entity Framework Core</strong> for efficient and <strong>scalable database
+                            operations</strong>
                     </li>
+                    <li>Designed normalized <strong> database schemas</strong>, created and executed
+                        <strong>LINQ</strong> queries for <strong>dynamic data manipulation</strong>, and managed
+                        <strong>database migrations</strong> to
+                        ensure <strong>data integrity</strong>
+                    </li>
+                    <li>Implemented <strong>JWT-based authentication</strong> and <strong>BCrypt password
+                            hashing</strong> for user data <strong>security</strong>
+                    </li>
+                    <li>Designed a <strong>responsive</strong> admin dashboard with <strong>jQuery</strong> for
+                        real-time schedule management,booking, and appointment notifications via <strong>SMTP
+                            integration</strong>
+                    </li>
+                    <li>Currently <strong>manage and maintain</strong> this project, ensuring <strong>ongoing
+                            improvements</strong> and <strong>smooth operation</strong> for the client</li>
                 </ul>
 
-                <h3 class='right-column-margins'>Full-Stack Web Developer</h3>
-                <h4>Plate Planner (October 2023 - Present)</h4>
-                <ul>
-                    <li>Built a meal planning and grocery app with the MERN stack and GraphQL for flexible querying</li>
-                    <li>Integrated JWT for secure authentication and developed recipe management with dynamic shopping
-                        lists</li>
-                    <li>Utilized Vite + React for efficient development and designed a responsive interface</li>
-                </ul>
 
                 <h3 class='right-column-margins'>Front-End Web Developer</h3>
                 <h4>Ashley Bohn Photography (October 2023 - Present)</h4>
                 <ul>
-                    <li>Created a photography portfolio site using React and Bootstrap, featuring responsive layouts and
-                        an optimized image gallery</li>
-                    <li>Implemented contact form submissions via EmailJS to send messages directly to the photographer
+                    <li>Created a photography portfolio site using <strong>React</strong> and
+                        <strong>Bootstrap</strong>, featuring <strong>responsive layouts</strong> and an
+                        <strong>optimized image gallery</strong>
+                    </li>
+                    <li>Implemented <strong>contact form submissions</strong> via <strong>EmailJS</strong> to send
+                        messages directly to the photographer</li>
+                    <li><strong>Actively manage</strong> and update the website, ensuring it remains functional and
+                        <strong>visually appealing</strong> for the client
                     </li>
                 </ul>
 
-                <h2 class="other-exp">Other Experience</h2>
-                <h3>Dental Assistant</h3>
-                <h4>My Dental Dentistry & Implants (April 2021 - April 2024)</h4>
+                <h3 class='right-column-margins'>Software Engineer</h3>
+                <h4>Plate Planner (October 2023 - March 2024)</h4>
                 <ul>
-                    <li><strong>Effective Communication:</strong> Coordinated communication between doctors and
-                        patients, ensuring clarity in technical details</li>
-                    <li><strong>Team Collaboration:</strong> Worked with a team to meet tight deadlines</li>
-                    <li><strong>Case Tracking & Coordination:</strong> Managed and tracked cases, maintaining
-                        correspondence with labs for timely deliveries</li>
-                </ul>
-
-                <h3 class='right-column-margins'>Sign Installation</h3>
-                <h4>SpellItOut Company (May 2020 - April 2021)</h4>
-                <ul>
-                    <li><strong>Client-Centered Design:</strong> Designed sign layouts based on client requests</li>
-                    <li><strong>Attention to Detail:</strong> Ensured meticulous installation of signs</li>
+                    <li>Built a meal planning and grocery app using the <strong>MERN
+                            stack</strong> and <strong>GraphQL</strong> for flexible querying and efficient data
+                        fetching</li>
+                    <li>Designed <strong>database schemas</strong> for managing recipes,
+                        ingredients, and shopping lists, ensuring <strong>data
+                            integrity</strong> and optimizing <strong>MongoDB</strong> queries with <strong>aggregation
+                            pipelines</strong></li>
+                    <li>Integrated <strong>JWT</strong> for <strong>secure authentication</strong> and developed dynamic
+                        <strong>recipe management</strong> with shopping lists
+                    </li>
+                    <li>Utilized <strong>Vite</strong> + <strong>React</strong> for efficient development and designed a
+                        <strong>responsive interface</strong>
+                    </li>
+                    <li>Built as a <strong>personal project</strong> to enhance <strong>full-stack development</strong>
+                        and <strong>database management</strong> skills</li>
                 </ul>
             </div>
         </div>

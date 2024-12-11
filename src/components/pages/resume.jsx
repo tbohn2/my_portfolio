@@ -1,7 +1,7 @@
 import React from 'react';
 import '../../styles/resume.css'
 import headshot from '../../assets/portrait5small.jpg'
-import resume from '../../assets/resume.pdf'
+import resume from '../../assets/Tanner_Bohn_Resume.pdf'
 
 export default function Resume({ handleLoadedPage }) {
     return (
@@ -10,31 +10,29 @@ export default function Resume({ handleLoadedPage }) {
                 <button className='custom-btn col-12'>Download Resume</button>
             </a>
             <div className='bg-light p-1'>
-                <div id='resume' class='d-flex flex-column work-sans p-1 border-dark-blue'>
-                    <div id='resume-header' class='bg-dark-blue d-flex justify-content-between align-items-center col-12'>
+                <div id='resume' className='d-flex flex-column work-sans p-1 border-dark-blue'>
+                    <div id='resume-header' className='bg-dark-blue d-flex justify-content-between align-items-center col-12'>
                         <img src={headshot} alt='Tanner Bohn' onLoad={() => handleLoadedPage('Resume')} />
-
-                        <div class='d-flex flex-column justify-content-center flex-grow-1 align-items-start px-2 pt-2 text-light'>
+                        <div className='d-flex flex-column justify-content-center flex-grow-1 align-items-start px-2 pt-2 text-light'>
                             <h1>Tanner Bohn</h1>
-                            <h2>Full-Stack Web Developer</h2>
-                            <p>Results-driven developer skilled in dynamic web applications using ASP.NET Core, React, Node.js,
-                                MySQL, and MongoDB.
-                                Proven success in enhancing user experiences and streamlining scheduling systems, implementing
-                                secure authentication, and delivering projects from concept to deployment.
-                                Focused on efficient data management and effective frontend-backend integration.
+                            <h2>Sofware Engineer</h2>
+                            <p>Results-driven full-stack developer with expertise in building dynamic
+                                web applications using <strong>ASP.NET Core</strong>, <strong>React</strong>, <strong>Node.js</strong>, <strong>MySQL</strong>, and <strong>MongoDB</strong>.
+                                Proficient in enhancing user experiences and implementing secure authentication solutions. Experienced in delivering projects from concept to deployment, with a
+                                focus on efficient data management and seamless <strong>frontend-backend integration</strong>.
                             </p>
                         </div>
                     </div>
-                    <div class='d-flex flex-grow-1 col-12'>
-                        <div id='left-column' class='d-flex flex-column flex-grow-1 mx-2'>
-                            <ul id='contact' class='list-unstyled'>
-                                <li><i class="bi bi-envelope"></i> tannerjbohn@gmail.com</li>
-                                <li><a href="https://www.tannerbohn.me/"><i class="bi bi-globe"></i> tannerbohn.me</a></li>
-                                <li><a href="https://github.com/tbohn2"><i class="bi bi-github"></i> github.com/tbohn2</a></li>
-                                <li><i class="bi bi-geo-alt"></i> Mesa, AZ</li>
+                    <div className='d-flex flex-grow-1 col-12'>
+                        <div id='left-column' className='d-flex flex-column flex-grow-1 mx-2'>
+                            <ul id='contact' className='list-unstyled'>
+                                <li><i className="bi bi-envelope"></i> tannerjbohn@gmail.com</li>
+                                <li><a href="https://www.tannerbohn.me/"><i className="bi bi-globe"></i> tannerbohn.me</a></li>
+                                <li><a href="https://github.com/tbohn2"><i className="bi bi-github"></i> github.com/tbohn2</a></li>
+                                <li><i className="bi bi-geo-alt"></i> Mesa, AZ</li>
                             </ul>
-                            <h2 class=''>Programming Languages</h2>
-                            <ul class='skills'>
+                            <h2 className=''>Programming Languages</h2>
+                            <ul className='skills'>
                                 <li>HTML5</li>
                                 <li>CSS3</li>
                                 <li>JavaScript</li>
@@ -42,7 +40,7 @@ export default function Resume({ handleLoadedPage }) {
                                 <li>SQL (Structured Query Language)</li>
                             </ul>
                             <h2>Frameworks and Tools</h2>
-                            <ul class='skills'>
+                            <ul className='skills'>
                                 <li>React</li>
                                 <li>Node.js</li>
                                 <li>Express.js</li>
@@ -57,80 +55,91 @@ export default function Resume({ handleLoadedPage }) {
                                 <li>JSON Web Tokens (JWT)</li>
                             </ul>
                             <h2>Databases</h2>
-                            <ul class='skills'>
+                            <ul className='skills'>
                                 <li>MySQL</li>
                                 <li>MongoDB</li>
                                 <li>GraphQL</li>
                             </ul>
                             <h2>Core Technical Concepts</h2>
-                            <ul class='skills'>
+                            <ul className='skills'>
                                 <li>Object-Oriented Programming (OOP)</li>
                                 <li>Functional Programming</li>
+                                <li>ORM (Object-Relational Mapping)</li>
                                 <li>RESTful APIs</li>
                                 <li>MVC (Model-View-Controller)</li>
                             </ul>
                             <h2>Education</h2>
-                            <ul class='list-unstyled'>
+                            <ul className='list-unstyled'>
                                 <li>
-                                    <h4 class='my-0'>ASU Coding Bootcamp </h4>
-                                    <p class='my-0'> Arizona State University </p>
-                                    <p class='my-0 fst-italic'>Feb 2023-Aug 2023</p>
+                                    <h4 className='my-0'>ASU Coding Bootcamp </h4>
+                                    <p className='my-0'> Arizona State University </p>
+                                    <p className='my-0 fst-italic'>Feb 2023-Aug 2023</p>
                                 </li>
-                                <li class='mt-2'>
-                                    <h4 class='my-0'>Bachelor of Science </h4>
-                                    <p class='my-0'>Biochemistry</p>
-                                    <p class='my-0'> Arizona State University </p>
-                                    <p class='my-0 fst-italic'>2016-2018, 2020-2022</p>
-                                    <p class='my-0 fst-italic'>GPA: 4.00</p>
+                                <li className='mt-2'>
+                                    <h4 className='my-0'>Bachelor of Science </h4>
+                                    <p className='my-0'>Biochemistry</p>
+                                    <p className='my-0'> Arizona State University </p>
+                                    <p className='my-0 fst-italic'>2016-2018, 2020-2022</p>
+                                    <p className='my-0 fst-italic'>GPA: 4.00</p>
                                 </li>
                             </ul>
                         </div>
-                        <div id='right-column' class='d-flex flex-column flex-grow-1 px-2'>
+                        <div id='right-column' className='d-flex flex-column flex-grow-1 px-2'>
                             <h2>Experience</h2>
-                            <h3>Full-Stack Web Developer</h3>
+                            <h3>Software Engineer</h3>
                             <h4>Solid Ground AZ (February 2024 - Present)</h4>
                             <ul>
-                                <li>Developed a scheduling system using ASP.NET Core, Razor Pages, and MySQL for yoga instructors
-                                    and clients</li>
-                                <li>Implemented JWT-based authentication and BCrypt password hashing</li>
-                                <li>Designed a responsive admin dashboard with jQuery for real-time schedule management and booking
+                                <li>Developed a secure scheduling system using <strong>C#</strong>, <strong>ASP.NET
+                                    Core</strong>, <strong>Razor Pages</strong>, and <strong>MySQL</strong>, leveraging <strong>Entity Framework Core</strong> for
+                                    efficient and <strong>scalable database operations</strong>
                                 </li>
+                                <li>Designed normalized <strong> database schemas</strong>, created and executed <strong>LINQ</strong> queries
+                                    for <strong>dynamic data manipulation</strong>, and managed <strong>database migrations</strong> to
+                                    ensure <strong>data integrity</strong>
+                                </li>
+                                <li>Implemented <strong>JWT-based authentication</strong> and <strong>BCrypt password
+                                    hashing</strong> for user data <strong>security</strong>
+                                </li>
+                                <li>Designed a <strong>responsive</strong> admin dashboard with <strong>jQuery</strong> for
+                                    real-time schedule management,booking, and appointment notifications via <strong>SMTP
+                                        integration</strong>
+                                </li>
+                                <li>Currently <strong>manage and maintain</strong> this project, ensuring <strong>ongoing
+                                    improvements</strong> and <strong>smooth operation</strong> for the client</li>
                             </ul>
 
-                            <h3 class='right-column-margins'>Full-Stack Web Developer</h3>
-                            <h4>Plate Planner (October 2023 - Present)</h4>
-                            <ul>
-                                <li>Built a meal planning and grocery app with the MERN stack and GraphQL for flexible querying</li>
-                                <li>Integrated JWT for secure authentication and developed recipe management with dynamic shopping
-                                    lists</li>
-                                <li>Utilized Vite + React for efficient development and designed a responsive interface</li>
-                            </ul>
 
-                            <h3 class='right-column-margins'>Front-End Web Developer</h3>
+                            <h3 className='right-column-margins'>Front-End Web Developer</h3>
                             <h4>Ashley Bohn Photography (October 2023 - Present)</h4>
                             <ul>
-                                <li>Created a photography portfolio site using React and Bootstrap, featuring responsive layouts and
-                                    an optimized image gallery</li>
-                                <li>Implemented contact form submissions via EmailJS to send messages directly to the photographer
+                                <li>Created a photography portfolio site using <strong>React</strong> and <strong>Bootstrap</strong>,
+                                    featuring <strong>responsive layouts</strong> and an <strong>optimized image gallery</strong>
+                                </li>
+                                <li>Implemented <strong>contact form submissions</strong> via <strong>EmailJS</strong> to send
+                                    messages directly to the photographer</li>
+                                <li><strong>Actively manage</strong> and update the website, ensuring it remains functional
+                                    and <strong>visually appealing</strong> for the client
                                 </li>
                             </ul>
 
-                            {/* <h2 class="other-exp">Other Experience</h2> */}
-                            <h3>Dental Assistant</h3>
-                            <h4>My Dental Dentistry & Implants (April 2021 - April 2024)</h4>
+                            <h3 className='right-column-margins'>Software Engineer</h3>
+                            <h4>Plate Planner (October 2023 - March 2024)</h4>
                             <ul>
-                                <li><strong>Effective Communication:</strong> Coordinated communication between doctors and
-                                    patients, ensuring clarity in technical details</li>
-                                <li><strong>Team Collaboration:</strong> Worked with a team to meet tight deadlines</li>
-                                <li><strong>Case Tracking & Coordination:</strong> Managed and tracked cases, maintaining
-                                    correspondence with labs for timely deliveries</li>
-                            </ul>
-
-                            <h3 class='right-column-margins'>Sign Installation</h3>
-                            <h4>SpellItOut Company (May 2020 - April 2021)</h4>
-                            <ul>
-                                <li><strong>Client-Centered Design:</strong> Designed sign layouts based on client requests</li>
-                                <li><strong>Attention to Detail:</strong> Ensured meticulous installation of signs</li>
+                                <li>Built a meal planning and grocery app using the <strong>MERN
+                                    stack</strong> and <strong>GraphQL</strong> for flexible querying and efficient data
+                                    fetching</li>
+                                <li>Designed <strong>database schemas</strong> for managing recipes,
+                                    ingredients, and shopping lists, ensuring <strong>data
+                                        integrity</strong> and optimizing <strong>MongoDB</strong> queries with <strong>aggregation
+                                            pipelines</strong></li>
+                                <li>Integrated <strong>JWT</strong> for <strong>secure authentication</strong> and developed
+                                    dynamic <strong>recipe management</strong> with shopping lists
+                                </li>
+                                <li>Utilized <strong>Vite</strong> + <strong>React</strong> for efficient development and designed
+                                    a <strong>responsive interface</strong>
+                                </li>
+                                <li>Built as a <strong>personal project</strong> to enhance <strong>full-stack
+                                    development</strong> and <strong>database management</strong> skills</li>
                             </ul>
                         </div>
                     </div>

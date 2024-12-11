@@ -13,8 +13,6 @@
     height: calc(11 * var(--resume-multiplier));
     overflow: hidden;
     color: black;
-    background-color: white;
-    border: 5px solid var(--dark);
 }
 
 #resume h1 {
@@ -25,7 +23,7 @@
 #resume h2 {
     border-bottom: 2px solid var(--dark);
     font-size: calc(0.25 * var(--resume-multiplier));
-    margin-bottom: calc(.03 * var(--resume-multiplier));
+    margin-bottom: calc(.032778 * var(--resume-multiplier));
     font-weight: 600;
 }
 
@@ -59,14 +57,9 @@
     margin-bottom: calc(0.041667 * var(--resume-multiplier));
 }
 
-#resume li {
-    font-size: calc(0.163 * var(--resume-multiplier));
-    line-height: normal;
-}
-
 #left-column {
-    width: calc(5 * var(--resume-multiplier));
-    padding-top: calc(0.1 * var(--resume-multiplier));
+    width: calc(7 * var(--resume-multiplier));
+    padding-top: calc(0.05 * var(--resume-multiplier));
 }
 
 #left-column h2 {
@@ -76,6 +69,7 @@
 
 #left-column li {
     font-size: calc(0.16 * var(--resume-multiplier));
+    line-height: calc(0.18 * var(--resume-multiplier));
 }
 
 #contact li {
@@ -100,19 +94,25 @@
 
 .skills li {
     min-width: 50%;
-    margin: calc(0.025 * var(--resume-multiplier)) 0px;
+    margin: calc(0.02 * var(--resume-multiplier)) 0px;
 }
 
 #right-column {
     border-left: 1px solid var(--dark);
+    padding-top: calc(0.05 * var(--resume-multiplier));
+}
+
+#right-column li {
+    line-height: calc(0.2 * var(--resume-multiplier));
+    font-size: calc(0.17 * var(--resume-multiplier));
 }
 
 .right-column-margins {
-    margin-top: 0 !important;
+    margin-top: calc(0.07 * var(--resume-multiplier)) !important;
 }
 
 .other-exp {
-    margin-top: 0 !important;
+    margin-top: calc(0.06 * var(--resume-multiplier)) !important;
 }
 
 @media screen and (max-width: 1200px) {
