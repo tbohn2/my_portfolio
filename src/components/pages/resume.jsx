@@ -88,6 +88,7 @@ export default function Resume({ handleLoadedPage }) {
                             <h2>Experience</h2>
                             <h3>Software Engineer</h3>
                             <h4>Solid Ground AZ (February 2024 - Present)</h4>
+                            <a href="https://www.solidgroundaz.com/">solidgroundaz.com</a>
                             <ul>
                                 <li>Developed a secure scheduling system using <strong>C#</strong>, <strong>ASP.NET
                                     Core</strong>, <strong>Razor Pages</strong>, and <strong>MySQL</strong>, leveraging <strong>Entity Framework Core</strong> for
@@ -111,6 +112,7 @@ export default function Resume({ handleLoadedPage }) {
 
                             <h3 className='right-column-margins'>Front-End Web Developer</h3>
                             <h4>Ashley Bohn Photography (October 2023 - Present)</h4>
+                            <a href="https://www.ashleybohnphoto.com/">ashleybohnphoto.com</a>
                             <ul>
                                 <li>Created a photography portfolio site using <strong>React</strong> and <strong>Bootstrap</strong>,
                                     featuring <strong>responsive layouts</strong> and an <strong>optimized image gallery</strong>
@@ -124,6 +126,7 @@ export default function Resume({ handleLoadedPage }) {
 
                             <h3 className='right-column-margins'>Software Engineer</h3>
                             <h4>Plate Planner (October 2023 - March 2024)</h4>
+                            <a href="https://www.plate-planner.com/">plate-planner.com</a>
                             <ul>
                                 <li>Built a meal planning and grocery app using the <strong>MERN
                                     stack</strong> and <strong>GraphQL</strong> for flexible querying and efficient data

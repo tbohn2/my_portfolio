@@ -10,7 +10,7 @@
 
 #resume {
     width: calc(8.5 * var(--resume-multiplier));
-    height: calc(11 * var(--resume-multiplier));
+    height: auto;
     overflow: hidden;
     color: black;
 }
@@ -23,7 +23,7 @@
 #resume h2 {
     border-bottom: 2px solid var(--dark);
     font-size: calc(0.25 * var(--resume-multiplier));
-    margin-bottom: calc(.032778 * var(--resume-multiplier));
+    margin-bottom: calc(.01 * var(--resume-multiplier));
     font-weight: 600;
 }
 
@@ -77,10 +77,10 @@
     font-size: calc(0.17 * var(--resume-multiplier));
 }
 
-#contact a {
-    text-decoration: none;
-    font-weight: normal;
-    color: black;
+#resume a {
+    text-decoration: none !important;
+    font-weight: normal !important;
+    color: black !important;
 }
 
 /* These are the ul on left */
@@ -99,11 +99,17 @@
 
 #right-column {
     border-left: 1px solid var(--dark);
-    padding-top: calc(0.05 * var(--resume-multiplier));
+    padding-top: calc(0.01 * var(--resume-multiplier));
+}
+
+#right-column a {
+    font-style: italic;
+    margin: calc(-0.025 * var(--resume-multiplier)) 0;
+    font-size: calc(0.17 * var(--resume-multiplier));
 }
 
 #right-column li {
-    line-height: calc(0.2 * var(--resume-multiplier));
+    line-height: calc(0.1925 * var(--resume-multiplier));
     font-size: calc(0.17 * var(--resume-multiplier));
 }
 
@@ -119,10 +125,6 @@
     :root {
         --resume-multiplier: 100px;
     }
-
-    #resume {
-        height: auto;
-    }
 }
 
 @media screen and (max-width: 992px) {
@@ -134,10 +136,6 @@
 @media screen and (max-width: 768px) {
     :root {
         --resume-multiplier: 62px;
-    }
-
-    #resume {
-        height: auto;
     }
 
     #left-column {
