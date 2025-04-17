@@ -128,21 +128,18 @@ export default function Resume({ handleLoadedPage }) {
                             <h4>Plate Planner (October 2023 - March 2024)</h4>
                             <a href="https://www.plate-planner.com/">plate-planner.com</a>
                             <ul>
-                                <li>Built a meal planning and grocery app using the <strong>MERN
-                                    stack</strong> and <strong>GraphQL</strong> for flexible querying and efficient data
-                                    fetching</li>
-                                <li>Designed <strong>database schemas</strong> for managing recipes,
-                                    ingredients, and shopping lists, ensuring <strong>data
-                                        integrity</strong> and optimizing <strong>MongoDB</strong> queries with <strong>aggregation
-                                            pipelines</strong></li>
-                                <li>Integrated <strong>JWT</strong> for <strong>secure authentication</strong> and developed
-                                    dynamic <strong>recipe management</strong> with shopping lists
+                                <li>Developed a full-stack meal planning and grocery app using the <strong>MERN stack</strong> and
+                                    <strong>GraphQL</strong> for efficient data queries
                                 </li>
-                                <li>Utilized <strong>Vite</strong> + <strong>React</strong> for efficient development and designed
-                                    a <strong>responsive interface</strong>
+                                <li>Designed <strong>MongoDB schemas</strong> for managing recipes, ingredients, and shopping lists,
+                                    optimizing performance and ensuring <strong>data integrity</strong></li>
+                                <li>Implemented <strong>JWT authentication</strong> and built dynamic <strong>recipe and shopping
+                                    list management</strong> features</li>
+                                <li>Built the frontend with <strong>Vite</strong> and <strong>React</strong>, creating a fast,
+                                    <strong>responsive user interface</strong>
                                 </li>
-                                <li>Built as a <strong>personal project</strong> to enhance <strong>full-stack
-                                    development</strong> and <strong>database management</strong> skills</li>
+                                <li>Created as a <strong>personal project</strong> to strengthen <strong>full-stack
+                                    development</strong> and <strong>database design</strong> skills</li>
                             </ul>
                         </div>
                     </div>
