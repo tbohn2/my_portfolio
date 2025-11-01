@@ -27,7 +27,7 @@ export default function Resume({ handleLoadedPage }) {
                         <div id='left-column' className='d-flex flex-column flex-grow-1 mx-2'>
                             <ul id='contact' className='list-unstyled'>
                                 <li><i className="bi bi-envelope"></i> tannerjbohn@gmail.com</li>
-                                <li><a href="https://www.tannerbohn.me/"><i className="bi bi-globe"></i> tannerbohn.me</a></li>
+                                <li><a href="https://www.tannerbohn.com/"><i className="bi bi-globe"></i> tannerbohn.com</a></li>
                                 <li><a href="https://github.com/tbohn2"><i className="bi bi-github"></i> github.com/tbohn2</a></li>
                                 <li><i className="bi bi-geo-alt"></i> Mesa, AZ</li>
                             </ul>

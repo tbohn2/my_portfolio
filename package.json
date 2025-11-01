@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.1.0",
   "type": "module",
-  "homepage": "https://tannerbohn.me",
+  "homepage": "https://tannerbohn.com",
   "scripts": {
     "dev": "vite --host",
     "build": "vite build",

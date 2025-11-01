@@ -2,7 +2,7 @@
 
 ## Overview
 
-This [website](https://tannerbohn.me) showcases my work as a **Full Stack Web Developer**. It highlights projects I've worked on, demonstrating my skills in front-end and back-end development. The website features a user-friendly design to provide an interactive experience for visitors who want to learn more about my background and projects.
+This [website](https://tannerbohn.com) showcases my work as a **Full Stack Web Developer**. It highlights projects I've worked on, demonstrating my skills in front-end and back-end development. The website features a user-friendly design to provide an interactive experience for visitors who want to learn more about my background and projects.
 
 ## Projects
 
