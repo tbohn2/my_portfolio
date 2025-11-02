@@ -52,7 +52,7 @@ export default function Portfolio({ mobile, handleLoadedPage }) {
     }, [details]);
 
     useEffect(() => {
-        if (projLoaded.length === 3) {
+        if (projLoaded.length === projects.length) {
             handleLoadedPage('Portfolio');
         }
     }, [projLoaded]);
@@ -109,9 +109,9 @@ export default function Portfolio({ mobile, handleLoadedPage }) {
             role: ['Developed the backend using ASP.NET Core and MySQL', 'Implemented JWT-based authentication', 'Created a dynamic frontend with jQuery for schedule and appointment management'],
             imgURL: solidGroundImage,
             imgURL2: solidGroundImage2,
-            siteURL: 'https://solidgroundaz.com/',
+            siteURL: 'https://solidgroundaz.site/',
             gitURL: 'https://github.com/tbohn2/solid-ground-az',
-            adminSiteURL: 'https://solidgroundaz.com/admin',
+            adminSiteURL: 'https://solidgroundaz.site/admin',
             login: ['Username: test', 'Password: testtest']
         },
         {
@@ -134,7 +134,7 @@ export default function Portfolio({ mobile, handleLoadedPage }) {
             role: ['Designed and developed the frontend using React and Vite', 'Integrated EmailJS for form handling', 'Coordinated with the photographer to meet design needs'],
             imgURL: ashleyPhoto,
             imgURL2: ashleyPhoto2,
-            siteURL: 'https://www.ashleybohnphoto.com',
+            siteURL: 'https://www.ashleybohnphoto.site',
             gitURL: 'https://github.com/tbohn2/ashley-photo'
         },
         {
@@ -158,7 +158,7 @@ export default function Portfolio({ mobile, handleLoadedPage }) {
             role: ['Developed both frontend and backend using React, Node.js, Express, and MongoDB', 'Implemented GraphQL for data queries and designed user authentication with JWT'],
             imgURL: platePlannerImage,
             imgURL2: platePlannerImage2,
-            siteURL: 'https://www.plate-planner.com/',
+            siteURL: 'https://plateplanner.site/',
             gitURL: 'https://github.com/tbohn2/plate-planner',
             login: ['Username: test@test.com', 'Password: testtest']
         },
