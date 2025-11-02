@@ -1,8 +1,8 @@
 .card-container {
     position: relative;
     top: 75px;
-    width: 30%;
-    height: 21vw;
+    width: 45%;
+    height: auto;
     transition: all .5s ease-in-out;
 }
 

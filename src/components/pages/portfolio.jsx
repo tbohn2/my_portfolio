@@ -6,6 +6,8 @@ import platePlannerImage from '../../assets/plate-planner.png'
 import platePlannerImage2 from '../../assets/plate-planner2.png'
 import solidGroundImage from '../../assets/solid-g.png'
 import solidGroundImage2 from '../../assets/solid-g2.png'
+import hentgesDentalImage from '../../assets/hentges-dental.png'
+import hentgesDentalImage2 from '../../assets/hentges-dental2.png'
 
 export default function Portfolio({ mobile, handleLoadedPage }) {
 
@@ -57,6 +59,62 @@ export default function Portfolio({ mobile, handleLoadedPage }) {
 
     const projects = [
         {
+            id: 4,
+            title: 'Hentge Dental',
+            description: 'Hentge Dental is a modern dental clinic website built with Next.js, designed to provide information, streamline patient appointment requests, and improve online visibility through robust SEO. The platform supports secure authentication and an intuitive admin panel for managing patient requests.',
+            features: [
+                'Patient appointment request scheduling',
+                'Comprehensive service and dentist information',
+                'Responsive, accessible design',
+                'Admin dashboard for managing appointment requests'
+            ],
+            languages: ['JavaScript', 'HTML', 'CSS'],
+            tech: ['Next.js', 'React', 'JWT Authentication', 'Tailwind CSS', 'SEO Optimization'],
+            challenges: [
+                'Implementing JWT authentication for secure access to the admin dashboard',
+                'Enhancing SEO using Next.js best practices (meta tags, sitemap, clean URLs)',
+                'Building a robust, validated patient appointment request form',
+                'Balancing dynamic interactivity with static site optimization for speed'
+            ],
+            role: [
+                'Developed the site architecture using Next.js and React',
+                'Built secure patient request workflows and authentication with JWT',
+                'Implemented SEO techniques for improved search rankings',
+                'Designed and styled responsive components with Tailwind CSS'
+            ],
+            imgURL: hentgesDentalImage,
+            imgURL2: hentgesDentalImage2,
+            siteURL: 'https://www.hentgesdental.com/',
+            gitURL: 'https://github.com/tbohn2/hentges_dental'
+        },
+        {
+            id: 3,
+            title: 'Solid Ground AZ',
+            description: 'Solid Ground AZ is a full-stack web application designed to manage yoga instructor schedules, clients, and appointments. Built using ASP.NET Core with Razor Pages and MySQL, it offers a responsive and efficient solution for scheduling management.',
+            features: [
+                'User Authentication with JWT',
+                'Schedule Management for yoga instructors',
+                'Client Booking system for appointment scheduling',
+                'Admin Dashboard for managing schedules and appointments',
+                'Dynamic frontend with jQuery for interactive user experiences'
+            ],
+            languages: ['C#', 'HTML', 'JavaScript', 'SQL'],
+            tech: ['ASP.NET Core 8.0', 'Razor Pages', 'MySQL', 'Entity Framework Core', 'jQuery'],
+            challenges: [
+                'Implementing secure authentication with JWT and password hashing using BCrypt',
+                'Encrypting user data to ensure confidentiality and security',
+                'Real-time schedule updates and appointment booking for both instructors and clients',
+                'Building a responsive and dynamic frontend with jQuery for smooth user interaction'
+            ],
+            role: ['Developed the backend using ASP.NET Core and MySQL', 'Implemented JWT-based authentication', 'Created a dynamic frontend with jQuery for schedule and appointment management'],
+            imgURL: solidGroundImage,
+            imgURL2: solidGroundImage2,
+            siteURL: 'https://solidgroundaz.com/',
+            gitURL: 'https://github.com/tbohn2/solid-ground-az',
+            adminSiteURL: 'https://solidgroundaz.com/admin',
+            login: ['Username: test', 'Password: testtest']
+        },
+        {
             id: 1,
             title: 'Ashley Bohn Photography',
             description: 'Ashley Photography is a web application created for photographer Ashley Bohn. It showcases her work, including her biography, pricing, and portfolio. The application allows users to contact her through a form submission using EmailJS, which sends their message directly to her email.',
@@ -104,33 +162,6 @@ export default function Portfolio({ mobile, handleLoadedPage }) {
             gitURL: 'https://github.com/tbohn2/plate-planner',
             login: ['Username: test@test.com', 'Password: testtest']
         },
-        {
-            id: 3,
-            title: 'Solid Ground AZ',
-            description: 'Solid Ground AZ is a full-stack web application designed to manage yoga instructor schedules, clients, and appointments. Built using ASP.NET Core with Razor Pages and MySQL, it offers a responsive and efficient solution for scheduling management.',
-            features: [
-                'User Authentication with JWT',
-                'Schedule Management for yoga instructors',
-                'Client Booking system for appointment scheduling',
-                'Admin Dashboard for managing schedules and appointments',
-                'Dynamic frontend with jQuery for interactive user experiences'
-            ],
-            languages: ['C#', 'HTML', 'JavaScript', 'SQL'],
-            tech: ['ASP.NET Core 8.0', 'Razor Pages', 'MySQL', 'Entity Framework Core', 'jQuery'],
-            challenges: [
-                'Implementing secure authentication with JWT and password hashing using BCrypt',
-                'Encrypting user data to ensure confidentiality and security',
-                'Real-time schedule updates and appointment booking for both instructors and clients',
-                'Building a responsive and dynamic frontend with jQuery for smooth user interaction'
-            ],
-            role: ['Developed the backend using ASP.NET Core and MySQL', 'Implemented JWT-based authentication', 'Created a dynamic frontend with jQuery for schedule and appointment management'],
-            imgURL: solidGroundImage,
-            imgURL2: solidGroundImage2,
-            siteURL: 'https://solidgroundaz.com/',
-            gitURL: 'https://github.com/tbohn2/solid-ground-az',
-            adminSiteURL: 'https://solidgroundaz.com/admin',
-            login: ['Username: test', 'Password: testtest']
-        }
     ];
 
     const handledLoadedProject = () => {
