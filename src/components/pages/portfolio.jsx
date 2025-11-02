@@ -60,8 +60,8 @@ export default function Portfolio({ mobile, handleLoadedPage }) {
     const projects = [
         {
             id: 4,
-            title: 'Hentge Dental',
-            description: 'Hentge Dental is a modern dental clinic website built with Next.js, designed to provide information, streamline patient appointment requests, and improve online visibility through robust SEO. The platform supports secure authentication and an intuitive admin panel for managing patient requests.',
+            title: 'Hentges Dental',
+            description: 'Hentges Dental is a modern dental clinic website built with Next.js, designed to provide information, streamline patient appointment requests, and improve online visibility through robust SEO. The platform supports secure authentication and an intuitive admin panel for managing patient requests.',
             features: [
                 'Patient appointment request scheduling',
                 'Comprehensive service and dentist information',
