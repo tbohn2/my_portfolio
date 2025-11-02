@@ -24,9 +24,9 @@ function Header({ displayPage, setDisplayPage, mobile }) {
                             <li className='col-12'>
                                 <Link to='/resume'>resume</Link>
                             </li>
-                            <li className='col-12'>
+                            {/* <li className='col-12'>
                                 <Link to='/contact'>contact</Link>
-                            </li>
+                            </li> */}
                         </ul>
                     </div>
                 </nav>
@@ -48,11 +48,11 @@ function Header({ displayPage, setDisplayPage, mobile }) {
                                 resume
                             </Link>
                         </li>
-                        <li>
+                        {/* <li>
                             <Link to="/contact" onClick={() => setDisplayPage('Contact')} className={displayPage === 'Contact' ? 'active' : 'inactive'}                >
                                 contact
                             </Link>
-                        </li>
+                        </li> */}
                     </ul>
                 </nav>
             }

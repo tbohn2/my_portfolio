@@ -51,7 +51,7 @@ function App() {
             <Route path="/" element={<AboutMe setDisplayPage={(page) => setDisplayPage(page)} handleLoadedPage={(page) => handleLoadedPage(page)} />} />
             <Route path="/portfolio" element={<Portfolio mobile={mobile} handleLoadedPage={(page) => handleLoadedPage(page)} />} />
             <Route path="/resume" element={<Resume mobile={mobile} handleLoadedPage={(page) => handleLoadedPage(page)} />} />
-            <Route path="/contact" element={<Contact mobile={mobile} />} />
+            {/* <Route path="/contact" element={<Contact mobile={mobile} />} /> */}
           </Routes>
         </div>
         <Footer mobile={mobile} />
