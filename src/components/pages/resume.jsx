@@ -1,148 +1,149 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import '../../styles/resume.css'
-import headshot from '../../assets/portrait5small.jpg'
 import resume from '../../assets/Tanner_Bohn_Resume.pdf'
 
 export default function Resume({ handleLoadedPage }) {
+    useEffect(() => {
+        handleLoadedPage('Resume');
+    }, [handleLoadedPage]);
+
     return (
         <section className='fade-in col-12 d-flex flex-column align-items-center'>
             <a id='pdf-download' href={resume} download='Tanner_Bohn_Resume' className='my-3'>
                 <button className='custom-btn col-12'>Download Resume</button>
             </a>
-            <div className='bg-light p-1'>
-                <div id='resume' className='d-flex flex-column work-sans p-1 border-dark-blue'>
-                    <div id='resume-header' className='bg-dark-blue d-flex justify-content-between align-items-center col-12'>
-                        <img src={headshot} alt='Tanner Bohn' onLoad={() => handleLoadedPage('Resume')} />
-                        <div className='d-flex flex-column justify-content-center flex-grow-1 align-items-start px-2 pt-2 text-light'>
-                            <h1>Tanner Bohn</h1>
-                            <h2>Sofware Engineer</h2>
-                            <p>Results-driven full-stack developer with expertise in building dynamic
-                                web applications using <strong>ASP.NET Core</strong>, <strong>React</strong>, <strong>Node.js</strong>, <strong>MySQL</strong>, and <strong>MongoDB</strong>.
-                                Proficient in enhancing user experiences and implementing secure authentication solutions. Experienced in delivering projects from concept to deployment, with a
-                                focus on efficient data management and seamless <strong>frontend-backend integration</strong>.
-                            </p>
-                        </div>
-                    </div>
-                    <div className='d-flex flex-grow-1 col-12'>
-                        <div id='left-column' className='d-flex flex-column flex-grow-1 mx-2'>
-                            <ul id='contact' className='list-unstyled'>
+            <div id='resume' className='d-flex flex-column work-sans'>
+                <div className='d-flex flex-grow-1 col-12'>
+                    <div id='left-column' className='d-flex flex-column flex-grow-1 mx-2'>
+
+                        <div id='resume-header' className='bg-dark-blue text-light text-center py-2'>
+                            <h1 className='mb-0'>Tanner Bohn</h1>
+                            <h2 className='fw-light mb-2'>Software Engineer</h2>
+                            <ul id='contact' className='list-unstyled mb-0'>
                                 <li><i className="bi bi-envelope"></i> tannerjbohn@gmail.com</li>
-                                <li><a href="https://www.tannerbohn.com/"><i className="bi bi-globe"></i> tannerbohn.com</a></li>
-                                <li><a href="https://github.com/tbohn2"><i className="bi bi-github"></i> github.com/tbohn2</a></li>
+                                <li><a className='text-light' href="https://www.tannerbohn.com/"><i className="bi bi-globe"></i>
+                                    tannerbohn.com</a></li>
+                                <li><a className='text-light' href="https://github.com/tbohn2"><i className="bi bi-github"></i>
+                                    github.com/tbohn2</a></li>
                                 <li><i className="bi bi-geo-alt"></i> Mesa, AZ</li>
                             </ul>
-                            <h2 className=''>Programming Languages</h2>
-                            <ul className='skills'>
-                                <li>HTML5</li>
-                                <li>CSS3</li>
-                                <li>JavaScript</li>
-                                <li>C#</li>
-                                <li>SQL (Structured Query Language)</li>
-                            </ul>
-                            <h2>Frameworks and Tools</h2>
-                            <ul className='skills'>
-                                <li>React</li>
-                                <li>Node.js</li>
-                                <li>Express.js</li>
-                                <li>ASP.NET Core</li>
-                                <li>Entity Framework Core</li>
-                                <li>Vite</li>
-                                <li>jQuery</li>
-                                <li>Bootstrap</li>
-                                <li>EmailJS</li>
-                                <li>Git/GitHub</li>
-                                <li>BCrypt</li>
-                                <li>JSON Web Tokens (JWT)</li>
-                            </ul>
-                            <h2>Databases</h2>
-                            <ul className='skills'>
-                                <li>MySQL</li>
-                                <li>MongoDB</li>
-                                <li>GraphQL</li>
-                            </ul>
-                            <h2>Core Technical Concepts</h2>
-                            <ul className='skills'>
-                                <li>Object-Oriented Programming (OOP)</li>
-                                <li>Functional Programming</li>
-                                <li>ORM (Object-Relational Mapping)</li>
-                                <li>RESTful APIs</li>
-                                <li>MVC (Model-View-Controller)</li>
-                            </ul>
-                            <h2>Education</h2>
-                            <ul className='list-unstyled'>
-                                <li>
-                                    <h4 className='my-0'>ASU Coding Bootcamp </h4>
-                                    <p className='my-0'> Arizona State University </p>
-                                    <p className='my-0 fst-italic'>Feb 2023-Aug 2023</p>
-                                </li>
-                                <li className='mt-2'>
-                                    <h4 className='my-0'>Bachelor of Science </h4>
-                                    <p className='my-0'>Biochemistry</p>
-                                    <p className='my-0'> Arizona State University </p>
-                                    <p className='my-0 fst-italic'>2016-2018, 2020-2022</p>
-                                    <p className='my-0 fst-italic'>GPA: 4.00</p>
-                                </li>
-                            </ul>
                         </div>
-                        <div id='right-column' className='d-flex flex-column flex-grow-1 px-2'>
-                            <h2>Experience</h2>
-                            <h3>Software Engineer</h3>
-                            <h4>Solid Ground AZ (February 2024 - Present)</h4>
-                            <a href="https://www.solidgroundaz.com/">solidgroundaz.com</a>
-                            <ul>
-                                <li>Developed a secure scheduling system using <strong>C#</strong>, <strong>ASP.NET
-                                    Core</strong>, <strong>Razor Pages</strong>, and <strong>MySQL</strong>, leveraging <strong>Entity Framework Core</strong> for
-                                    efficient and <strong>scalable database operations</strong>
-                                </li>
-                                <li>Designed normalized <strong> database schemas</strong>, created and executed <strong>LINQ</strong> queries
-                                    for <strong>dynamic data manipulation</strong>, and managed <strong>database migrations</strong> to
-                                    ensure <strong>data integrity</strong>
-                                </li>
-                                <li>Implemented <strong>JWT-based authentication</strong> and <strong>BCrypt password
-                                    hashing</strong> for user data <strong>security</strong>
-                                </li>
-                                <li>Designed a <strong>responsive</strong> admin dashboard with <strong>jQuery</strong> for
-                                    real-time schedule management,booking, and appointment notifications via <strong>SMTP
-                                        integration</strong>
-                                </li>
-                                <li>Currently <strong>manage and maintain</strong> this project, ensuring <strong>ongoing
-                                    improvements</strong> and <strong>smooth operation</strong> for the client</li>
-                            </ul>
 
+                        <h2>Programming Languages</h2>
+                        <ul className='skills'>
+                            <li>JavaScript / TypeScript / Python</li>
+                            <li>C# / HTML5 / CSS3</li>
+                        </ul>
 
-                            <h3 className='right-column-margins'>Front-End Web Developer</h3>
-                            <h4>Ashley Bohn Photography (October 2023 - Present)</h4>
-                            <a href="https://www.ashleybohnphoto.com/">ashleybohnphoto.com</a>
-                            <ul>
-                                <li>Created a photography portfolio site using <strong>React</strong> and <strong>Bootstrap</strong>,
-                                    featuring <strong>responsive layouts</strong> and an <strong>optimized image gallery</strong>
-                                </li>
-                                <li>Implemented <strong>contact form submissions</strong> via <strong>EmailJS</strong> to send
-                                    messages directly to the photographer</li>
-                                <li><strong>Actively manage</strong> and update the website, ensuring it remains functional
-                                    and <strong>visually appealing</strong> for the client
-                                </li>
-                            </ul>
+                        <h2>Frameworks & Tools</h2>
+                        <ul className='skills'>
+                            <li>React / Next.js / Node.js / Express.js</li>
+                            <li>Django / ASP.NET Core / Vite</li>
+                            <li>GraphQL / jQuery</li>
+                            <li>Bootstrap / Tailwind CSS</li>
+                            <li>Git / GitHub</li>
+                        </ul>
 
-                            <h3 className='right-column-margins'>Software Engineer</h3>
-                            <h4>Plate Planner (October 2023 - March 2024)</h4>
-                            <a href="https://www.plate-planner.com/">plate-planner.com</a>
-                            <ul>
-                                <li>Developed a full-stack meal planning and grocery app using the <strong>MERN stack</strong> and
-                                    <strong>GraphQL</strong> for efficient data queries
-                                </li>
-                                <li>Designed <strong>MongoDB schemas</strong> for managing recipes, ingredients, and shopping lists,
-                                    optimizing performance and ensuring <strong>data integrity</strong></li>
-                                <li>Implemented <strong>JWT authentication</strong> and built dynamic <strong>recipe and shopping
-                                    list management</strong> features</li>
-                                <li>Built the frontend with <strong>Vite</strong> and <strong>React</strong>, creating a fast,
-                                    <strong>responsive user interface</strong>
-                                </li>
-                                <li>Created as a <strong>personal project</strong> to strengthen <strong>full-stack
-                                    development</strong> and <strong>database design</strong> skills</li>
-                            </ul>
-                        </div>
+                        <h2>Databases</h2>
+                        <ul className='skills'>
+                            <li>MySQL / PostgreSQL / MongoDB</li>
+                        </ul>
+
+                        <h2>Additional Skills</h2>
+                        <ul className='skills'>
+                            <li>ORM (Entity Framework / Mongoose)</li>
+                            <li>Authentication & Security (JWT / OAuth / BCrypt)</li>
+                            <li>CI/CD (Vercel / Render / AWS)</li>
+                            <li>Payment Integration (Stripe)</li>
+                            <li>Agile Development</li>
+                        </ul>
+
+                        <h2>Education</h2>
+                        <ul className='list-unstyled'>
+                            <li>
+                                <h4 className='my-0'>ASU Coding Bootcamp</h4>
+                                <p className='my-0'>Arizona State University</p>
+                                <p className='my-0 fst-italic'>Feb 2023 – Aug 2023</p>
+                            </li>
+                            <li className='mt-2'>
+                                <h4 className='my-0'>Bachelor of Science, Biochemistry</h4>
+                                <p className='my-0'>Arizona State University</p>
+                                <p className='my-0 fst-italic'>2016–2018, 2020–2022</p>
+                                <p className='my-0 fst-italic'>GPA: 4.00</p>
+                            </li>
+                        </ul>
+
                     </div>
+
+                    <div id='right-column' className='d-flex flex-column justify-content-between flex-grow-1 px-2 pb-2'>
+
+                        <h2 className='bg-dark-blue text-light text-center'>Professional Experience</h2>
+                        <h3>Software Engineer Intern | TruNeighbor</h3>
+                        <h4>May 2025 – Aug 2025</h4>
+                        <ul>
+                            <li>Engineered 10+ <strong>REST API endpoints</strong> and backend modules
+                                (<strong>Node.js</strong>) within a 7-person <strong>Agile</strong> team, powering core platform
+                                functionality</li>
+                            <li>Implemented a <strong>CI/CD pipeline</strong> to run a <strong>Python</strong>
+                                data ingestion script, streamlining updates to <strong>AWS EC2</strong> servers</li>
+                            <li>Optimized data workflows through automation, increasing update frequency to bi-daily and
+                                reducing redundancy by 25%</li>
+                        </ul>
+
+                        <h2 className='mt-3 bg-dark-blue text-light text-center'>Freelance Experience</h2>
+
+                        <h3>Software Engineer | Hentges Dental</h3>
+                        <h4>Aug 2025 – Present | <a href="https://www.hentgesdental.com/">hentgesdental.com</a></h4>
+                        <ul>
+                            <li>Developed clinic website (<strong>Next.js</strong>, <strong>Tailwind CSS</strong>) with SEO
+                                optimization and validated appointment forms</li>
+                            <li>Built secure authentication and admin dashboard for appointment management</li>
+                        </ul>
+
+                        <h3>Full-Stack Developer | Bohn Voyage</h3>
+                        <h4>Aug 2025 – Present | <a href="https://bohn-voyage.vercel.app/">bohn-voyage.vercel.app</a> (WIP)</h4>
+                        <ul>
+                            <li>Architected booking platform (<strong>Next.js</strong>, <strong>Django REST API</strong>,
+                                <strong>PostgreSQL</strong>, <strong>Tailwind</strong>)
+                            </li>
+                            <li>Implemented multi-step booking, magic link authentication, <strong>Stripe</strong> payments, and
+                                <strong>OpenAI</strong> integration
+                            </li>
+                            <li>Deployed to <strong>Vercel</strong> and <strong>Render</strong> with secure account management
+                            </li>
+                        </ul>
+
+                        <h3>Full-Stack Developer | Solid Ground AZ</h3>
+                        <h4>Feb 2024 – Jun 2025 | <a href="https://www.solidgroundaz.site/">solidgroundaz.site</a></h4>
+                        <ul>
+                            <li>Built scheduling system (<strong>C#</strong>, <strong>ASP.NET Core</strong>, <strong>Razor
+                                Pages</strong>, <strong>MySQL</strong>) with normalized schemas and <strong>LINQ</strong>
+                                queries</li>
+                            <li>Implemented authentication (<strong>BCrypt</strong>) and responsive admin dashboard
+                                (<strong>jQuery</strong>, <strong>SMTP</strong>)</li>
+                        </ul>
+
+                        <h2 className='mt-3 bg-dark-blue text-light text-center'>Personal Projects</h2>
+
+                        <h3>Full-Stack Developer | Plate Planner</h3>
+                        <h4>Oct 2023 – Mar 2024 | <a href="https://www.plateplanner.site/">plateplanner.site</a></h4>
+                        <ul>
+                            <li>Built meal-planning app (<strong>MERN</strong>, <strong>GraphQL</strong>) with
+                                <strong>MongoDB</strong> schemas for recipes and shopping lists
+                            </li>
+                            <li>Developed responsive frontend (<strong>Vite</strong>, <strong>React</strong>) with dynamic
+                                recipe and list management</li>
+                        </ul>
+
+                        <h3>Front-End Developer | Ashley Bohn Photography</h3>
+                        <h4>Oct 2023 – Oct 2024 | <a href="https://www.ashleybohnphoto.site/">ashleybohnphoto.site</a></h4>
+                        <ul>
+                            <li>Developed responsive photography portfolio (<strong>React</strong>, <strong>Bootstrap</strong>)
+                                with optimized image gallery and <strong>EmailJS</strong> contact form</li>
+                        </ul>
+
+                    </div>
+
                 </div>
             </div>
         </section>
