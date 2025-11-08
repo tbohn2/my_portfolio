@@ -8,6 +8,8 @@ import solidGroundImage from '../../assets/solid-g.png'
 import solidGroundImage2 from '../../assets/solid-g2.png'
 import hentgesDentalImage from '../../assets/hentges-dental.png'
 import hentgesDentalImage2 from '../../assets/hentges-dental2.png'
+import bohnVoyageImage from '../../assets/bohn-voyage.png'
+import bohnVoyageImage2 from '../../assets/bohn-voyage2.png'
 
 export default function Portfolio({ mobile, handleLoadedPage }) {
 
@@ -16,6 +18,8 @@ export default function Portfolio({ mobile, handleLoadedPage }) {
     const [projLoaded, setProjLoaded] = useState([]);
 
     const detailsRefs = useRef({});
+    const imageRefs = useRef([]);
+    const loadedImagesRef = useRef(new Set());
 
     useEffect(() => {
         const handleClickOutside = (event) => {
@@ -50,6 +54,31 @@ export default function Portfolio({ mobile, handleLoadedPage }) {
             document.removeEventListener('touchstart', handleClickOutside);
         };
     }, [details]);
+
+    useEffect(() => {
+        // Reset loaded state when component mounts
+        setProjLoaded([]);
+        loadedImagesRef.current.clear();
+
+        // Check if images are already loaded (cached) when component mounts
+        const checkCachedImages = () => {
+            imageRefs.current.forEach((imgRef, index) => {
+                if (imgRef && imgRef.complete && imgRef.naturalHeight !== 0) {
+                    if (!loadedImagesRef.current.has(index)) {
+                        loadedImagesRef.current.add(index);
+                        handledLoadedProject(index);
+                    }
+                }
+            });
+        };
+
+        // Small delay to ensure refs are set
+        const timer = setTimeout(() => {
+            checkCachedImages();
+        }, 100);
+
+        return () => clearTimeout(timer);
+    }, []);
 
     useEffect(() => {
         if (projLoaded.length === projects.length) {
@@ -138,6 +167,48 @@ export default function Portfolio({ mobile, handleLoadedPage }) {
             gitURL: 'https://github.com/tbohn2/ashley-photo'
         },
         {
+            id: 5,
+            title: 'Bohn Voyage (WIP)',
+            description: 'Bohn Voyage is a full-stack river tube booking platform created for Salt River floating adventures in Arizona. The application allows customers to book inflatable platforms for river floating experiences. It features a multi-step booking process with real-time availability checking, email-based authentication via magic links, and secure payment processing through Stripe. The platform includes both a responsive Next.js frontend and a Django REST API backend with PostgreSQL database.',
+            features: [
+                'Multi-step booking with real-time tube availability',
+                'Email authentication via magic link',
+                'Stripe-secured payments',
+                'JWT-secured customer accounts',
+                'Responsive design',
+                'Automated email notifications'
+            ],
+            languages: ['Python', 'TypeScript', 'JavaScript', 'HTML', 'CSS'],
+            tech: [
+                'Next.js/React',
+                'Django/Django REST Framework',
+                'PostgreSQL',
+                'Tailwind CSS',
+                'Stripe',
+                'JWT',
+                'OpenAI (for NLP features)',
+            ],
+            challenges: [
+                'Building a secure email verification flow with magic links and JWT token management',
+                'Creating a multi-step booking wizard with state management and progress tracking',
+                'Integrating Stripe payment processing with webhook handling for payment status updates',
+                'Managing CORS and cookie-based authentication between frontend and backend',
+            ],
+            role: [
+                'Designed and developed full-stack architecture',
+                'Built Next.js frontend (TypeScript, Tailwind CSS)',
+                'Created Django REST API backend',
+                'Implemented magic link email auth',
+                'Integrated Stripe payments',
+                'Deployment setup (Vercel, Render)'
+            ],
+            imgURL: bohnVoyageImage,
+            imgURL2: bohnVoyageImage2,
+            siteURL: 'https://bohn-voyage.vercel.app/', // TODO: Update to live site URL when deployed
+            gitURL: 'https://github.com/tbohn2/bohn_voyage',
+            gitURL2: 'https://github.com/tbohn2/bohn_voyage_backend'
+        },
+        {
             id: 2,
             title: 'Plate Planner',
             description: 'Plate Planner is a web application designed to streamline meal planning and grocery shopping. It integrates the MERN stack (MongoDB, Express, React, Node.js) with GraphQL for flexible data querying and Vite for a fast and efficient development experience.',
@@ -164,7 +235,13 @@ export default function Portfolio({ mobile, handleLoadedPage }) {
         },
     ];
 
-    const handledLoadedProject = () => {
+    const handledLoadedProject = (index) => {
+        if (index !== undefined && loadedImagesRef.current.has(index)) {
+            return; // Already counted this image
+        }
+        if (index !== undefined) {
+            loadedImagesRef.current.add(index);
+        }
         setProjLoaded((prevState) => (
             [...prevState, true]
         ));
@@ -199,6 +276,9 @@ export default function Portfolio({ mobile, handleLoadedPage }) {
             <div className='col-12 d-flex flex-wrap justify-content-evenly align-items-center fs-5'>
                 <a className='col-11 col-sm-4 col-md-11 my-2 custom-btn text-decoration-none text-center' href={details.siteURL}>Visit Site</a>
                 <a className='col-11 col-sm-4 col-md-11 my-2 custom-btn text-decoration-none text-center' href={details.gitURL}>Visit Repository</a>
+                {details.gitURL2 && (
+                    <a className='col-11 col-sm-4 col-md-11 my-2 custom-btn text-decoration-none text-center' href={details.gitURL2}>Visit Repository (Backend)</a>
+                )}
                 {details.adminSiteURL && (
                     <a className='col-11 col-sm-4 col-md-11 custom-btn text-decoration-none text-center my-2 fs-5' href={details.adminSiteURL}>Visit Admin Site</a>
                 )}
@@ -211,7 +291,12 @@ export default function Portfolio({ mobile, handleLoadedPage }) {
             {projects.map((project, index) => (
                 <div key={index} className='card-container'>
                     <div className='project-card roboto' onClick={() => setDetails(project)}>
-                        <img src={project.imgURL} alt={`${project.title} Screenshot`} onLoad={handledLoadedProject} />
+                        <img
+                            ref={(el) => imageRefs.current[index] = el}
+                            src={project.imgURL}
+                            alt={`${project.title} Screenshot`}
+                            onLoad={() => handledLoadedProject(index)}
+                        />
                         <h2>{project.title}</h2>
                     </div>
                 </div>
@@ -243,7 +328,7 @@ export default function Portfolio({ mobile, handleLoadedPage }) {
                                 <h3>Technology:</h3>
                                 <ul className='tech-container col-12'>
                                     {details.tech.map(techName => (
-                                        <li className='col-xl-6 col-12 details-text'>{techName}</li>
+                                        <li className='col-12 details-text'>{techName}</li>
                                     ))}
                                 </ul>
                             </div>
