@@ -92,7 +92,7 @@ export default function Resume({ handleLoadedPage }) {
 
                         <h2 className='mt-3 bg-dark-blue text-light text-center'>Freelance Experience</h2>
 
-                        <h3>Software Engineer | Hentges Dental</h3>
+                        <h3>Full-Stack Developer | Hentges Dental</h3>
                         <h4>Aug 2025 – Present | <a href="https://www.hentgesdental.com/">hentgesdental.com</a></h4>
                         <ul>
                             <li>Developed clinic website (<strong>Next.js</strong>, <strong>Tailwind CSS</strong>) with SEO
