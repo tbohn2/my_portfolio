@@ -37,9 +37,9 @@ export default function Resume({ handleLoadedPage }) {
 
                         <h2>Frameworks & Tools</h2>
                         <ul className='skills'>
-                            <li>React / Next.js / Node.js / Express.js</li>
-                            <li>Django / ASP.NET Core / Vite</li>
-                            <li>GraphQL / jQuery</li>
+                            <li>React / Next.js / Vite</li>
+                            <li>Node.js / Express.js / Django</li>
+                            <li>ASP.NET Core / GraphQL / jQuery</li>
                             <li>Bootstrap / Tailwind CSS</li>
                             <li>Git / GitHub</li>
                         </ul>
@@ -54,6 +54,7 @@ export default function Resume({ handleLoadedPage }) {
                             <li>ORM (Entity Framework / Mongoose)</li>
                             <li>Authentication & Security (JWT / OAuth / BCrypt)</li>
                             <li>CI/CD (Vercel / Render / AWS)</li>
+                            <li>Unit Testing (Jest / Pytest)</li>
                             <li>Payment Integration (Stripe)</li>
                             <li>Agile Development</li>
                         </ul>
@@ -84,10 +85,11 @@ export default function Resume({ handleLoadedPage }) {
                             <li>Engineered 10+ <strong>REST API endpoints</strong> and backend modules
                                 (<strong>Node.js</strong>) within a 7-person <strong>Agile</strong> team, powering core platform
                                 functionality</li>
-                            <li>Implemented a <strong>CI/CD pipeline</strong> to run a <strong>Python</strong>
-                                data ingestion script, streamlining updates to <strong>AWS EC2</strong> servers</li>
-                            <li>Optimized data workflows through automation, increasing update frequency to bi-daily and
+                            <li>Implemented a <strong>CI/CD pipeline</strong> for a <strong>Python</strong> data ingestion
+                                script on <strong>AWS EC2</strong>, automating updates, increasing frequency to bi-daily, and
                                 reducing redundancy by 25%</li>
+                            <li>Developed <strong>unit tests</strong> to ensure reliability and maintain coverage for critical
+                                backend functionality</li>
                         </ul>
 
                         <h2 className='mt-3 bg-dark-blue text-light text-center'>Freelance Experience</h2>
