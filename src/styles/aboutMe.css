@@ -1,9 +1,6 @@
-#aboutMeBody {
-    min-height: 85vh;
-}
-
 #aboutMeContent {
     padding-top: 100px;
+    gap: 2rem;
 }
 
 #aboutText h1 {
@@ -33,9 +30,24 @@
     color: var(--secondary);
 }
 
+#aboutText .btn {
+    border-color: var(--primary);
+    background-color: var(--dark);
+    color: var(--primary);
+    transition: all 0.5s;
+}
+
+#aboutText .btn:hover {
+    background-color: var(--primary);
+    border-color: var(--primary);
+    color: var(--dark);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
 .myImg {
     background-color: var(--dark);
-    box-shadow: 0 0 90px 25px var(--secondary);
+    box-shadow: 0 0 90px 0px var(--primary);
     background-image: radial-gradient(circle, transparent 55%, var(--secondary) 100%);
     width: 400px;
     height: 400px;
@@ -76,6 +88,10 @@
 
     #aboutText p {
         text-align: center;
+    }
+
+    #aboutText .btn {
+        width: 100%;
     }
 
     #aboutText h1 {
