@@ -141,7 +141,7 @@ export default function Portfolio({ mobile, handleLoadedPage }) {
             siteURL: 'https://solidgroundaz.site/',
             gitURL: 'https://github.com/tbohn2/solid-ground-az',
             adminSiteURL: 'https://solidgroundaz.site/admin',
-            login: ['Username: test', 'Password: testtest']
+            login: ['Username: Test', 'Password: Test']
         },
         {
             id: 1,
